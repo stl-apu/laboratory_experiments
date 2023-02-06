@@ -128,6 +128,6 @@
 
 [このページのトップへ](#)
 
-[Dockerページへ](https://stl-apu.github.io/advanced_experiment_2022/docker)
+[Dockerページへ](https://stl-apu.github.io/laboratory_experiments/docker)
 
-[応用実験用サイトのトップへ](https://stl-apu.github.io/advanced_experiment_2022/)
+[応用実験用サイトのトップへ](https://stl-apu.github.io/laboratory_experiments/)

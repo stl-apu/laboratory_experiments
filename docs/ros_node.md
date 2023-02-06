@@ -1,7 +1,7 @@
 # ROSノード
 
 ## ROSノードを用いたトピック通信
-- 応用実験用のROSパッケージ「advanced_experiment_2022」をcloneしたあとに実行してください。
+- 応用実験用のROSパッケージ「laboratory_experiments」をcloneしたあとに実行してください。
 
 ## 準備
 - ROSパッケージをcatkin_makeコマンドを用いてビルドします。
@@ -68,4 +68,4 @@
 
 [このページのトップへ](#)
 
-[応用実験用サイトのトップへ](https://stl-apu.github.io/advanced_experiment_2022/)
+[応用実験用サイトのトップへ](https://stl-apu.github.io/laboratory_experiments/)

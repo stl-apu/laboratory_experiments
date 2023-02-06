@@ -83,17 +83,17 @@
   ```
 - サブコマンドcloneでプログラムをコピー（初回ダウンロード）する。
   ```
-  $ git clone git@github.com:stl-apu/advanced_experiment_2022.git
+  $ git clone git@github.com:stl-apu/laboratory_experiments.git
   ```
-- コマンドlsでディレクトリー「advanced_experiment_2022」が存在することを確認する。
+- コマンドlsでディレクトリー「laboratory_experiments」が存在することを確認する。
   ```
   $ ls
   ```
 
 ## 差分アップロード
-- ディレクトリー「advanced_experiment_2022」に移動する。
+- ディレクトリー「laboratory_experiments」に移動する。
   ```
-  $ cd advanced_experiment_2022
+  $ cd laboratory_experiments
   ```
 - ブランチの一覧を確認する。
   ```
@@ -206,4 +206,4 @@
 
 [このページのトップへ](#)
 
-[応用実験用サイトのトップへ](https://stl-apu.github.io/advanced_experiment_2022/)
+[応用実験用サイトのトップへ](https://stl-apu.github.io/laboratory_experiments/)
