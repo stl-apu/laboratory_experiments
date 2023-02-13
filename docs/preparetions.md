@@ -15,7 +15,7 @@
 
 ## PCの設定
 - 自宅でも実施できるよう、個人のPCを使用します。
-- Ubuntu 18.04（Bionic Beaver）、Mac 12.4（Monterey）、Windows 10（Enterprise、Pro、またはEducation）のいずれかを使用できるようにしておいてください。
+- Ubuntu 20.04（Focal Fossa）、Mac 13.2（Ventura）、Windows 10（Enterprise、Pro、またはEducation）のいずれかを使用できるようにしておいてください。
   - 担当教員やTAがサポートしやすいのは、Ubuntu＞Mac＞Windowsの順番です。
   - Windows 10のHomeエディションはHyper-Vを使用できないので、Educationなどにアップグレードしておいてください。
     - PCの環境を汚したくない人やOSをアップグレードしたくない人は学部貸出PCを利用してください。
