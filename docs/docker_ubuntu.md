@@ -45,27 +45,27 @@
   ```
 
 ## イメージのダウンロード
-- Ubuntu 18.04のイメージをダウンロードする。
+- ROSがインストールされたUbuntu 20.04のイメージをダウンロードする。
   ```
-  $ docker image pull ubuntu:18.04
+  $ docker image pull ros:foxy-ros-base-focal
   ```
-- Ubuntu 18.04のイメージが存在することを確認する。
+- 上記のイメージが存在することを確認する。
   ```
   $ docker image ls
   ```
 
 ## コンテナーの作成→テスト
-- イメージを用いてコンテナーを作成し、起動する。オプションnameでコンテナーに対して名前（例：ubuntu）を付けておく。
+- イメージを用いてコンテナーを作成し、起動する。オプションnameでコンテナーに対して名前（例：ros-cui）を付けておく。
   ```
-  $ docker container run -itd --env="DISPLAY" --env="QT_X11_NO_MITSHM=1" --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" --name ubuntu ubuntu:18.04 /bin/bash
+  $ docker container run -itd --env="DISPLAY" --env="QT_X11_NO_MITSHM=1" --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" --name ros-cui ros:foxy-ros-base-focal /bin/bash
   ```
-- コンテナー「ubuntu」が存在することを確認する。
+- コンテナー「ros-cui」が存在することを確認する。
   ```
   $ docker container ls -a
   ```
-- コンテナー「ubuntu」に入る。
+- コンテナー「ros-cui」に入る。
   ```
-  $ docker container exec -it ubuntu /bin/bash
+  $ docker container exec -it ros-cui /bin/bash
   ```
 - コマンドsudoをインストールする。
   ```
@@ -99,7 +99,7 @@
   《記法》
   $ docker container start コンテナー名
   《実例》
-  $ docker container start ubuntu
+  $ docker container start ros-cui
   ```
 
 ### コンテナーの停止
@@ -111,7 +111,7 @@
   《記法》
   $ docker container stop コンテナー名
   《実例》
-  $ docker container stop ubuntu
+  $ docker container stop ros-cui
   ```
 
 ### コンテナーの削除
