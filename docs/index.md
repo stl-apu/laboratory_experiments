@@ -15,21 +15,21 @@
 - [GitHub](https://stl-apu.github.io/laboratory_experiments/github)
 - [ROS Topic](https://stl-apu.github.io/laboratory_experiments/ros_topic)
 - [ROS Node](https://stl-apu.github.io/laboratory_experiments/ros_node)
-- [Assignment1](https://stl-apu.github.io/laboratory_experiments/assignment1)
+- [Assignment 1](https://stl-apu.github.io/laboratory_experiments/assignment1)
 
 ### Week 2
 グループでROSのプログラムを作ります。
+- [ROS Package](https://stl-apu.github.io/laboratory_experiments/ros_package)
+- [ROS Subscriber](https://stl-apu.github.io/laboratory_experiments/ros_subscriber)
+- [ROS Publisher](https://stl-apu.github.io/laboratory_experiments/ros_publisher)
 - [ROS Launch](https://stl-apu.github.io/laboratory_experiments/ros_launch)
-- [ROS Parameter](https://stl-apu.github.io/laboratory_experiments/ros_parameter)
-- [Assignment2](https://stl-apu.github.io/laboratory_experiments/assignment2)
 - [ROS Bag](https://stl-apu.github.io/laboratory_experiments/ros_bag)
-
+- [Assignment 2](https://stl-apu.github.io/laboratory_experiments/assignment2)
 
 ### Week 3
 グループでロボットを動かします。
 - [ROS Simulation](https://stl-apu.github.io/laboratory_experiments/ros_simulation)
-
-- 切り替え
+- [ROS Parameter](https://stl-apu.github.io/laboratory_experiments/ros_parameter)
 - [ROS TurtleBot](https://stl-apu.github.io/laboratory_experiments/ros_turtlebot)
-- [Assignment3](https://stl-apu.github.io/laboratory_experiments/assignment3)
+- [Assignment 3](https://stl-apu.github.io/laboratory_experiments/assignment3)
 
