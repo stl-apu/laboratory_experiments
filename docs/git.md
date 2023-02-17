@@ -1,15 +1,14 @@
 # Git
-- Gitを利用して、応用実験で使用するプログラムをダウンロードする。
-- Gitを利用して、応用実験のレポートを提出する。
+- Gitを利用して、情報科学実験で使用するプログラムをダウンロードする。
+- Gitを利用して、情報科学実験のレポートを提出する。
 
 ## 準備
 - ターミナルやコマンドプロンプトを開く。
 - Dockerサービスを起動する。
-- コンテナーに入る。
+- Dockerコンテナーに入る。
   ```
-  $ docker exec -it ubuntu /bin/bash
+  $ docker container exec -it ros-cui /bin/bash
   ```
-- ページ「ROS Build」を参考にcatkin_wsなどのディレクトリーを作成する。
 
 ## Gitの設定
 - gitをインストールする。
@@ -20,7 +19,7 @@
   ```
   $ git version
   ```
-- ユーザーの名前とメールアドレスを登録する。
+- ユーザーの名前とメールアドレスを設定する。
   ```
   《記法》
   $ git config --global user.name "名前"
@@ -33,10 +32,10 @@
   ```
   $ git config -l
   ```
-  - Gitの設定を変更したい時は再度`$ git config`を編集する。
+  - Gitの設定を変更したい時は再度`$ git config`を実行し、上書きする。
 
 ## GitHubの設定
-- clone、pull、pushなどを実行できるよう、SSH接続（鍵認証）の設定を行います。
+- clone、pull、pushなどのコマンドを実行できるよう、SSH接続（鍵認証）の設定を行います。
 - 下記のディレクトリーにid_rsaとid_rsa.pubが存在することを確認します。
   ```
   $ ls ~/.ssh
@@ -55,124 +54,128 @@
       $ sudo apt update
       $ sudo apt -y install openssh-server
       ```
-- 下記のコマンドで公開鍵（id_rsa.pub）の内容をクリップボードにコピーする。
+- 下記のコマンドで公開鍵（id_rsa.pub）の内容をクリップボードにコピーします。
   ```
   $ cat ~/.ssh/id_rsa.pub | xsel -bi
   ```
-  - コマンドxselが無い場合はパッケージをインストールする。
+  - コマンドxselが無い場合はパッケージをインストールします。
     ```
     $ sudo apt update
     $ sudo apt -y install xsel
     ```
-- GitHubのウェブサイトを開く。
+- GitHubのウェブサイトを開きます。
   - https://github.com/settings/ssh
-- ［Settings］→［SSH and GPG keys］へと進み、［SSH keys］の所にあるボタン「New SSH key」を押す。
-- 公開鍵の内容を記入欄「Key」の中にペーストし、登録する。
-  - 記入欄「Title」にはコンピューター名などを記入する。
-- 正常に接続できるかを確認する。
+- ［Settings］→［SSH and GPG keys］へと進み、［SSH keys］の所にあるボタン「New SSH key」を押します。
+- 公開鍵の内容を記入欄「Key」の中にペーストし、登録します。
+  - 記入欄「Title」にはコンピューター名などを記入します。
+- 正常に接続できるかを確認します。
   ```
   $ ssh -T git@github.com
   ```
-  - 「You've successfully authenticated, but GitHub does not provide shell access.」と表示されればOK！
-  - 「Are you sure you want to continue connecting (yes/no/[fingerprint])?」と聞かれた場合は「yes」と回答する。
+  - 「You've successfully authenticated, but GitHub does not provide shell access.」と表示されればOKです！
+  - 「Are you sure you want to continue connecting (yes/no/[fingerprint])?」と聞かれた場合は「yes」と回答します。
 
 ## 全体ダウンロード
-- ROSでは、プログラムをワークスペースのsrcに置くので、ディレクトリーを移動する。
+- ROSでは、プログラムをワークスペースのsrcに置くので、ディレクトリーを移動します。
   ```
-  $ cd ~/catkin_ws/src
+  $ cd ~/colcon_ws/src
   ```
-- サブコマンドcloneでプログラムをコピー（初回ダウンロード）する。
+- サブコマンドcloneでプログラムをコピー（初回ダウンロード）します。
   ```
-  $ git clone git@github.com:stl-apu/laboratory_experiments.git
+  $ git clone https://github.com/stl-apu/laboratory_experiments_2023.git
   ```
-- コマンドlsでディレクトリー「laboratory_experiments」が存在することを確認する。
+- コマンドlsでディレクトリー「laboratory_experiments」が存在することを確認します。
   ```
   $ ls
   ```
 
 ## 差分アップロード
-- ディレクトリー「laboratory_experiments」に移動する。
+- ディレクトリー「laboratory_experiments」に移動します。
   ```
   $ cd laboratory_experiments
   ```
-- ブランチの一覧を確認する。
+- ブランチの一覧を確認します。
   ```
   $ git branch
   ```
-  - mainのみが存在する。
-- ブランチ「develop」に移動する。
+  - mainのみが存在します。
+- ブランチ「develop」に移動します。
   ```
   $ git checkout develop
   ```
-- ブランチ「develop」に移動したことを確認する。
+- ブランチ「develop」に移動したことを確認します。
   ```
   $ git status
   ```
-- ブランチの一覧を確認する。
+- 再度、ブランチの一覧を確認します。
   ```
   $ git branch
   ```
-  - mainとdevelopが存在する。
-- 自分用のブランチ（feature/学籍番号）を作成しながら移動する。
+  - mainとdevelopが存在します。
+- 自分用のブランチ（feature/学籍番号）を作成しながら移動します。
   ```
   《記法》
   $ git checkout -b ブランチ名
   《実例》
-  $ git checkout -b feature/2020311000
+  $ git checkout -b feature/2021311000
   ```
-- テキストエディター（geditなど）でtest.txtを開き、「Local 1」と追記し、保存する。
+  - オプションbはブランチを作成しながら切り替えます。普通に切り替える場合はオプション無しで大丈夫です。
   ```
-  $ gedit test.txt
+  $ git checkout feature/2021311000
   ```
-- 編集内容をcommitの対象に含める。
+- テキストエディター（nanoなど）でtest.txtを開き、「Local 1」と追記し、保存します。
+  ```
+  $ nano test.txt
+  ```
+- 編集内容をcommitの対象に含めます。
   ```
   $ git add test.txt
   ```
-- commitする。
+- commitします。
   ```
   《記法》
   $ git commit -m "コミット文"
-
   《実例》
   $ git commit -m "Update test.txt"
   ```
-- pushする。
+- pushします。
   ```
   《記法》
   $ git push origin ブランチ名
   《実例》
-  $ git push origin feature/2020311000
+  $ git push origin feature/2021311000
   ```
-- GitHubのウェブサイトを開き、自分用のブランチ（例：feature/2020311000）を確認する。「Local 1」が反映されていたらOK！
+- GitHubのウェブサイトを開き、自分用のブランチを確認します。
+  - 「Local 1」が反映されていたらOKです！
 
 ## 競合の解消
-- 他のメンバーによってTXTファイルが編集されたことを再現するため、GitHubのウェブサイト上でリモート側のファイルを編集する。
-- test.txtを選択し、ペンの形のアイコン（Edit file）から編集する。「Remote 1」と追記し、Commit（保存）する。
-- 再度、ローカル側でテキストエディター（geditなど）でtest.txtを開き、「Local 2」と追記し、保存する。
+- 他のメンバーによってtxtファイルが編集されたことを再現するため、GitHubのウェブサイト上でリモート側のファイルを編集します。
+- test.txtを選択し、ペンの形のアイコン（Edit file）を押し、「Remote 1」と追記し、commit（保存）します。
+- 再度、ローカル側でテキストエディターでtest.txtを開き、「Local 2」と追記し、保存します。
   ```
-  $ gedit test.txt
+  $ nano test.txt
   ```
-- 編集内容をcommitの対象に含める。
+- 編集内容をcommitの対象に含めます。
   ```
   $ git add test.txt
   ```
-- Commitする。
+- commitします。
   ```
   $ git commit -m "Update test.txt"
   ```
-- Pushすると、エラーが発生する。
+- pushします。
   ```
-  $ git push origin feature/2020311000
+  $ git push origin feature/2021311000
   ```
-  - PullしてからでないとPushできない。
-- Pullすると、別のエラーが発生する。
+  - エラーが発生します。PullしてからでないとPushできません。
+- Pullすると、別のエラーが発生します。
   ```
-  $ git pull origin feature/2020311000
+  $ git pull origin feature/2021311000
   ```
-  - 複数人が同時に同じファイルを編集すると、競合（conflict）が発生する。
-- テキストエディター（geditなど）でtest.txtを開き、競合を解消し、保存する。
+  - 複数人が同時に同じファイルを編集すると、競合（conflict）が発生します。
+- テキストエディターでtest.txtを開き、競合を解消し、保存します。
   ```
-  $ gedit test.txt
+  $ nano test.txt
   ```
   - 今回は「Local 2」の方を残すことにします。
     - 実際には研究開発グループ内で修正方針を検討する必要があります。
@@ -183,26 +186,26 @@
   Local 1
   Local 2
   ```
-- Pushする。
+- pushします。
   ```
   $ git add test.txt
   $ git commit -m "Update test.txt"
-  $ git push origin feature/2020311000
+  $ git push origin feature/2021311000
   ```
-- ブランチ「main」に戻しておく。
+- ブランチ「main」に戻しておきます。
   ```
   $ git checkout main
   ```
 
 ## 補足1：ブランチの結合
 - ブランチmain（master）が本番環境となります。
-- feature → develop → masterと、プログラムをサブコマンドMergeで結合する必要があります。
-- 研究開発リーダー（責任者）が行う作業なので、応用実験では割愛します。
-- 将来、研究開発リーダーになりたい人は学習を継続してください。
+- feature → develop → masterと、プログラムをサブコマンドmergeで結合する必要があります。
+- 研究開発リーダー（責任者）が行う作業なので、情報科学実験では割愛します。
+  - 将来、研究開発リーダーになりたい人は学んでみてください。
 
 ## 補足2：Gitクライアント
 - GitHub Desktopを使えば、GUIで管理できます。
-- Git機能を搭載したソフトウェアも多いです。Atomなど…。
+- Git機能を搭載したソフトウェアも多いです。MicrosoftのVisual Studio Codeなど…。
 
 [このページのトップへ](#)
 

@@ -12,6 +12,9 @@
 - [Docker](https://stl-apu.github.io/laboratory_experiments/docker)
 - [ROS Build](https://stl-apu.github.io/laboratory_experiments/ros_build)
 - [Git](https://stl-apu.github.io/laboratory_experiments/git)
+- [Assignment1](https://stl-apu.github.io/laboratory_experiments/assignment1)
+
+
 - [ROS Topic](https://stl-apu.github.io/laboratory_experiments/ros_topic)
 - [ROS Node](https://stl-apu.github.io/laboratory_experiments/ros_node)
 
