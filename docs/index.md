@@ -12,11 +12,10 @@
 個人でROSの仕組みを学びます。
 - [Docker](https://stl-apu.github.io/laboratory_experiments/docker)
 - [ROS Build](https://stl-apu.github.io/laboratory_experiments/ros_build)
-- [Git](https://stl-apu.github.io/laboratory_experiments/git)
+- [GitHub](https://stl-apu.github.io/laboratory_experiments/github)
 - [ROS Topic](https://stl-apu.github.io/laboratory_experiments/ros_topic)
 - [ROS Node](https://stl-apu.github.io/laboratory_experiments/ros_node)
 - [Assignment1](https://stl-apu.github.io/laboratory_experiments/assignment1)
-
 
 ### Week 2
 グループでROSのプログラムを作ります。

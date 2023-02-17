@@ -7,7 +7,7 @@
   $ printenv | grep ROS
   ROS_DISTRO=foxy
   ```
-- 基本となる環境変数を設定します。
+- ROSの環境を設定します。
   ```
   $ source /ros_entrypoint.sh
   ```
