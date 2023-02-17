@@ -1,18 +1,19 @@
 # ROSのビルド
+- ROSのプログラムをビルドする方法を学びつつ、ソースコードを作成するための準備を進めます。
 
 ## 環境変数の確認
-- ROSがインストールされていることを確認します。  
+- ROSがインストールされていることを確認します。
   ```
-  # printenv | grep ROS
+  $ printenv | grep ROS
   ROS_DISTRO=foxy
   ```
-- 基本となる環境変数を設定する。
+- 基本となる環境変数を設定します。
   ```
-  # source /ros_entrypoint.sh
+  $ source /ros_entrypoint.sh
   ```
 - ROSに関する環境変数を確認します。  
   ```
-  # printenv | grep ROS
+  $ printenv | grep ROS
   ```
   - 正常にインストールされていれば、下記のように出力されます。
   ```
@@ -23,17 +24,17 @@
   ```
 
 ## ディレクトリーの作成
-- 研究開発用ディレクトリーとしてcatkin_wsおよびsrcを作成します。
+- 研究開発用ディレクトリーとしてcolcon_wsおよびsrcを作成します。
   ```
-  # mkdir -p ~/ros2_ws/src
+  $ mkdir -p ~/colcon_ws/src
   ```
 
 ## プログラムのビルド
-- コマンドcatkin_makeを用いてビルドします。この時点では何もプログラムが無いので、すぐに100％になり、ビルドが完了します。
+- ビルドツールcolcon（コルコン）を用いてビルドします。この時点では何もプログラムが無いので、すぐに100％に達し、ビルドが完了します。
   ```
-  # cd ~/ros2_ws
-  # colcon build
-  # ~/ros2_ws/install/setup.bash
+  $ cd ~/colcon_ws
+  $ colcon build
+  $ source ~/colcon_ws/install/setup.bash
   ```
 
 [このページのトップへ](#)
