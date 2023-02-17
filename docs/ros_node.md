@@ -1,33 +1,13 @@
 # ROSノード
+- ROSコマンドでなくROSノードを用いた出版・講読を行います。
 
-## ROSノードを用いたトピック通信
-- 応用実験用のROSパッケージ「laboratory_experiments」をcloneしたあとに実行してください。
-
-## 準備
-- ROSパッケージをcatkin_makeコマンドを用いてビルドします。
-  ```
-  $ docker exec -it ubuntu /bin/bash
-  $ cd ~/catkin_ws
-  $ catkin_make
-  ```
-
-- 環境変数DISPLAYが設定されていることを確認する。設定されていないと、ホストOSにGUIの表示を依頼できない。
+## 確認
+- GUIのROSツールを使用するので、環境変数DISPLAYが設定されていることを確認する。設定されていないと、ホストOSにGUIの表示を依頼できない。
   ```
   $ echo $DISPLAY
   ```
-  - IPアドレスがホストOSと異なっていた場合は変更する。
-    ```
-    《記法》
-    $ export DISPLAY=IPアドレス:ディスプレイ番号.スクリーン番号
-    や
-    $ export DISPLAY=IPアドレス:ディスプレイ番号
-    《実例》
-    $ export DISPLAY=172.31.233.193:0.0
-    や
-    $ export DISPLAY=172.31.233.193:0
-    ```
 
-### 1つ目：ROSマスターの起動
+## 1つ目：ROSマスターの起動
 - roscoreを起動します。
   ```
   $ docker exec -it ubuntu /bin/bash
@@ -35,7 +15,7 @@
   $ roscore
   ```
 
-### 2つ目：ROSトピックの購読
+## 2つ目：ROSトピックの購読
 - listenerを起動します。
   ```
   $ docker exec -it ubuntu /bin/bash
@@ -43,7 +23,7 @@
   $ rosrun advanced_experiment listener
   ```
 
-### 3つ目：ROSトピックの出版
+## 3つ目：ROSトピックの出版
 - talkerを起動します。
   ```
   $ docker exec -it ubuntu /bin/bash
@@ -51,7 +31,7 @@
   $ rosrun advanced_experiment talker
   ```
 
-### 4つ目：ROSノードの確認  
+## 4つ目：ROSノードの確認  
 - ツール「rqt_graph」でROSノード同士の繋がりを確認します。
   ```
   $ docker exec -it ubuntu /bin/bash
