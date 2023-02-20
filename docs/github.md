@@ -84,15 +84,15 @@
   ```
   $ git clone https://github.com/stl-apu/laboratory_experiments_2023.git
   ```
-- コマンドlsでディレクトリー「laboratory_experiments」が存在することを確認します。
+- コマンドlsでディレクトリー「laboratory_experiments_2023」が存在することを確認します。
   ```
   $ ls
   ```
 
 ## 差分アップロード
-- ディレクトリー「laboratory_experiments」に移動します。
+- ディレクトリー「laboratory_experiments_2023」に移動します。
   ```
-  $ cd laboratory_experiments
+  $ cd laboratory_experiments_2023
   ```
 - ブランチの一覧を確認します。
   ```

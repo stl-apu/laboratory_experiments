@@ -1,13 +1,27 @@
-# ROSパッケージ
-- 第1週はロボット用のソフトウェアを開発するために必要不可欠なDockerとGitHubの使い方を学びました。また、ROSトピックやROSノードといったROSの基本的な用語を学びました。
-- 第2週は実際にROSノードを作成します。
-- ROSノードはROSパッケージの中に入れます。複数のROSノードを入れることができ、複数のROSノードが連携することで、大規模・複雑な機能を実現することができます。
+# ROSのパブリッシャー
+- 第1週で学んだトーカーを自作してみます。
 
-## ROSパッケージの作成
-- ROS
-  ```
-  $ 
-  ```
+## Pythonプログラムの作成
+- test_publisher_node.pyを作成します。
+    ```
+    $ cd ~/colcon_ws/src/test_package/test_package
+    $ nano test_publisher_node.py
+    ```
+
+### モジュールのインポート
+- リスナーと同様です。
+
+### クラスの定義
+- 下記の通り、TestPublisherを定義します。
+    ```
+    class TestSubscriber(Node):
+        def __init__(self):
+            super().__init__('test_publisher_node')
+            self.sub = self.create_subscription(String, 'test_topic', self.callback, 1)
+        def callback(self, msg):
+            self.get_logger().info(f'Subscribe: {msg.data}')
+    ```
+
 
 [このページのトップへ](#)
 
