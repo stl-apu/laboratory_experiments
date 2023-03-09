@@ -36,11 +36,11 @@
     ```
 
 ## 3つ目：ROSノードの確認  
-- ツール「rqt_graph」でROSノード同士の繋がりを確認します。
+- ツール「rqt_graph」でROSノード同士の繋がりを確認します。左上の更新ボタンを押すと表示されます。
     ```
     $ docker container exec -it ros-cui /bin/bash
     $ source ros_entrypoint.sh
-    $ rqt_graph
+    $ ros2 run rqt_graph rqt_graph
     ```
     - 「/talker」という名前のROSノードと、「/listener」という名前のROSノードが、ROSトピック「/chatter」で繋がっていることが確認できると思います。このトピックがトピックメッセージ型の情報（文字列や数字など）を伝達することで、2つのノード（機能）が連携することができます。
     - 閉じるボタンか「Ctrlキー」＋「cキー」で終了することができます。
