@@ -82,7 +82,7 @@
   ```
 - サブコマンドcloneでプログラムをコピー（初回ダウンロード）します。
   ```
-  $ git clone https://github.com/stl-apu/laboratory_experiments_2023.git
+  $ git clone git@github.com:stl-apu/laboratory_experiments_2023.git
   ```
 - コマンドlsでディレクトリー「laboratory_experiments_2023」が存在することを確認します。
   ```
