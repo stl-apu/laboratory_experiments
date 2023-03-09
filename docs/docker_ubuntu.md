@@ -41,7 +41,7 @@
     ```
 - 改めてDockerサービスを起動する。
   ```
-  $ sudo service docker start
+  $ sudo service docker restart
   ```
 
 ## イメージのダウンロード

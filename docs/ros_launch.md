@@ -1,11 +1,24 @@
-# roslaunchの利用
-- 毎回、複数のターミナルを開くのは面倒なので、普通はROSコマンド「roslaunch」を使用します。
-- roslaunchコマンドでlaunchファイルを実行すると、複数のROSノードを1つのターミナルで起動することができます。
-  - ROSマスターが起動していなかった場合は、自動的に起動してくれます。
-  - ROSパラメーターも合わせて設定することができます。
-- launchファイルはlaunchディレクトリーに置きます。
+# launchコマンド
+- 毎回、複数のターミナルを開くのは面倒なので、普通はROSコマンド「launch」を使用します。
+- launchコマンドでlaunchファイルを実行すると、複数のROSノードを1つのターミナルで起動することができます。
+- launchファイルはlaunchディレクトリーを作成し、その中に置きます。
 
-## 実行
+
+## launchファイルの実行
+- 試しにlaunchファイルを実行してみましょう。1つのコマンドで3つのノードを起動することができます。
+    ```
+    $ ros2 launch sample_package listener_talker.launch.py
+    ```
+
+
+## launchファイルの作成
+    ```
+    $ cd ~/colcon_ws/src/test_package/
+    $ mkdir launch
+    $ cd launch
+    $ nano test.py
+    ```
+
 - まず、launchディレクトリー内のturtle_test.launchを確認してみます。タグ<node>が2組あるので、2つのROSノードが起動することが分かります。
 - 実行します。
   ```

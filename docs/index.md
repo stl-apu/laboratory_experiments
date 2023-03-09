@@ -5,13 +5,14 @@
 
 ## 実験内容
 ### Week 0
-- [事前準備](https://stl-apu.github.io/laboratory_experiments/preparetions)
-- [予習用動画](https://youtu.be/H_ZcbYlYff4)
+- [事前準備](https://stl-apu.github.io/laboratory_experiments/preparetion)
+- 予習用動画（ROS）
+- 予習用動画（DockerとGitHub）
 
 ### Week 1
 個人でROSの仕組みを学びます。
 - [Docker](https://stl-apu.github.io/laboratory_experiments/docker)
-- [ROS Build](https://stl-apu.github.io/laboratory_experiments/ros_build)
+- [ROS Preparetion](https://stl-apu.github.io/laboratory_experiments/ros_preparetion)
 - [GitHub](https://stl-apu.github.io/laboratory_experiments/github)
 - [ROS Topic](https://stl-apu.github.io/laboratory_experiments/ros_topic)
 - [ROS Node](https://stl-apu.github.io/laboratory_experiments/ros_node)
@@ -22,6 +23,7 @@
 - [ROS Package](https://stl-apu.github.io/laboratory_experiments/ros_package)
 - [ROS Subscriber](https://stl-apu.github.io/laboratory_experiments/ros_subscriber)
 - [ROS Publisher](https://stl-apu.github.io/laboratory_experiments/ros_publisher)
+- [ROS Build](https://stl-apu.github.io/laboratory_experiments/ros_build)
 - [ROS Launch](https://stl-apu.github.io/laboratory_experiments/ros_launch)
 - [ROS Bag](https://stl-apu.github.io/laboratory_experiments/ros_bag)
 - [Assignment 2](https://stl-apu.github.io/laboratory_experiments/assignment2)
