@@ -36,7 +36,7 @@
     ```
 
 ## 3つ目：ROSノードの確認  
-- ツール「rqt_graph」でROSノード同士の繋がりを確認します。左上の更新ボタンを押すと表示されます。
+- ツール「rqt_graph」でROSノード同士の繋がりを確認します。これはCUIツールでなくGUIツールですが、Dockerの動作を確認するために敢えて使用しています。左上の更新ボタンを押すとノードが表示されます。
     ```
     $ docker container exec -it ros-cui /bin/bash
     $ source ros_entrypoint.sh
