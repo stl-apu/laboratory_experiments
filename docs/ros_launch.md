@@ -46,35 +46,35 @@
     ```
 
 - 角括弧の間に起動するROSノードに関して記述します。
-    - 1つ目はsubscriberを起動します。
-        ```
-        launch_ros.actions.Node(
-            package='assignment_package',
-            executable='subscriber',
-            output='screen',
-            prefix='xterm -e',
-            on_exit=launch.actions.Shutdown())
-        ```
-        - 必須項目はpackageとexecutableのみです。他の項目について調査してみましょう。
-    - 2つ目はpublisherを起動します。
-        ```
-        launch_ros.actions.Node(
-            package='assignment_package',
-            executable='publisher',
-            output='screen',
-            prefix='xterm -e',
-            on_exit=launch.actions.Shutdown())
-        ```
-        - 複数のノードを起動する時はコンマで区切ります。
-    - 3つ目はrqt_graphを起動します。
-        ```
-        launch_ros.actions.Node(
-            package='rqt_graph',
-            executable='rqt_graph',
-            output='screen',
-            on_exit=launch.actions.Shutdown())
-        ```
-        - rqt_graphはGUIツールなので、xtermは必要ありません。
+- 1つ目はsubscriberを起動します。
+    ```
+    launch_ros.actions.Node(
+        package='assignment_package',
+        executable='subscriber',
+        output='screen',
+        prefix='xterm -e',
+        on_exit=launch.actions.Shutdown())
+    ```
+    - 必須項目はpackageとexecutableのみです。他の項目について調査してみましょう。
+- 2つ目はpublisherを起動します。
+    ```
+    launch_ros.actions.Node(
+        package='assignment_package',
+        executable='publisher',
+        output='screen',
+        prefix='xterm -e',
+        on_exit=launch.actions.Shutdown())
+    ```
+    - 複数のノードを起動する時はコンマで区切ります。
+- 3つ目はrqt_graphを起動します。
+    ```
+    launch_ros.actions.Node(
+        package='rqt_graph',
+        executable='rqt_graph',
+        output='screen',
+        on_exit=launch.actions.Shutdown())
+    ```
+    - rqt_graphはGUIツールなので、xtermは必要ありません。
 
 
 ## launchファイルの設定
@@ -100,7 +100,7 @@
     $ cd ~/colcon_ws && colcon build
     ```
 
-- 一応、xtermが使用できるかどうかを確認しておく。
+- 一応、xtermが使用できるかどうかを確認しておきます。
     ```
     $ xterm
     ```
