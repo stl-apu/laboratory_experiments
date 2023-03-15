@@ -14,7 +14,7 @@
     《記法》
     $ ros2 pkg create パッケージ名 --build-type ament_python
     《実例》
-    $ ros2 pkg create assignment_package --build-type ament_python
+    $ ros2 pkg create practice_package --build-type ament_python
     ```
 - 3つのファイルと3つのディレクトリーが作成されます。
     ```

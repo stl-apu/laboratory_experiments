@@ -1,4 +1,4 @@
-# The First Week's Assignment
+# The Third Week's Assignment
 
 - グループごとにROSプログラムを作成してもらいます。
 - グループごとに1つのブランチを作成してください。グループの誰か1人が作成する。

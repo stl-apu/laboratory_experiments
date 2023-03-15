@@ -19,9 +19,9 @@
 
 ## launchファイルの作成
 - 拡張子から予想できますが、launchファイルはPythonで記述します。
-- まず、パッケージassignment_packageにlaunchディレクトリーを作成します。
+- まず、パッケージpractice_packageにlaunchディレクトリーを作成します。
     ```
-    $ cd ~/colcon_ws/src/assignment_package/
+    $ cd ~/colcon_ws/src/practice_package/
     $ mkdir launch
     $ cd launch
     ```
@@ -49,7 +49,7 @@
 - 1つ目はsubscriberを起動します。
     ```
     launch_ros.actions.Node(
-        package='assignment_package',
+        package='practice_package',
         executable='subscriber',
         output='screen',
         prefix='xterm -e',
@@ -59,7 +59,7 @@
 - 2つ目はpublisherを起動します。
     ```
     launch_ros.actions.Node(
-        package='assignment_package',
+        package='practice_package',
         executable='publisher',
         output='screen',
         prefix='xterm -e',
@@ -107,7 +107,7 @@
 
 - 実行します。
     ```
-    $ ros2 launch assignment_package assignment_launch
+    $ ros2 launch practice_package assignment_launch
     ```
 
 [このページのトップへ](#)

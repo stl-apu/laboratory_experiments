@@ -7,7 +7,7 @@
 ## 記録
 - 記録したいノードを立ち上げます。
     ```
-    ros2 launch assignment_package assignment_launch
+    ros2 launch practice_package assignment_launch
     ```
 
 - トピックの一覧を確認します。
