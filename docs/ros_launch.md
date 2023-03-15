@@ -18,7 +18,7 @@
 
 
 ## launchファイルの作成
-- 拡張子の通り、launchファイルはPythonで記述します。
+- 拡張子から予想できますが、launchファイルはPythonで記述します。
 - まず、パッケージassignment_packageにlaunchディレクトリーを作成します。
     ```
     $ cd ~/colcon_ws/src/assignment_package/
@@ -31,66 +31,84 @@
     ```
 
 - ここから具体的にlaunchファイルの内容を記述していきます。
+
 - 2つのモジュールをimportします。
+    ```
+    import launch
+    import launch_ros.actions
+    ```
 
-==========ここから==========
+- メソッドgenerate_launch_descriptionでオブジェクトLaunchDescriptionを返します。
+    ```
+    def generate_launch_description():
+        return launch.LaunchDescription([
+        ])
+    ```
 
-- まず、launchディレクトリー内のturtle_test.launchを確認してみます。タグ<node>が2組あるので、2つのROSノードが起動することが分かります。
+- 角括弧の間に起動するROSノードに関して記述します。
+    - 1つ目はsubscriberを起動します。
+        ```
+        launch_ros.actions.Node(
+            package='assignment_package',
+            executable='subscriber',
+            output='screen',
+            prefix='xterm -e',
+            on_exit=launch.actions.Shutdown())
+        ```
+        - 必須項目はpackageとexecutableのみです。他の項目について調査してみましょう。
+    - 2つ目はpublisherを起動します。
+        ```
+        launch_ros.actions.Node(
+            package='assignment_package',
+            executable='publisher',
+            output='screen',
+            prefix='xterm -e',
+            on_exit=launch.actions.Shutdown())
+        ```
+        - 複数のノードを起動する時はコンマで区切ります。
+    - 3つ目はrqt_graphを起動します。
+        ```
+        launch_ros.actions.Node(
+            package='rqt_graph',
+            executable='rqt_graph',
+            output='screen',
+            on_exit=launch.actions.Shutdown())
+        ```
+        - rqt_graphはGUIツールなので、xtermは必要ありません。
+
+
+## launchファイルの設定
+- setup.pyを編集する必要があります。
+- osモジュールとglobモジュールをインポートします。
+    ```
+    import os
+    from glob import glob
+    ```
+- data_filesにlaunchファイルの参照先を追加します。
+    ```
+    ：
+    data_files=[
+        ：
+        (os.path.join('share', package_name), glob('launch/*_launch.py')),
+    ],
+    ：
+    ```
+
+## launchファイルの実行
+- ビルドします。
+    ```
+    $ cd ~/colcon_ws && colcon build
+    ```
+
+- 一応、xtermが使用できるかどうかを確認しておく。
+    ```
+    $ xterm
+    ```
+
 - 実行します。
     ```
-    《記法》
-    $ roslaunch パッケージ名 ファイル名.launch
-     《実例》
-     $ roslaunch advanced_experiment turtle_test.launch
-     ```
-    - screenオプションを付けると、ノードの出力（ROS_INFOなど）を確認できるようになります。
-      ```
-      $ roslaunch advanced_experiment turtle_test.launch --screen
-      ```
-
-## 変更
-- マウスで操作するためのノードも起動するように変更してみましょう。
-- turtle_test.launchをコピーし、turtle_mouse.launchを作成します。
-- テキストエディター（geditなど）でturtle_mouse.launchを開きます。
-      ```
-      $ gedit turtle_mouse.launch
-      ```
-- 下記の1行を</launch>タグの前に追記し、保存してください。
-      ```
-     <node pkg="mouse_teleop" type="mouse_teleop.py" name="mouse_teleop" />
-     ```
-- 実行してみます。
-     ```
-     $ roslaunch advanced_experiment turtle_mouse.launch --screen
-     ```
-    - これだけだとマウスでロボットを操作することができません。トピック名が合っていないためです。ノード同士の繋がりを確認してみましょう。
-        ```
-        $ rqt_graph
-        ```
-- ノードを起動する時にトピック名を変更します。下記の通り、修正してください。
+    $ ros2 launch assignment_package assignment_launch
     ```
-    <node pkg="mouse_teleop" type="mouse_teleop.py" name="mouse_teleop">
-        <remap from="mouse_vel" to="/turtle1/cmd_vel"/>
-    </node>
-    ```
-- マウスでロボットを操作できるようになったと思います。
-- ROSパラメーターも設定してみましょう。
-- 下記の3行をturtlesim_nodeを起動する<node>タグに追記し、保存してください。
-    ```
-    <param name="background_r" value="255"/>
-    <param name="background_g" value="255"/>
-    <param name="background_b" value="255"/>
-    ```
-- シミュレーターの背景が白になったと思います。
-- 以上のように、ノード名を変更したりパラメーターを設定したりすることで、複数のノードを連携可能な状態で起動することができます。
-
-## 要点
-- ROSを理解する上で重要なのは、ROSノードを1つも開発せずにロボットを動作させることができたという点です。
-- ROSはユーザー数が多いため、キー入力の取得や画像の取得など、多くの人が必要としている機能は既に実装・公開されています。
-- そのため、自分が得意とする部分の開発に注力することができます。
-- 自分が開発したROSノード（ROSパッケージ）を公開することで、直ぐに社会に貢献することができます。
-- トヨタ自動車の生活支援ロボット「HSR」のプログラムは複数の研究機関が集まって開発していますが、愛県大グループでは人間や物体を認識するためのROSパッケージのみを開発しており、その他の部分はトヨタ自動車や他の研究機関が開発してくれたものを使っています。
-- ROSを利用することで共同研究しやすくなったと言えますね。
 
 [このページのトップへ](#)
 
