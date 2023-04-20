@@ -30,9 +30,11 @@
     ```
 - コンピューターを再起動する。
 - VcXsrvをソフトウェア「XLanuch」で起動する。
-    - 「Multiple windows」を選択する。
+    - 「Multiple windows」を選択する。「Display number」は「-1」でOK！
+    - 「Start no client」を選択する。
     - 「Native opengl」のチェックを外す。
-    - 「Disable access control」にチェックを入れる。
+        - もしGUIが表示されない場合は実験中だけ「Disable access control」にチェックを入れる。
+    - システムトレイ（通知領域）にXLanuchのアイコンが表示される。
 
 [このページのトップへ](#)
 
