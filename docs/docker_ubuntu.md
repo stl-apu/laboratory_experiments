@@ -16,7 +16,7 @@
     ```
     $ sudo gpasswd -a $USER docker
     ```
-- ソケット通信に関するファイルの所有者をグループ「docker」に変更します。
+- ソケット通信に関するファイルの所有グループを「docker」に変更します。
     ```
     $ sudo chgrp docker /var/run/docker.sock
     ```
