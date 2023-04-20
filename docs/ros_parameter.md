@@ -50,7 +50,7 @@
 ### 3つ目：talkerノードの起動
   - talker_with_parameterを起動します。
     ```
-    $ docker exec -it ubuntu /bin/bash
+    $ docker container exec -it ubuntu /bin/bash
     $ source ~/catkin_ws/devel/setup.bash
     $ rosrun advanced_experiment talker_with_parameter
     ```

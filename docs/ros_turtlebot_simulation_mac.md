@@ -3,7 +3,7 @@
 ## Dockerコンテナーの作成
 - GUIに対応したROS用のDockerコンテナーを作成する。
   ```
-  % docker run -p 8080:80 --name ros_gui --shm-size=512m tiryoh/ros-desktop-vnc:melodic
+  % docker container run -p 8080:80 --name ros_gui --shm-size=512m tiryoh/ros-desktop-vnc:melodic
   ```
 - ウェブブラウザーを開き、下記のURLでアクセスする。
   - http://localhost:8080
