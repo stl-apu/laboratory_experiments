@@ -4,25 +4,25 @@
 - Dockerは開発環境を共有する仕組みです。
 - 複数人でシステムを開発する時、全員のソフトウェアのヴァージョンを揃えることができます。
 - アカウントを持っていない人は、下記のウェブサイトから作成しておいてください。
-  - [https://www.docker.com/](https://www.docker.com/)
+    - [https://www.docker.com/](https://www.docker.com/)
 
 ### GitHub（ギットハブ）
 - GitHubはプログラムを共有する仕組みです。
-- 複数人でシステムを開発する時、他の人が担当しているプログラムを最新に保つことができます。
+- 複数人でシステムを開発する時、他の人が担当しているプログラムを最新の状態に保つことができます。
 - アカウントを持っていない人は、下記のウェブサイトから作成しておいてください。
-  - [https://github.com/](https://github.com/)
-- <span style="color: #CC0066;">アカウント名をMicrosoft Teamsのプライベートチャットで担当教員（SUZUKI Takuo）に教えてください。</span>応用実験用のリポジトリーに招待します。
+    - [https://github.com/](https://github.com/)
+- <span style="color: #CC0066;">アカウント名をMicrosoft Teamsのプライベートチャットで担当教員（SUZUKI Takuo）に教えてください。</span>実験用のリポジトリーに招待します。
 
 ## PCの設定
-- 自宅でも実施できるよう、個人のPCを使用します。
-- Ubuntu 20.04（Focal Fossa）、Mac 13.2（Ventura）、Windows 10（Enterprise、Pro、またはEducation）のいずれかを使用できるようにしておいてください。
-  - 担当教員やTAがサポートしやすいのは、Ubuntu＞Mac＞Windowsの順番です。
-  - Windows 10のHomeエディションはHyper-Vを使用できないので、Educationなどにアップグレードしておいてください。
-    - PCの環境を汚したくない人やOSをアップグレードしたくない人は学部貸出PCを利用してください。
-- OSを最新版にアップデートしておいてください。
-  - ただし、ウイルス対策ソフトなどが最新版に対応していない場合は、それらが対応している最新版にアップデートしておいてください。
-- PCがクラッシュするような危険な内容は含んでいませんが、故障する可能性はゼロではありません。<span style="color: #CC0066;">済みませんが、応用実験中に個人のPCが故障しても担当教員として責任を取れませんので、不安な人は学部貸出PCを利用してください。</span>よろしくお願いします。
+- 自分のPCに詳しくなってほしいですし、自宅でも実施できるよう、本実験では個人のPCを使用します。
+- Ubuntu 20.04（Focal Fossa）、Mac 13.3（Ventura）、Windows 10（Pro、Enterprise、またはEducation）あるいはWindows 11（Pro、Enterprise、またはEducation）のいずれかのOSを使用できるようにしておいてください。
+    - 担当教員やTAがサポートしやすいのは、Ubuntu＞Mac＞Windowsの順番です。
+    - Windows 10およびWindows 11のHomeエディションはHyper-Vを使用しにくいので、ProやEducationなどにアップグレードすることをオススメします。
+- OSは最新版にアップデートしておいてください。ただし、ウイルス対策ソフトなどが最新版に対応していない場合は、それらが対応している最新版にアップデートしておいてください。
+- PCがクラッシュするような危険な内容は含んでいませんが、故障する可能性はゼロではありません。<span style="color: #CC0066;">済みませんが、実験中に個人のPCが故障しても担当教員として責任を取れませんので、不安な人は学部貸出PCを利用してください。</span>また、どうしてもPCの環境を汚したくない人やOSをアップグレードしたくない人も学部貸出PCを利用してください。ただし、貸出可能台数に限りがあることを御理解ください。
+
+以上です。よろしくお願いします。
 
 [このページのトップへ](#)
 
-[情報科学実験用サイトのトップへ](https://stl-apu.github.io/laboratory_experiments/)
+[実験用サイトのトップへ](https://stl-apu.github.io/laboratory_experiments/)
