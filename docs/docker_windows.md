@@ -18,20 +18,21 @@
 
 ## GUIの設定
 - GUIを使用するためにVcXsrvをインストールする。
-  - https://sourceforge.net/projects/vcxsrv/
+    - https://sourceforge.net/projects/vcxsrv/
 - ホストのIPアドレスを確認する。Wi-FiなどのIPv4アドレスを確認する。
-  ```
-  > ipconfig
-  ```
-- ホストの設定を変更する。Xmingのインストール先（/Program Files (x86)/Xming）にあるX0.hostsファイルに、X Window Systemの転送を許可するホストのIPアドレスを記入する。
-  ```
-  localhost
-  ホストのIPアドレス（←追記！）
-  ```
+    ```
+    > ipconfig
+    ```
+- ホストの設定を変更する。Xmingのインストール先（/Program Files (x86)/Xming）にあるX0.hostsファイルに、X Window Systemの転送を許可するホストOSのIPアドレスを記入する。
+    ```
+    localhost
+    ホストOSのIPアドレス（←追記！）
+    ```
 - コンピューターを再起動する。
 - VcXsrvをソフトウェア「XLanuch」で起動する。
-  - 「Native opengl」のチェックを外す。
-  - 「Disable access control」にチェックを入れる。
+    - 「Multiple windows」を選択する。
+    - 「Native opengl」のチェックを外す。
+    - 「Disable access control」にチェックを入れる。
 
 [このページのトップへ](#)
 
