@@ -2,19 +2,19 @@
 
 ## コンピューターの設定の確認
 - 「タスクマネージャー」を起動し、［パフォーマンス］→［CPU］から［仮想化：有効］となっていることを確認する。
-  - 有効にする方法はコンピューターのメーカーや機種によって異なるので、自分で調べる。
+    - 有効にする方法はコンピューターのメーカーや機種によって異なるので、自分で調べる。
 - 「コントロールパネル」を起動し、［プログラム］→［Windowsの機能の有効化または無効化］を開き、［Hyper-V］と［Linux用Windowsサブシステム（Windows Subsystem for Linux）］にチェックが入っていることを確認する。
 
 ## ソフトウェアのインストール
 - DockerのアカウントでDocker Hubにアクセスする。
-  - https://hub.docker.com/
+    - https://hub.docker.com/
 - Docker Desktop for Windowsをインストールする。
-  - https://docs.docker.com/get-docker/
+    - https://docs.docker.com/get-docker/
 - Docker Desktop.exeを起動し、IDとPasswordを入力する。
 - コマンドプロンプトを起動し、コマンドdockerが実行できることを確認する。
-  ```
-  > docker version
-  ```
+    ```
+    > docker version
+    ```
 
 ## GUIの設定
 - GUIを使用するためにVcXsrvをインストールする。
