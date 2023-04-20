@@ -1,96 +1,48 @@
-# Docker（Ubuntu）
+# Dockerの設定（Ubuntu）
 
 ## ソフトウェアのインストール
-- Dockerをインストールする。
-  ```
-  $ sudo apt update
-  $ sudo apt -y install docker.io
-  ```
-- コマンドdockerが実行できることを確認する。
-  ```
-  $ docker version
-  ```
+- Dockerをインストールします。
+    ```
+    $ sudo apt update
+    $ sudo apt install docker.io -y
+    ```
+- コマンドdockerが実行できることを確認します。
+    ```
+    $ docker version
+    ```
 
 ## ソケット通信の設定
-- グループ「docker」にユーザーを追加する。
-  ```
-  $ sudo gpasswd -a $USER docker
-  ```
-- ソケット通信に関するファイルの所有者をグループ「docker」に変更する。
-  ```
-  $ sudo chgrp docker /var/run/docker.sock
-  ```
-- サービスDockerを再起動する。
-  ```
-  $ sudo service docker restart
-  ```
-- コンピューターを再起動する。
-  ```
-  $ sudo reboot
-  ```
-- 接続が許可されているクライアント（Docker Container）として「LOCAL:」があることを確認する。
-  ```
-  $ xhost
-  access control enabled, only authorized clients can connect
-  LOCAL:
-  SI:localuser:ユーザー名
-  ```
-  - 「LOCAL:」が無い場合は追加する。
+- グループ「docker」にユーザーを追加します。
     ```
-    $ xhost +local:
+    $ sudo gpasswd -a $USER docker
     ```
-- 改めてDockerサービスを起動する。
-  ```
-  $ sudo service docker restart
-  ```
-
-## イメージのダウンロード
-- ROSがインストールされたUbuntu 20.04のイメージをダウンロードする。
-  ```
-  $ docker image pull ros:foxy-ros-base-focal
-  ```
-- 上記のイメージが存在することを確認する。
-  ```
-  $ docker image ls
-  ```
-
-## コンテナーの作成→テスト
-- イメージを用いてコンテナーを作成し、起動する。オプションnameでコンテナーに対して名前（例：ros-cui）を付けておく。
-  ```
-  $ docker container run -itd --env="DISPLAY" --env="QT_X11_NO_MITSHM=1" --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" --name ros-cui ros:foxy-ros-base-focal /bin/bash
-  ```
-- コンテナー「ros-cui」が存在することを確認する。
-  ```
-  $ docker container ls -a
-  ```
-- コンテナー「ros-cui」に入る。
-  ```
-  $ docker container exec -it ros-cui /bin/bash
-  ```
-- コマンドsudoをインストールする。
-  ```
-  # su
-  # apt update
-  # apt -y install sudo
-  # exit
-  ```
-- geditをインストールし、実行してみる。
-  ```
-  # sudo apt -y install gedit
-  # gedit
-  ```
-  - libGLに関するエラーが発生する場合は、下記のコマンドを実行する。
+- ソケット通信に関するファイルの所有者をグループ「docker」に変更します。
     ```
-    # export LIBGL_ALWAYS_INDIRECT=1
+    $ sudo chgrp docker /var/run/docker.sock
     ```
-- x11-appsをインストールし、実行してみる。
-  ```
-  # sudo apt -y install x11-apps
-  # xeyes
-  ```
-  - マウスカーソルを見続ける目が表示される。
-  - 「Ctrl＋c」で終了できる。
-
+- サービスDockerを再起動します。
+    ```
+    $ sudo service docker restart
+    ```
+- コンピューターを再起動します。
+    ```
+    $ sudo reboot
+    ```
+- 接続が許可されているクライアント（Docker Container）として「LOCAL:」があることを確認します。
+    ```
+    $ xhost
+    access control enabled, only authorized clients can connect
+    LOCAL:
+    SI:localuser:ユーザー名
+    ```
+    - 「LOCAL:」が無い場合は追加します。
+        ```
+        $ xhost +local:
+        ```
+- 改めてDockerサービスを起動します。
+    ```
+    $ sudo service docker restart
+    ```
 
 [このページのトップへ](#)
 

@@ -1,12 +1,12 @@
 # ROSのビルド
-- ROSのプログラムをビルドする方法を学びつつ、ソースコードを作成するための準備を進めます。
+- ROSのプログラムをビルドする方法を学びつつ、ソースコードを作成するための環境を整備します。
 
 ## 環境変数の確認
 - ROSがインストールされていることを確認します。
-  ```
-  $ printenv | grep ROS
-  ROS_DISTRO=foxy
-  ```
+    ```
+    $ printenv | grep ROS
+    ROS_DISTRO=foxy
+    ```
 - ROSの環境を設定します。
   ```
   $ source /ros_entrypoint.sh
