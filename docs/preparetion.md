@@ -13,7 +13,7 @@
     - [https://github.com/](https://github.com/)
 - <span style="color: #CC0066;">アカウント名をMicrosoft Teamsのプライベートチャットで担当教員（SUZUKI Takuo）に教えてください。</span>実験用のリポジトリーに招待します。
 
-## PCの設定
+## PCの用意
 - 自分のPCに詳しくなってほしいですし、自宅でも実施できるよう、本実験では個人のPCを使用します。
 - Ubuntu 20.04（Focal Fossa）、Mac 13.3（Ventura）、Windows 10（Pro、Enterprise、またはEducation）あるいはWindows 11（Pro、Enterprise、またはEducation）のいずれかのOSを使用できるようにしておいてください。
     - 担当教員やTAがサポートしやすいのは、Ubuntu＞Mac＞Windowsの順番です。
