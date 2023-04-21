@@ -20,15 +20,11 @@
     ```
     $ sudo chgrp docker /var/run/docker.sock
     ```
-- サービスDockerを再起動します。
-    ```
-    $ sudo service docker restart
-    ```
 - コンピューターを再起動します。
     ```
     $ sudo reboot
     ```
-- 接続が許可されているクライアント（Docker Container）として「LOCAL:」があることを確認します。
+- 接続が許可されているXクライアントとして「LOCAL:」があることを確認します。
     ```
     $ xhost
     access control enabled, only authorized clients can connect
@@ -39,7 +35,7 @@
         ```
         $ xhost +local:
         ```
-- 改めてDockerサービスを起動します。
+- Dockerサービスを再起動します。
     ```
     $ sudo service docker restart
     ```
