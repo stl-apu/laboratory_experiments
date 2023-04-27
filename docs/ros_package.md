@@ -38,8 +38,8 @@
         …
         entry_points={
             'console_scripts': [
-                'test_subscriber_node = laboratory_experiments_2023.practice_subscriber_node:main',
-                'test_publisher_node = laboratory_experiments_2023.practice_publisher_node:main',
+                'practice_subscriber_node = laboratory_experiments_2023.practice_subscriber_node:main',
+                'practice_publisher_node = laboratory_experiments_2023.practice_publisher_node:main',
             ],
         },
         …
