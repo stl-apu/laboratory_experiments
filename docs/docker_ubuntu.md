@@ -2,43 +2,43 @@
 
 ## ソフトウェアのインストール
 - Dockerをインストールします。
-    ```
-    $ sudo apt update
-    $ sudo apt install docker.io -y
-    ```
+```
+$ sudo apt update
+$ sudo apt install docker.io -y
+```
 - コマンドdockerが実行できることを確認します。
-    ```
-    $ docker version
-    ```
+```
+$ docker version
+```
 
 ## ソケット通信の設定
 - グループ「docker」にユーザーを追加します。
-    ```
-    $ sudo gpasswd -a $USER docker
-    ```
+```
+$ sudo gpasswd -a $USER docker
+```
 - ソケット通信に関するファイルの所有グループを「docker」に変更します。
-    ```
-    $ sudo chgrp docker /var/run/docker.sock
-    ```
+```
+$ sudo chgrp docker /var/run/docker.sock
+```
 - コンピューターを再起動します。
-    ```
-    $ sudo reboot
-    ```
+```
+$ sudo reboot
+```
 - 接続が許可されているXクライアントとして「LOCAL:」があることを確認します。
-    ```
-    $ xhost
-    access control enabled, only authorized clients can connect
-    LOCAL:
-    SI:localuser:ユーザー名
-    ```
+```
+$ xhost
+access control enabled, only authorized clients can connect
+LOCAL:
+SI:localuser:ユーザー名
+```
     - 「LOCAL:」が無い場合は追加します。
-        ```
-        $ xhost +local:
-        ```
+    ```
+    $ xhost +local:
+    ```
 - Dockerサービスを再起動します。
-    ```
-    $ sudo service docker restart
-    ```
+```
+$ sudo service docker restart
+```
 
 [このページのトップへ](#)
 
