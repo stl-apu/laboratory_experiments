@@ -106,7 +106,7 @@
 
 - 実行します。
     ```
-    $ ros2 launch practice_package practice_launch
+    $ ros2 launch practice_package practice_launch.py
     ```
 
 [このページのトップへ](#)

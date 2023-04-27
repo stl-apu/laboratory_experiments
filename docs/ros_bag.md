@@ -7,7 +7,7 @@
 ## 記録
 - 記録したいノードを立ち上げます。
     ```
-    $ ros2 launch practice_package practice_launch
+    $ ros2 launch practice_package practice_launch.py
     ```
 
 - 別のターミナルを開き、トピックの一覧を確認します。
