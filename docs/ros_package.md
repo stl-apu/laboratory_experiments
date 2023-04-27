@@ -6,9 +6,12 @@
 ## ROSパッケージの作成
 - ROSパッケージはディレクトリーsrcに作成します。今回はlaboratory_experiments_2023というメタパッケージの中に作成します。
     ```
+    $ docker container exec -it ros-cui /bin/bash
+    $ source /ros_entrypoint.sh
     $ cd ~/colcon_ws/src/laboratory_experiments_2023
     ```
     - メタパッケージは複数のROSパッケージをまとめたものです。ロボットは複数の機能を組み合わせて使用することが多いので、多くのメタパッケージが使用されています。
+
 - 下記のコマンドでパッケージを作成します。パッケージ名はpractice_packageとします。このpractice_packageは個人で練習するためのROSパッケージとして使用していきます。
     ```
     《記法》

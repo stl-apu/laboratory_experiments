@@ -16,12 +16,12 @@
 ## プログラムの実行
 - 3つのターミナルを使用します。
 
-
 ### 1つ目：ROSトピックの購読
 - listenerを起動します。
     ```
     $ docker container exec -it ros-cui /bin/bash
-    $ source ros_entrypoint.sh
+    $ source /ros_entrypoint.sh
+    $ source ~/colcon_ws/install/setup.bash
     $ ros2 run practice_package practice_subscriber_node
     ```
 
@@ -29,7 +29,8 @@
 - talkerを起動します。
     ```
     $ docker container exec -it ros-cui /bin/bash
-    $ source ros_entrypoint.sh
+    $ source /ros_entrypoint.sh
+    $ source ~/colcon_ws/install/setup.bash
     $ ros2 run practice_package practice_publisher_node
     ```
 
@@ -37,7 +38,7 @@
 - ツール「rqt_graph」でROSノード同士の繋がりを確認します。
     ```
     $ docker container exec -it ros-cui /bin/bash
-    $ source ros_entrypoint.sh
+    $ source /ros_entrypoint.sh
     $ rqt_graph
     ```
 
