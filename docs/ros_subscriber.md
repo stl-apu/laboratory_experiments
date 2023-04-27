@@ -41,14 +41,14 @@
         print('==========プログラム開始==========')
         rclpy.init()
         node = PracticeSubscriber()
-    try:
-        rclpy.spin(node)
-    except KeyboardInterrupt:
-        print('Ctrl＋cが押されました。')
-    finally:
-        node.destroy_node()
-        rclpy.shutdown()
-        print('==========プログラム終了==========')
+        try:
+            rclpy.spin(node)
+        except KeyboardInterrupt:
+            print('Ctrl＋cが押されました。')
+        finally:
+            node.destroy_node()
+            rclpy.shutdown()
+            print('==========プログラム終了==========')
     ```
     - 関数`main()`を定義します。
         - 関数`init()`でROS2の通信を初期化します。
