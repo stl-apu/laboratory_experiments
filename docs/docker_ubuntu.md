@@ -32,9 +32,9 @@ LOCAL:
 SI:localuser:ユーザー名
 ```
     - 「LOCAL:」が無い場合は追加します。
-    ```
-    $ xhost +local:
-    ```
+```
+$ xhost +local:
+```
 - Dockerサービスを再起動します。
 ```
 $ sudo service docker restart
