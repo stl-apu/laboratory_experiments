@@ -1,13 +1,13 @@
-# launch
-- 毎回、複数のターミナルを開いて実行するのは面倒なので、普通はlaunchファイルを作成し実行します。
-- launchコマンドでlaunchファイルを実行すると、複数のROSノードを1つのターミナルで起動することができます。
+# ROS launch（ローンチ）
+- 毎回、複数のターミナルを開いて実行するのは面倒なので、普通はlaunchファイルを作成します。
+- コマンドlaunchでlaunchファイルを実行すると、複数のROSノードを1つのターミナルで起動することができます。
 - launchディレクトリーを作成し、その中にlaunchファイルを置きます。
     ```
     ~/colcon_ws/src/パッケージ名/launch/launchファイル名.py
     ```
-    - launchファイル名は「sample_launch.py」のように「_launch」を付けることが多いです。
+    - launchファイル名は「sample_launch.py」のように最後に「_launch」を付けることが多いです。
 
-## launchの試用
+## launchファイルの試用
 - 試しにlaunchファイルを実行してみましょう。1つのコマンドで3つのノードを起動することができます。
     ```
     $ ros2 launch sample_package listener_talker_launch.py
@@ -16,37 +16,36 @@
     - talkerノードが端末と共に起動します。
     - rqt_graphノードがGUIツールとして起動します。
 
-
 ## launchファイルの作成
-- 拡張子から予想できますが、launchファイルはPythonで記述します。
+- 拡張子から分かると思いますが、launchファイルはPythonで記述します。
 - まず、パッケージpractice_packageにlaunchディレクトリーを作成します。
     ```
     $ cd ~/colcon_ws/src/practice_package/
     $ mkdir launch
     $ cd launch
     ```
-- 次に、ファイルassignment_launch.pyを作成します。
+- 次に、ファイルpractice_launch.pyを作成します。
     ```
-    $ nano assignment_launch.py
+    $ nano practice_launch.py
     ```
 
-- ここから具体的にlaunchファイルの内容を記述していきます。
-
+## launchファイルの記述
+- ここから具体的にlaunchファイルの中身を記述していきます。
 - 2つのモジュールをimportします。
     ```
     import launch
     import launch_ros.actions
     ```
 
-- メソッドgenerate_launch_descriptionでオブジェクトLaunchDescriptionを返します。
+- 関数`generate_launch_description`でオブジェクトLaunchDescriptionを返します。
     ```
     def generate_launch_description():
         return launch.LaunchDescription([
         ])
     ```
 
-- 角括弧の間に起動するROSノードに関して記述します。
-- 1つ目はsubscriberを起動します。
+- 角括弧の間に起動するROSノードに関する情報を記述します。
+- 1つ目のノードとしてsubscriberを起動します。
     ```
     launch_ros.actions.Node(
         package='practice_package',
@@ -55,8 +54,8 @@
         prefix='xterm -e',
         on_exit=launch.actions.Shutdown())
     ```
-    - 必須項目はpackageとexecutableのみです。他の項目について調査してみましょう。
-- 2つ目はpublisherを起動します。
+    - 必須項目はpackageとexecutableのみです。他の項目については自分で調査してみましょう。
+- 2つ目のノードとしてはpublisherを起動します。
     ```
     launch_ros.actions.Node(
         package='practice_package',
@@ -65,7 +64,7 @@
         prefix='xterm -e',
         on_exit=launch.actions.Shutdown())
     ```
-    - 複数のノードを起動する時はコンマで区切ります。
+    - 複数のROSノードを起動する時はコンマで区切ります。
 - 3つ目はrqt_graphを起動します。
     ```
     launch_ros.actions.Node(
@@ -74,8 +73,7 @@
         output='screen',
         on_exit=launch.actions.Shutdown())
     ```
-    - rqt_graphはGUIツールなので、xtermは必要ありません。
-
+    - rqt_graphはGUIツールなので、xtermを起動する必要はありません。
 
 ## launchファイルの設定
 - setup.pyを編集する必要があります。
@@ -93,6 +91,7 @@
     ],
     ：
     ```
+    - package_nameを「practice_package」などと書き換える必要はありません。上記のまま記述してください。
 
 ## launchファイルの実行
 - ビルドします。
@@ -100,14 +99,14 @@
     $ cd ~/colcon_ws && colcon build
     ```
 
-- 一応、xtermが使用できるかどうかを確認しておきます。
+- 一応、事前にxtermが使用できるかどうかを確認しておきます。
     ```
     $ xterm
     ```
 
 - 実行します。
     ```
-    $ ros2 launch practice_package assignment_launch
+    $ ros2 launch practice_package practice_launch
     ```
 
 [このページのトップへ](#)
