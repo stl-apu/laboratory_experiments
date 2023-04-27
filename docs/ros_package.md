@@ -16,7 +16,7 @@
     《実例》
     $ ros2 pkg create practice_package --build-type ament_python
     ```
-- 3つのファイルと3つのディレクトリーが作成されます。
+- 3つのファイルと3つのディレクトリーが作成されます。コマンドlsで確認してみます。
     ```
     $ ls
     setup.py
@@ -35,8 +35,8 @@
         …
         entry_points={
             'console_scripts': [
-                'test_subscriber_node = laboratory_experiments_2023.test_subscriber_node:main',
-                'test_publisher_node = laboratory_experiments_2023.test_publisher_node:main',
+                'test_subscriber_node = laboratory_experiments_2023.practice_subscriber_node:main',
+                'test_publisher_node = laboratory_experiments_2023.practice_publisher_node:main',
             ],
         },
         …
