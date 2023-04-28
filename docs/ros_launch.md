@@ -2,10 +2,10 @@
 - 毎回、複数のターミナルを開いて実行するのは面倒なので、普通はlaunchファイルを作成します。
 - コマンドlaunchでlaunchファイルを実行すると、複数のROSノードを1つのターミナルで起動することができます。
 - launchディレクトリーを作成し、その中にlaunchファイルを置きます。
-    ```
-    ~/colcon_ws/src/パッケージ名/launch/launchファイル名.py
-    ```
-    - launchファイル名は「sample_launch.py」のように最後に「_launch」を付けることが多いです。
+```
+~/colcon_ws/src/パッケージ名/launch/launchファイル名.py
+```
+- launchファイル名は「sample_launch.py」のように最後に「_launch」を付けることが多いです。
 
 ## launchファイルの試用
 - 試しにlaunchファイルを実行してみましょう。1つのコマンドで3つのノードを起動することができます。
@@ -49,7 +49,7 @@
     ```
     launch_ros.actions.Node(
         package='practice_package',
-        executable='subscriber',
+        executable='practice_subscriber_node',
         output='screen',
         prefix='xterm -e',
         on_exit=launch.actions.Shutdown())
@@ -59,7 +59,7 @@
     ```
     launch_ros.actions.Node(
         package='practice_package',
-        executable='publisher',
+        executable='practice_publisher_node',
         output='screen',
         prefix='xterm -e',
         on_exit=launch.actions.Shutdown())
