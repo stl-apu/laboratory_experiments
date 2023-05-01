@@ -24,12 +24,12 @@
 - [ROS Publisher](https://stl-apu.github.io/laboratory_experiments/ros_publisher)
 - [ROS Build](https://stl-apu.github.io/laboratory_experiments/ros_build)
 - [ROS Launch](https://stl-apu.github.io/laboratory_experiments/ros_launch)
-- [ROS Bag](https://stl-apu.github.io/laboratory_experiments/ros_bag)
 - [Assignment 2](https://stl-apu.github.io/laboratory_experiments/assignment2)
 
 ### Week 3（in preparation）
 グループでロボットを動かします。
 - [ROS Simulation](https://stl-apu.github.io/laboratory_experiments/ros_simulation)
 - [ROS Parameter](https://stl-apu.github.io/laboratory_experiments/ros_parameter)
+- [ROS Bag](https://stl-apu.github.io/laboratory_experiments/ros_bag)
 - [ROS TurtleBot](https://stl-apu.github.io/laboratory_experiments/ros_turtlebot)
 - [Assignment 3](https://stl-apu.github.io/laboratory_experiments/assignment3)
