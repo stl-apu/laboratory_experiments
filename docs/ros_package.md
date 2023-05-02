@@ -54,12 +54,12 @@ $ nano package.xml
 ```
     - rclpyとstd_msgsを追記しておきます。
 ```
-`<package format="3">`
+&lt;package format="3"&gt;
     …
-    `<exec_depend>`rclpy`</exec_depend>`
-    `<exec_depend>`std_msgs`</exec_depend>`
+    &lt;exec_depend&gt;rclpy&lt;/exec_depend&gt;
+    &lt;exec_depend&gt;std_msgs&lt;/exec_depend&gt;
     …
-`</package>`
+&lt;/package&gt;
 ```
 
 [このページのトップへ](#)
