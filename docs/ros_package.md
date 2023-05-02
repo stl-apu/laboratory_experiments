@@ -53,6 +53,7 @@ entry_points={
 $ nano package.xml
 ```
     - rclpyとstd_msgsを追記しておきます。
+
     ```
     <package format="3">
         …
