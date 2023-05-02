@@ -32,6 +32,7 @@
 ### Week 3（in preparation）
 グループでロボットを動かします。
 - [ROS Simulation](https://stl-apu.github.io/laboratory_experiments/ros_simulation)
+- [ROS Service](https://stl-apu.github.io/laboratory_experiments/ros_service)
 - [ROS Parameter](https://stl-apu.github.io/laboratory_experiments/ros_parameter)
 - [ROS Bag](https://stl-apu.github.io/laboratory_experiments/ros_bag)
 - [ROS TurtleBot](https://stl-apu.github.io/laboratory_experiments/ros_turtlebot)
