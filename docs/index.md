@@ -6,7 +6,10 @@
 ## 実験内容
 ### Week 0
 - [事前準備](https://stl-apu.github.io/laboratory_experiments/preparetion)
-- 予習用動画（ROS）
+- [予習用動画](https://youtu.be/-cXh0QW575M)
+    - ROS概論
+    - YouTube
+    - 約1時間
 
 ### Week 1
 個人でROSの仕組みを学びます。
