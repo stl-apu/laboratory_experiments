@@ -56,10 +56,10 @@ $ nano package.xml
 ```
 &lt;package format="3">
     …
-    <exec_depend>rclpy</exec_depend>
-    <exec_depend>std_msgs</exec_depend>
+    &lt;exec_depend>rclpy</exec_depend>
+    &lt;exec_depend>std_msgs</exec_depend>
     …
-</package>
+&lt;/package>
 ```
 
 [このページのトップへ](#)
