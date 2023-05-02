@@ -3,11 +3,16 @@
 - 単純なシミュレーターturtlesimをキーボードで動かします。  
 
 ## 準備
-- コンテナーの中に入り、シミュレーション用のROSパッケージをインストールする。
+- コンテナーの中に入り、シミュレーション用のROSパッケージをインストールします。
 ```
 $ source /ros_entrypoint.sh
 $ sudo apt update
 $ sudo apt install ros-foxy-turtlesim -y
+```
+
+- ROSパッケージが実行可能であることを確認します。
+```
+$ ros2 pkg executables turtlesim
 ```
 
 ## 基礎
@@ -82,7 +87,7 @@ $ rqt
 - 次に、［Plugins］→［Robot Tools］からでRobot Steeringを追加します。
 - ボックスに/turtle1/cmd_velと入力し、スライダーで値を変化させます。値が変化すると、自動的にトピックが出版されます。
 
-### 6つ目：マウスを用いた操作
+### マウスを用いた操作
 - ロボットをマウスで操作することもできます。
 - シミュレーターを一旦終了し、必要なソフトウェアをインストールします。
 
