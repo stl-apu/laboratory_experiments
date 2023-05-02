@@ -1,50 +1,55 @@
 # シミュレーション
 - シミュレーターの中でロボットを動作させます。
-- turtlesimをキーボードで動かします。  
+- 単純なシミュレーターturtlesimをキーボードで動かします。  
 
 ## 準備
-- シミュレーション用のROSパッケージをインストールする。
-  ```
-  $ sudo apt update
-  $ sudo apt -y install ros-melodic-turtlesim
-  ```
+- コンテナーの中に入り、シミュレーション用のROSパッケージをインストールする。
+```
+$ source /ros_entrypoint.sh
+$ sudo apt update
+$ sudo apt install ros-foxy-turtlesim -y
+```
 
 ## 基礎
 - 全部で3つのターミナルを用います。ターミナルを3つ用意しても良いですし、1つのターミナルに3つのタブを作成しても良いです。
-- 3つ目のターミナルをアクティブにした状態で矢印キー（↑キーや→キー）を入力すると、ロボットを動かせます。
-- ROSマスターやROSノードは「Ctrlキー＋cキー」で停止できます。
+- ROSノードは「Ctrlキー＋cキー」で停止できます。
 
-### 1つ目：ROSマスターの起動
-- 環境変数などを設定する。
-  ```
-  $ source ~/catkin_ws/devel/setup.bash
-  ```
-- ROSマスターを起動する。  
-  ```
-  $ roscore
-  ```
+### 1つ目：シミュレーターの起動
+- シミュレーターを起動します。
+```
+$ source /ros_entrypoint.sh
+$ ros2 run turtlesim turtlesim_node
+```
 
-### 2つ目：シミュレーターの起動
-- 環境変数などを設定する。
-  ```
-  $ source ~/catkin_ws/devel/setup.bash
-  ```
-- バーチャルなロボットとして、turtlesimノードを起動する。  
-  ```
-  $ rosrun turtlesim turtlesim_node
-  ```
+### 2つ目：コントローラーの起動
+- ロボットを動かすため、キーボード入力を速度情報に変換するROSノードを起動します。
+```
+$ source /ros_entrypoint.sh
+$ ros2 run turtlesim turtle_teleop_key
+```
 
-### 3つ目：コントローラーの起動
-- 環境変数などを設定する。
-  ```
-  $ source ~/catkin_ws/devel/setup.bash
-  ```
-- ロボットを動かすため、キーボード入力を速度情報に変換するROSノードを起動する。
-  ```
-  $ rosrun turtlesim turtle_teleop_key
-  ```
+- このターミナルをアクティブにした状態で矢印キー（↑キーや→キーなど）を入力すると、ロボットを動かせます。
+
+### 3つ目：ビューワーの起動
+- ノードの一覧を確認してみます。
+```
+$ ros2 node list
+```
+    - 2つのノード（turtlesimとteleop_turtle）が存在することを確認できると思います。
+
+- ノード同士の繋がりを確認してみます。
+```
+$ rqt_graph
+```
+    - 2つのノードがトピック/turtle1/cmd_velで繋がっていることを確認できると思います。
+    - 「ロボットを動作させる時」と「talkerとlistnerで会話する時」が全く同じ仕組みで動いていることを理解してください。
+
+
+
+
 - 重要なポイントは、/teleop_turtleノードは速度情報を出版しているだけ、/turtlesimノードは速度情報を購読しているだけで、どのノードが配信・購読しているかは全く関係ないところです。つまり、速度情報（/turtle1/cmd_vel）を出すのが、キーボードでも、マウスでも、ジョイスティックでも、画像処理の結果でも、音声処理の結果でも、何でも大丈夫です。同様に、キーボードだけで、バーチャルなロボットも、リアルなロボットも、自動車も、ドローンも、何でも操作することができます。
 - これがROSの利点です！
+
 
 ## 発展
 
