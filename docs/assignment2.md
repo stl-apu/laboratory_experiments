@@ -29,7 +29,7 @@ $ git checkout -b feature/baymax
 
 - 最後にassignment_packageの中にreadme.mdを作成してください。このreadmeファイルに書いてある手順で実行できることを確認し、評価します。
     - mdファイルの書き方は[ココ](https://guides.github.com/features/mastering-markdown/)を参考にしてください。
- 
+
 - 評価可能な状態になったら代表者がTeamsのグループチャットで鈴木＜SUZUKI Takuo＞に連絡してください。
     - 代表者以外のメンバーが確認できるように、他のメンバーをグループに加えましょう。
 

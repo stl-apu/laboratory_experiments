@@ -14,50 +14,51 @@ $ cd ~/colcon_ws/src/laboratory_experiments_2023
 
 
 - 下記のコマンドでパッケージを作成します。パッケージ名はpractice_packageとします。このpractice_packageは個人で練習するためのROSパッケージとして使用していきます。
-    ```
-    《記法》
-    $ ros2 pkg create パッケージ名 --build-type ament_python
-    《実例》
-    $ ros2 pkg create practice_package --build-type ament_python
-    ```
+```
+《記法》
+$ ros2 pkg create パッケージ名 --build-type ament_python
+《実例》
+$ ros2 pkg create practice_package --build-type ament_python
+```
 - 3つのファイルと3つのディレクトリーが作成されます。コマンドlsで確認してみます。
-    ```
-    $ ls
-    setup.py
-    setup.cfg
-    package.xml
-    パッケージ名のディレクトリー
-    resourceディレクトリー
-    testディレクトリー
-    ```
+```
+$ ls
+setup.py
+setup.cfg
+package.xml
+パッケージ名のディレクトリー
+resourceディレクトリー
+testディレクトリー
+```
 - setup.pyを開き、エントリーポイントを指定します。エントリーポイントはROSノードのプログラムの開始点で、main関数を指定します。
-    ```
-    $ nano setup.py
-    ```
+```
+$ nano setup.py
+```
     - subscriberとpublisherを作成する予定なので、下記の通り追記しておきます。
-        ```
-        …
-        entry_points={
-            'console_scripts': [
-                'practice_subscriber_node = practice_package.practice_subscriber_node:main',
-                'practice_publisher_node = practice_package.practice_publisher_node:main',
-            ],
-        },
-        …
-        ```
+```
+…
+entry_points={
+    'console_scripts': [
+        'practice_subscriber_node = practice_package.practice_subscriber_node:main',
+        'practice_publisher_node = practice_package.practice_publisher_node:main',
+    ],
+},
+…
+```
+
 - package.xmlを開き、Pythonプログラムの中でインポートするモジュールを事前に記述しておきます。
-    ```
-    $ nano package.xml
-    ```
+```
+$ nano package.xml
+```
     - rclpyとstd_msgsを追記しておきます。
-        ```
-        <package format="3">
-            …
-            <exec_depend>rclpy</exec_depend>
-            <exec_depend>std_msgs</exec_depend>
-            …
-        </package>
-        ```
+```
+<package format="3">
+    …
+    <exec_depend>rclpy</exec_depend>
+    <exec_depend>std_msgs</exec_depend>
+    …
+</package>
+```
 
 [このページのトップへ](#)
 
