@@ -52,14 +52,10 @@ entry_points={
 ```
 $ nano package.xml
 ```
-    - rclpyとstd_msgsを追記しておきます。
+    - rclpyとstd_msgsを追記しておきます。<package format="3">と</package>の間に追記します。
 ```
-&lt;package format="3">
-    …
-    &lt;exec_depend>rclpy</exec_depend>
-    &lt;exec_depend>std_msgs</exec_depend>
-    …
-&lt;/package>
+<exec_depend>rclpy</exec_depend>
+<exec_depend>std_msgs</exec_depend>
 ```
 
 [このページのトップへ](#)
