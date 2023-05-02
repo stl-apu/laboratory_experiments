@@ -4,12 +4,12 @@
 - 演習室6で実施します。
 
 ## 実験内容
+
 ### Week 0
 - [事前準備](https://stl-apu.github.io/laboratory_experiments/preparetion)
-- [予習用動画](https://youtu.be/-cXh0QW575M)
-    - ROS概論
-    - YouTube
-    - 約1時間
+- [事前学習](https://youtu.be/-cXh0QW575M)
+    - YouTubeの動画を視聴してください。
+    - 内容は「ROS概論」で、動画の長さは約1時間です。
 
 ### Week 1
 個人でROSの仕組みを学びます。
