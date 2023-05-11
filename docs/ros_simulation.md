@@ -84,7 +84,13 @@ $ rqt_plot
 ```
 $ rqt
 ```
+
 - 次に、［Plugins］→［Robot Tools］からでRobot Steeringを追加します。
+    - Robot Toolsが見つからない人は、オプション付きで実行してみてください。
+```
+$ rqt --force-discover
+```
+
 - ボックスに/turtle1/cmd_velと入力し、スライダーで値を変化させます。値が変化すると、自動的にトピックが出版されます。
 
 ### マウスを用いた操作
