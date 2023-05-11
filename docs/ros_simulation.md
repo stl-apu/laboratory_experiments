@@ -112,10 +112,11 @@ $ source ~/colcon_ws/install/setup.bash
 - シミュレーターなどを再度実行し、マウスで操作するためのROSノードを起動します。
 ```
 $ ros2 run mouse_teleop mouse_teleop
-↓
+↓読替
 $ ros2 run mouse_teleop mouse_teleop --remap mouse_vel:=/turtle1/cmd_vel
 ```
     - マウスのドラッグにより並進移動量と回転移動量を出版することができます。
+    - そのままではmouse_velという名前でトピックを出版するので、オプションremapを用いてmouse_velを/turtle1/cmd_velという名前で出版するように変更する。
 
 [このページのトップへ](#)
 
