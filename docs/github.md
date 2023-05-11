@@ -84,7 +84,7 @@ $ ssh -T git@github.com
 ## 全体ダウンロード
 - ROSでは、プログラムをワークスペースのsrcに置くので、ディレクトリーを移動します。
 ```
-$ cd ~/colcon_ws/src
+$ cd ~/colcon_ws/src/
 ```
 - コマンドcloneでプログラムをコピー（初回ダウンロード）します。
 ```

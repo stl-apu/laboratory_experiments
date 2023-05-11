@@ -99,7 +99,7 @@ $ rqt --force-discover
 
 - ROSパッケージ「teleop_tools」をcloneします。
 ```
-$ cd ~/colcon_ws/src
+$ cd ~/colcon_ws/src/
 $ git clone git@github.com:ros-teleop/teleop_tools.git
 ```
 
