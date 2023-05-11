@@ -40,7 +40,7 @@ $ ros2 run turtlesim turtle_teleop_key
 ```
 $ ros2 node list
 ```
-    - 2つのノード（turtlesimとteleop_turtle）が存在することを確認できると思います。
+    - 2つのノード（/turtlesimと/teleop_turtle）が存在することを確認できると思います。
 
 - ノード同士の繋がりを確認してみます。
 ```
