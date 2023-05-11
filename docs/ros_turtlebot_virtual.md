@@ -19,30 +19,20 @@ $ docker container run -p 6080:80 --shm-size=512m tiryoh/ros2-desktop-vnc:foxy
 # シミュレーションの準備
 - 必要となる関連パッケージを予めインストールしておきます。
 ```
-$ sudo apt-get update
-$ sudo apt-get upgrade -y
-$ sudo apt install ros-foxy-gazebo-* ros-foxy-cartographer ros-foxy-cartographer-ros ros-foxy-navigation2 ros-foxy-nav2-bringup -y
+$ sudo apt update
+$ sudo apt upgrade -y
+$ sudo apt install ros-foxy-gazebo-* -y
+$ sudo apt install ros-foxy-cartographer ros-foxy-cartographer-ros -y
+$ sudo apt install ros-foxy-navigation2 ros-foxy-nav2-bringup -y
 ```
     - Gazebo（Gazebo11）
     - Cartographer
     - Navigation2
 
-
-
 - TurtleBot3用のパッケージをインストールします。
 ```
 $ source ~/.bashrc
-$ sudo apt install ros-foxy-dynamixel-sdk ros-foxy-turtlebot3-msgs ros-foxy-turtlebot3 -y
-```
-
-- 1つだけROSの環境変数を設定します。
-```
-$ export ROS_DOMAIN_ID=30
-```
-    - 毎回、設定するのが面倒なら、.bashrcに書き込んでおきましょう。
-```
-$ echo 'export ROS_DOMAIN_ID=30' >> ~/.bashrc
-$ source ~/.bashrc（←設定した直後のみ）
+$ sudo apt install ros-foxy-dynamixel-sdk ros-foxy-turtlebot3 ros-foxy-turtlebot3-msgs ros-foxy-turtlebot3-gazebo -y
 ```
 
 - TurtleBot3のシミュレーション用のパッケージをインストールします。
@@ -54,9 +44,18 @@ $ cd ~/colcon_ws
 $ colcon build --symlink-install
 ```
 
+- ROSの環境変数を設定します。
+- ROS_DOMAIN_IDは0～65535の中で好きな数字を選んで設定してください。
 - TurtleBot3はburgerとwaffleがあるので、ロボットのモデルとしてburgerと設定しておきます。
 ```
+$ export ROS_DOMAIN_ID=30
 $ export TURTLEBOT3_MODEL=burger
+```
+    - 毎回、設定するのが面倒なら、.bashrcに書き込んでおきましょう。
+```
+$ echo 'export ROS_DOMAIN_ID=30' >> ~/.bashrc
+$ echo 'export TURTLEBOT3_MODEL=burger' >> ~/.bashrc
+$ source ~/.bashrc（←設定した直後のみ）
 ```
 
 - 動作確認の意味で、empty_world（何も無い世界）を起動してみます。
@@ -64,7 +63,7 @@ $ export TURTLEBOT3_MODEL=burger
 $ ros2 launch turtlebot3_gazebo empty_world.launch.py
 ```
     - 何も無い世界でも5分くらい掛かります。
-    - マウスの左ボタンを押しながらドラッグすると、視点を平行移動できます。
+    - マウスの左ボタンを押しながらドラッグすると、視点を並進移動できます。
     - マウスの左ボタンとキーボードのShiftボタンを押しながらドラッグすると、視点を回転移動できます。
     - マウスの左ボタンを押しながらドラッグすると、視点を近づけたり遠ざけたりできます。
     - 「Ctrl＋c」で終了できます。
@@ -90,6 +89,11 @@ ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py
 ```
 $ rviz2
 ```
+    - 「Global Options」→「Fixed Frame」を「base_link」などに変更します。
+    - ボタン「add」をクリックし、「By topic」を選択するとトピック「/scan」が選択できるので、追加してみます。
+    - マウスの左ボタンを押しながらドラッグすると、視点を回転移動できます。
+    - マウスの左ボタンとキーボードのShiftボタンを押しながらドラッグすると、視点を並進移動できます。
+    - マウスの左ボタンを押しながらドラッグすると、視点を近づけたり遠ざけたりできます。
 
 [このページのトップへ](#)
 

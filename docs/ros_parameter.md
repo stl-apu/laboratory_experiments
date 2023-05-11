@@ -9,6 +9,7 @@
 ```
 $ ros2 run turtlesim turtlesim_node
 ```
+- パラメーターの一覧を確認します。
 ```
 $ ros2 param list
 ```
