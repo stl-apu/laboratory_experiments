@@ -13,7 +13,7 @@ $ docker container exec -it ros-cui /bin/bash
 $ sudo apt update
 $ sudo apt install ros-foxy-demo-nodes-cpp -y
 $ sudo apt install ros-foxy-demo-nodes-py -y
-$ sudo apt install ros-foxy-rqt-graph -y
+$ sudo apt install ros-foxy-rqt* -y
 ```
 - アクセラレーターをオフに設定しておきます。
 ```
