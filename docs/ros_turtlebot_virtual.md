@@ -80,8 +80,7 @@ $ ros2 run turtlebot3_teleop teleop_keyboard
 
 - 次にTurtleBot3 Worldを試してみましょう。
 ```
-ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py
-や
+$ ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py
 ```
 
 - Gazeboの物理演算エンジンにより、仮想的に画像を取得したり、障害物との衝突判定を行ったり、リアルロボット（実機）に近いシミュレーションを実施することができます。
