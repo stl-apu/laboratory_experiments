@@ -7,14 +7,19 @@
 $ echo $DISPLAY
 ```
     - 設定させていない場合は「Dockerの設定」を確認しましょう。
-- 必要なパッケージをインストールしておきます。
+- コンテナーに入って…
 ```
 $ docker container exec -it ros-cui /bin/bash
+```
+
+- 必要なパッケージをインストールしておきます。
+```
 $ sudo apt update
 $ sudo apt install ros-foxy-demo-nodes-cpp -y
 $ sudo apt install ros-foxy-demo-nodes-py -y
 $ sudo apt install ros-foxy-rqt* -y
 ```
+
 - アクセラレーターをオフに設定しておきます。
 ```
 $ export LIBGL_ALWAYS_INDIRECT=1
