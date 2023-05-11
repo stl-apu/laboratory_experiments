@@ -6,22 +6,22 @@
 
 ## 記録
 - 記録したいノードを立ち上げます。
-    ```
-    $ ros2 launch practice_package practice_launch.py
-    ```
+```
+$ ros2 launch practice_package practice_launch.py
+```
 
 - 別のターミナルを開き、トピックの一覧を確認します。
-    ```
-    $ ros2 topic list
-    ```
+```
+$ ros2 topic list
+```
 
 - 記録したいトピックを選択しながらコマンド`bag record`を実行します。
-    ```
-    《記法》
-    $ ros2 bag record -o バッグファイル名 トピック名
-    《実例》
-    $ ros2 bag record -o practice_bag practice_topic
-    ```
+```
+《記法》
+$ ros2 bag record -o バッグファイル名 トピック名
+《実例》
+$ ros2 bag record -o practice_bag practice_topic
+```
     - オプションoでバッグファイルに名前を付けることができます。
     - Ctrl＋cで記録を終了します。
 
@@ -31,31 +31,31 @@
 
 ## 確認
 - コマンド`bag info`で確認します。
-    ```
-    《記法》
-    $ ros2 bag info バッグファイル名
-    《実例》
-    $ ros2 bag info practice_bag
-    ```
+```
+《記法》
+$ ros2 bag info バッグファイル名
+《実例》
+$ ros2 bag info practice_bag
+```
     - 記録したかったトピックが正しく記録されているかを確認することができます。
     - 記録の長さなども確認することができます。
 
 ## 再生
 - コマンド`bag play`で再生します。
-    ```
-    《記法》
-    $ ros2 bag play バッグファイル名
-    《実例》
-    $ ros2 bag play practice_bag
-    ```
+```
+《記法》
+$ ros2 bag play バッグファイル名
+《実例》
+$ ros2 bag play practice_bag
+```
     - オプションx（--rate）で再生速度の倍率を設定できます。速くすることも遅くすることもできます。
         - 再生速度を遅くすることで、ロースペックのPCでもシミュレーションを実行することができます。また、プログラムのデバッグや実験結果の分析が行いやすくなるという利点もあります。
         - 逆に速くすることで、実験を高速に実施することができます。
 
 - 別のターミナルを開き、コマンド`topic echo`で正常に出力されていることを確認してみましょう。
-    ```
-    $ ros2 topic echo practice_topic
-    ```
+```
+$ ros2 topic echo practice_topic
+```
 
 [このページのトップへ](#)
 
