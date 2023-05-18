@@ -30,10 +30,11 @@
 - [ROS Bag](https://stl-apu.github.io/laboratory_experiments/ros_bag)
 - [Assignment 2](https://stl-apu.github.io/laboratory_experiments/assignment2)
 
-### Week 3（in preparation）
+### Week 3
 グループでロボットを動かします。
 - [ROS Simulation](https://stl-apu.github.io/laboratory_experiments/ros_simulation)
 - [ROS Service](https://stl-apu.github.io/laboratory_experiments/ros_service)
 - [ROS Parameter](https://stl-apu.github.io/laboratory_experiments/ros_parameter)
 - [ROS TurtleBot](https://stl-apu.github.io/laboratory_experiments/ros_turtlebot)
+- ROS Processing
 - [Assignment 3](https://stl-apu.github.io/laboratory_experiments/assignment3)
