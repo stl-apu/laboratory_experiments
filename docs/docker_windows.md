@@ -19,17 +19,21 @@
 ## GUIの設定
 - GUIを使用するためにVcXsrvをインストールする。
     - https://sourceforge.net/projects/vcxsrv/
+
 - ホストのIPアドレスを確認する。Wi-FiなどのIPv4アドレスを確認する。
 ```
 > ipconfig
 ```
-- ホストの設定を変更する。VcXsrvのインストール先（/Program Files (x86)/VcXsrv）にあるX0.hostsファイルに、X Window Systemの転送を許可するホストOSのIPアドレスを記入し、保存する。
+
+- ホストの設定を変更する。VcXsrvのインストール先（/Program Files/VcXsrv）にあるX0.hostsファイルに、X Window Systemの転送を許可するホストOSのIPアドレスを記入し、保存する。
 ```
 localhost
 ホストOSのIPアドレス（←追記！）
 ```
+
 - コンピューターを再起動する。
-- VcXsrvをソフトウェア「XLanuch」で起動する。
+
+- Xサーバーをソフトウェア「XLanuch」で起動する。
     - 「Multiple windows」を選択する。「Display number」は「-1」でOK！
     - 「Start no client」を選択する。
     - 「Native opengl」のチェックを外す。
