@@ -23,7 +23,7 @@
 ```
 > ipconfig
 ```
-- ホストの設定を変更する。Xmingのインストール先（/Program Files (x86)/Xming）にあるX0.hostsファイルに、X Window Systemの転送を許可するホストOSのIPアドレスを記入する。
+- ホストの設定を変更する。VcXsrvのインストール先（/Program Files (x86)/VcXsrv）にあるX0.hostsファイルに、X Window Systemの転送を許可するホストOSのIPアドレスを記入する。
 ```
 localhost
 ホストOSのIPアドレス（←追記！）
