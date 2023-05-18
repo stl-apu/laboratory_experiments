@@ -16,7 +16,7 @@ $ source ros_entrypoint.sh
 ```
 $ ros2 topic echo /turtle1/cmd_vel
 ```
-    - 「Ctrl＋c」で終了できます。
+    - 通常は「Ctrl＋c」で終了できます。
 
 ## 2つ目：ROSトピックの出版
 - 別のターミナルを開きます。
