@@ -12,11 +12,11 @@ $ docker container exec -it ros-cui /bin/bash
 ```
 $ source ros_entrypoint.sh
 ```
-- トピック「/turtle1/cmd_vel」を購読します。この時点では何も出版されていないので、何も表示されません。
+- トピック「/turtle1/cmd_vel」を購読します。この時点では何も出版されていないので、何も表示されません（エラーで終了します）。
 ```
 $ ros2 topic echo /turtle1/cmd_vel
 ```
-    - 「Ctrl＋c」で終了できますが、このページの内容が終わるまで待ちましょう。
+    - 「Ctrl＋c」で終了できます。
 
 ## 2つ目：ROSトピックの出版
 - 別のターミナルを開きます。
