@@ -33,7 +33,7 @@ localhost
 
 - コンピューターを再起動する。
 
-- Xサーバーをソフトウェア「XLanuch」で起動する。
+- VcXsrv（Xサーバー）をソフトウェア「XLanuch」で起動する。
     - 「Multiple windows」を選択する。「Display number」は「-1」でOK！
     - 「Start no client」を選択する。
     - 「Native opengl」のチェックを外す。
