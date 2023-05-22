@@ -2,11 +2,6 @@
 - ROSコマンドでなくROSノードを用いて出版・講読を行ってみます。
 
 ## 準備
-- 最後にGUIのROSツールを使用するので、環境変数DISPLAYが設定されていることを確認しましょう。設定されていないと、ホストOSにGUIの表示を依頼できません。
-```
-$ echo $DISPLAY
-```
-    - 設定させていない場合は「Dockerの設定」を確認しましょう。
 - コンテナーに入って…
 ```
 $ docker container exec -it ros-cui /bin/bash
@@ -24,6 +19,13 @@ $ sudo apt install ros-foxy-rqt* -y
 ```
 $ export LIBGL_ALWAYS_INDIRECT=1
 ```
+
+- GUIのROSツールを使用するので、Dockerクライアント側で環境変数DISPLAYが設定されていることを確認しましょう。設定されていないと、Dockerホスト（ホストOS）側にGUIの表示を依頼できません。
+```
+$ echo $DISPLAY
+```
+    - 設定させていない場合は「Dockerの設定」を確認しましょう。
+
 
 ## 1つ目：ROSトピックの購読
 - listenerを起動します。
