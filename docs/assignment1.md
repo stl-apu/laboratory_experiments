@@ -13,7 +13,7 @@
 - 締切は次回の実験実施日の12時50分までとします。
 - 以上です。よろしくお願いします。
 
-［Hint］まずはTurtleSimやTurtleBot3（Burger）で使用されているTopic message typesを調査してみましょう。
+［Hint］まずはTurtleSimやTurtleBot3（Burger）で使用されているTopic message types（/turtle1/cmd_velなど）を調査してみましょう。
 
 [このページのトップへ](#)
 
