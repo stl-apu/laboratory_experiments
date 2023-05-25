@@ -20,6 +20,7 @@ from std_msgs.msg import String
 ## クラスの定義
 - ROSノードはクラスNodeを継承して作成するのが一般的です。
 - 下記の通り、クラスNodeを継承したクラスPracticeSubscriberを定義します。
+
 ```
 class PracticeSubscriber(Node):
     def __init__(self):
@@ -28,6 +29,7 @@ class PracticeSubscriber(Node):
     def callback(self, msg):
         self.get_logger().info(f'Subscribe: {msg.data}')
 ```
+
     - __init__()はコンストラクターで、クラスのインスタンスを生成する時に呼び出されます。
         - super()でクラスNodeのコンストラクターを呼び出し、ノード名を指定します。
         - 関数`create_subscription()`では「トピックメッセージ型」「トピック名」「コールバックメソッド名」「通信品質」を指定します。
