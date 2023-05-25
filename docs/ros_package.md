@@ -37,7 +37,7 @@ testディレクトリー
 $ nano setup.py
 ```
 
-- subscriberとpublisherを作成する予定なので、下記の通り追記しておきます。entry_pointsという項目があるので、その中に2行、追記します。
+- subscriberとpublisherを作成する予定なので、下記の通り追記しておきます。entry_pointsという項目があるので、その中に2行、追記します。なお、「…」は省略記号です。
 ```
 …
 entry_points={
@@ -55,7 +55,7 @@ entry_points={
 $ nano package.xml
 ```
 
-- rclpyとstd_msgsを追記しておきます。packageタグがあるので、その間に2行、追記します。
+- rclpyとstd_msgsを追記しておきます。packageタグがあるので、その間に2行、追記します。なお、「…」は省略記号です。
 ```
 <package format="3">
     …
