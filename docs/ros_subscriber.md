@@ -2,7 +2,7 @@
 - 第1週で学んだリスナーを自作してみます。
 - practice_subscriber_node.pyを作成します。
     ```
-    $ cd ~/colcon_ws/src/practice_package/practice_package
+    $ cd ~/colcon_ws/src/laboratory_experiments_2023/practice_package/practice_package
     $ nano practice_subscriber_node.py
     ```
 
@@ -30,10 +30,10 @@ class PracticeSubscriber(Node):
         self.get_logger().info(f'Subscribe: {msg.data}')
 ```
 
-- __init__()はコンストラクターで、クラスのインスタンスを生成する時に呼び出されます。
+- `__init__()`はコンストラクターで、クラスのインスタンスを生成する時に呼び出されます。
     - super()でクラスNodeのコンストラクターを呼び出し、ノード名を指定します。
     - 関数`create_subscription()`では「トピックメッセージ型」「トピック名」「コールバックメソッド名」「通信品質」を指定します。
-- callback()はコールバックメソッドで、トピックを受け取った時に呼び出されます。
+- `callback()`はコールバックメソッドで、トピックを受け取った時に呼び出されます。
     - get_loggerは情報をターミナルに表示します。
 
 ## メイン関数の定義
