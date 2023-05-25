@@ -36,7 +36,8 @@ testディレクトリー
 ```
 $ nano setup.py
 ```
-    - subscriberとpublisherを作成する予定なので、下記の通り追記しておきます。
+
+- subscriberとpublisherを作成する予定なので、下記の通り追記しておきます。entry_pointsという項目があるので、その中に2行、追記します。
 ```
 …
 entry_points={
@@ -47,22 +48,22 @@ entry_points={
 },
 …
 ```
-        - 左辺（practice_subscriber_nodeなど）がノード名になります。同じ名前のノードは1つしか存在できない点に注意しましょう。
+- 左辺（practice_subscriber_nodeなど）がノード名になります。同じ名前のノードは1つしか存在できない点に注意しましょう。
 
 - package.xmlを開き、Pythonプログラムの中でインポートするモジュールを事前に記述しておきます。
 ```
 $ nano package.xml
 ```
-    - rclpyとstd_msgsを追記しておきます。
 
-    ```
-    <package format="3">
-        …
-        <exec_depend>rclpy</exec_depend>
-        <exec_depend>std_msgs</exec_depend>
-        …
-    </package>
-    ```
+- rclpyとstd_msgsを追記しておきます。packageタグがあるので、その間に2行、追記します。
+```
+<package format="3">
+    …
+    <exec_depend>rclpy</exec_depend>
+    <exec_depend>std_msgs</exec_depend>
+    …
+</package>
+```
 
 [このページのトップへ](#)
 
