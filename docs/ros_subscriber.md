@@ -1,10 +1,11 @@
 # ROSのサブスクライバー
 - 第1週で学んだリスナーを自作してみます。
 - practice_subscriber_node.pyを作成します。
-    ```
-    $ cd ~/colcon_ws/src/laboratory_experiments_2023/practice_package/practice_package
-    $ nano practice_subscriber_node.py
-    ```
+
+```
+$ cd ~/colcon_ws/src/laboratory_experiments_2023/practice_package/practice_package
+$ nano practice_subscriber_node.py
+```
 
 ## モジュールのインポート
 - モジュールrclpyをインポートします。rclpyはROS Client Library for Pythonで、ROSノードをPythonで記述する際に必ず必要となるモジュールです。
