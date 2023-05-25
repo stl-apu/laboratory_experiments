@@ -20,8 +20,9 @@ $ ros2 pkg create パッケージ名 --build-type ament_python
 《実例》
 $ ros2 pkg create practice_package --build-type ament_python
 ```
-- 3つのファイルと3つのディレクトリーが作成されます。コマンドlsで確認してみます。
+- ディレクトリー「practice_package」の中に3つのファイルと3つのディレクトリーが作成されます。コマンドlsで確認してみます。
 ```
+$ cd practice_package
 $ ls
 setup.py
 setup.cfg
