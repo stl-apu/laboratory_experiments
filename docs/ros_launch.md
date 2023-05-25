@@ -20,7 +20,7 @@ $ ros2 launch sample_package listener_talker_launch.py
 - 拡張子から分かると思いますが、launchファイルはPythonで記述します。
 - まず、パッケージpractice_packageにlaunchディレクトリーを作成します。
 ```
-$ cd ~/colcon_ws/src/practice_package/
+$ cd ~/colcon_ws/src/laboratory_experiments_2023/practice_package/
 $ mkdir launch
 $ cd launch
 ```

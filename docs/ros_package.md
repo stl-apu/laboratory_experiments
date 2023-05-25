@@ -56,6 +56,7 @@ $ nano package.xml
 ```
 
 - rclpyとstd_msgsを追記しておきます。packageタグがあるので、その間に2行、追記します。なお、「…」は省略記号です。
+
 ```
 <package format="3">
     …
