@@ -16,6 +16,13 @@ $ ros2 launch sample_package listener_talker_launch.py
     - talkerノードが端末と共に起動します。
     - rqt_graphノードがGUIツールとして起動します。
 
+## xtermのインストール
+- 予めインストールしておきます。
+```
+$ sudo apt update
+$ sudo apt install xterm -y
+```
+
 ## launchファイルの作成
 - 拡張子から分かると思いますが、launchファイルはPythonで記述します。
 - まず、パッケージpractice_packageにlaunchディレクトリーを作成します。
