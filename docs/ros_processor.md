@@ -1,61 +1,79 @@
-# 点群処理の例
-- 第3週の課題のために点群処理の例を示します。
-- トピック「/scan」はLIDAR（Laser Range Finder）で取得される点群データです。
-- この点の集まりを処理することで、ロボットは最短経路で目的に移動したり障害物を避けたりできるようになります。
+# データ処理（点群処理）
+ROSシステム上でデータを処理する例を示します。
 
-- sample_packageの中にsample_processor_node.pyを作成しました。
+ロボットが人間を支援するために必要不可欠な点群処理を例示します。
+
+TurtleBot3は複数のトピックを用いて動作していますが、トピック「scan」はLaser Range Scanner（LIDARやLaser Distance Sensorなどとも呼ばれる距離センサー）で取得される点群データです。
+
+物体までの距離を意味する点の集まりを処理することで、ロボットは物体に沿って移動したり障害物を避けながら移動したりできるようになります。
+
+## 点群に関するトピックの理解
+トピック「scan」のメッセージ型はsensor_msgs/msg/LaserScanです。
+
+下記のコマンドで、どのようなデータで構成されているかが分かります。
+
 ```
+$ ros2 interface show sensor_msgs/msg/LaserScan
+```
+
+rangesが特定の角度ごとの物体までの距離を持つリストということが分かるので、このデータに基づいてロボットを制御することを考えます。つまり、トピック「scan」を購読し、トピック「cmd_vel」を出版することを考えます。
+
+## サンプルプログラムの実行
+サンプルプログラムをsrcディレクトリーにcloneします。
+ 
+ ```
+$ mkdir -p ~/colcon_ws/src
 $ cd ~/colcon_ws/src/
 $ git clone git@github.com:stl-apu/laboratory_experiments_2023.git
-$ cat laboratory_experiments_2023/sample_package/sample_processor_node.py
 ```
 
-## モジュール
-- モジュールは、
+ビルドします。
+
 ```
-import rclpy
-from rclpy.node import Node
-from std_msgs.msg import String
+$ cd ~/colcon_ws/
+$ colcon build
+$ source ~/colcon_ws/install/setup.bash
 ```
 
-## クラスの定義
-- ROSノードはクラスNodeを継承して作成するのが一般的です。
-- 下記の通り、クラスNodeを継承したクラスPracticeSubscriberを定義します。
-```
-class PracticeSubscriber(Node):
-    def __init__(self):
-        super().__init__('practice_subscriber_node')
-        self.sub = self.create_subscription(String, 'practice_topic', self.callback, 10)
-    def callback(self, msg):
-        self.get_logger().info(f'Subscribe: {msg.data}')
-```
-    - __init__()はコンストラクターで、クラスのインスタンスを生成する時に呼び出されます。
-        - super()でクラスNodeのコンストラクターを呼び出し、ノード名を指定します。
-        - 関数`create_subscription()`では「トピックメッセージ型」「トピック名」「コールバックメソッド名」「通信品質」を指定します。
-    - callback()はコールバックメソッドで、トピックを受け取った時に呼び出されます。
-        - get_loggerは情報をターミナルに表示します。
+ターミナルを2つ用いて実行します。
 
-## メイン関数の定義
-- Pythonは逐次型の言語なので、main関数が無くても問題ありませんが、エントリーポイントとして記述します。
 ```
-def main():
-    print('==========プログラム開始==========')
-    rclpy.init()
-    node = PracticeSubscriber()
-    try:
-        rclpy.spin(node)
-    except KeyboardInterrupt:
-        print('Ctrl＋cが押されました。')
-    finally:
-        node.destroy_node()
-        rclpy.shutdown()
-        print('==========プログラム終了==========')
+《1つ目》
+$ ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py
+《2つ目》
+$ ros2 run sample_package sample_processor_node
 ```
-    - 関数`main()`を定義します。
-        - 関数`init()`でROS2の通信を初期化します。
-        - 次に、インスタンスを生成します。
-        - 関数`spin()`でトピックを待ちます。
-        - 例外処理により、キーボードで強制終了した場合でも安全にROSノードを終了できるようにします。
+
+障害物を避けつつ、基本的に左回りで動きます。
+
+## サンプルプログラムの理解
+sample_processor_node.pyを確認してみます。
+
+```
+$ cat ~/colcon_ws/src/laboratory_experiments_2023/sample_package/sample_package/sample_processor_node.py
+```
+
+メッセージ型「sensor_msgs/msg/LaserScan」を使用するためには、Pythonのプログラムでモジュールsensor_msgsを読み込む必要があります。ついで、geometry_msgsも読み込んでおきます。
+
+```
+from sensor_msgs.msg import LaserScan
+from geometry_msgs.msg import Twist
+```
+
+関数「create_subscription」でトピック「scan」を購読し、トピックを受け取るごとにcallback関数を実行するように指定します。
+
+callback関数の中ではfor文やif文を用いて最も近い物体までの距離やその角度を求め、ロボットを制御するためにトピック「cmd_vel」を出版しています。このサンプルでは、基本的には直進し、正面に障害物がある場合は左に大きく回転する。また、一定範囲内に障害物がある場合は障害物の反対側に回転するように記述してあります。
+
+if文の条件を変更することで、より知的に移動することができます。
+
+## 設定ファイルの更新
+
+ビルドするためにはPythonファイルだけでなく、package.xmlを更新する必要があります。第3週の課題に取り組む際は注意しましょう。
+
+```
+<exec_depend>sensor_msgs</exec_depend>
+<exec_depend>geometry_msgs</exec_depend>
+```
 
 [このページのトップへ](#)
 
