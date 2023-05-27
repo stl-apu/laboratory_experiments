@@ -36,5 +36,5 @@
 - [ROS Service](https://stl-apu.github.io/laboratory_experiments/ros_service)
 - [ROS Parameter](https://stl-apu.github.io/laboratory_experiments/ros_parameter)
 - [ROS TurtleBot](https://stl-apu.github.io/laboratory_experiments/ros_turtlebot)
-- ROS Processor
+- [ROS Processor](https://stl-apu.github.io/laboratory_experiments/ros_processor)
 - [Assignment 3](https://stl-apu.github.io/laboratory_experiments/assignment3)
