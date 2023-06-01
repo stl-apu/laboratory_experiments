@@ -44,17 +44,17 @@ setup.pyを開き、エントリーポイントを指定します。エントリ
 $ nano setup.py
 ```
 
-subscriberとpublisherを作成する予定なので、下記の通り追記しておきます。entry_pointsという項目があるので、その中に2行、追記します。なお、「…」は省略記号です。
+subscriberとpublisherを作成する予定なので、下記の通り追記しておきます。entry_pointsという項目があるので、その中に2行、追記します。なお、「：」は省略記号です。
 
 ```
-…
+：
 entry_points={
     'console_scripts': [
         'practice_subscriber_node = practice_package.practice_subscriber_node:main',
         'practice_publisher_node = practice_package.practice_publisher_node:main',
     ],
 },
-…
+：
 ```
 
 左辺（practice_subscriber_nodeなど）がノード名になります。同じ名前のノードは1つしか存在できない点に注意しましょう。
@@ -65,14 +65,14 @@ package.xmlを開き、Pythonプログラムの中でインポートするモジ
 $ nano package.xml
 ```
 
-rclpyとstd_msgsを追記しておきます。packageタグがあるので、その間に2行、追記します。なお、「…」は省略記号です。
+rclpyとstd_msgsを追記しておきます。packageタグがあるので、その間に2行、追記します。なお、「：」は省略記号です。
 
 ```
 <package format="3">
-    …
+    ：
     <exec_depend>rclpy</exec_depend>
     <exec_depend>std_msgs</exec_depend>
-    …
+    ：
 </package>
 ```
 
