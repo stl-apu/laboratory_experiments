@@ -18,7 +18,7 @@ $ ssh ubuntu@10.0.1.11
 環境変数（TURTLEBOT3_MODEやORS_DOMAIN_ID）が設定されていることを確認します。
 
 ```
-cat ~/.bashrc
+$ cat ~/.bashrc
 ```
 
 TurtleBotを始動するためのROSパッケージを実行します。
