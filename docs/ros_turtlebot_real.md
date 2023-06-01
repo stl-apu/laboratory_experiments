@@ -1,39 +1,61 @@
-# 実機
-- Ubuntuを使用している
-- 順番に体験してもらいます。
+# TurtleBot（real robot）
+TurtleBot 3の実機を用いたデモを4限目の開始時に行います。
 
-## リモートコンピューターの設定
-- 無線ネットワークを学部のネットワーク「IST Wireless」から実験用のネットワーク「STL-AE」に切り替える。
-    - パスワードは教員またはTAから教えてもらう。
-    - 実機実験を終えたら、元に戻しておく。
+## デモの準備
+実験用のルーターの電源を入れ、リモートPCをルーターに接続させます。ちなみに、TurtleBotは自動的にルーターに接続するように設定してあります。
 
-- リモートコンピューターのROS_DOMAIN_IDの値を確認し、TurtleBotのROS_DOMAIN_IDを変更する。
+## TurtleBotの起動
+TurtleBotにアダプターかバッテリーを挿し、TurtleBot内のOpenCRの電源スイッチをスライドします。
 
-## ファイヤーウォールの設定
-- 恐らく初期設定のままではロボットと通信できないので、ファイヤーウォールの設定を変更する。
-- コマンドufwをインストールする。
+TurtleBot上のRIDARが回転し始め、起動音が鳴ります。
+
+TurtleBotが起動したら、リモートPCからRasbperry Piに入ります。
+
 ```
-$ sudo apt -y install ufw
+$ ssh ubuntu@10.0.1.11
 ```
-- ファイヤーウォールの状態を確認する。
+
+環境変数（TURTLEBOT3_MODEやORS_DOMAIN_ID）が設定されていることを確認します。
+
 ```
-$ sudo ufw status numbered
+cat ~/.bashrc
 ```
-- IPアドレス指定でポートを開放する。
+
+TurtleBotを始動するためのROSパッケージを実行します。
+
 ```
-《記法》
-$ sudo ufw allow from ロボットのIPアドレス
-《実例》
-$ sudo ufw allow from 10.0.1.12
+$ ros2 launch turtlebot3_bringup robot.launch.py
 ```
-- ファイヤーウォールを有効化する。
+
+## 実機の操作
+モデルと同じように実機を操作することができます。別のターミナルを開いて…
+
 ```
-$ sudo ufw enable
+$ ros2 run turtlebot3_teleop teleop_keyboard
 ```
-- 再度、ファイヤーウォールの状態を確認する。
+
+実機とモデルを同時に動かすこともできます。別のターミナルを開いて…
+
 ```
-$ sudo ufw status numbered
+$ ros2 launch turtlebot3_gazebo empty_world.launch.py
 ```
+
+試しに点群データを確認してみます。別のターミナルを開いて…
+
+```
+$ rviz2
+```
+
+## TurtleBotの停止
+リモートPCからシャットダウンします。
+
+```
+$ sudo shutdown -h now
+```
+
+Raspberry Piの緑色LEDが消えたら、OpenCRの電源をオフにします。
+
+TurtleBotからアダプターやバッテリーを抜いて終了です。
 
 [このページのトップへ](#)
 
