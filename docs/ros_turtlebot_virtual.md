@@ -17,7 +17,7 @@ $ docker container run -p 6080:80 --shm-size=512m tiryoh/ros2-desktop-vnc:foxy
 
 
 # シミュレーションの準備
-- 必要となる関連パッケージを予めインストールしておきます。
+- 必要となる関連パッケージを予めインストールしておきます。ダウンロードに時間が掛かる人は最後の2行（4行目と5行目）を後でダウンロードしてください。
 ```
 $ sudo apt update
 $ sudo apt upgrade -y
