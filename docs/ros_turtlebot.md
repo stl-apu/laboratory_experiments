@@ -1,7 +1,7 @@
 # TurtleBot
 
 - [Virtual Robot](https://stl-apu.github.io/laboratory_experiments/ros_turtlebot_virtual)
-- [Real Robot](https://stl-apu.github.io/laboratory_experiments/ros_turtlebot_real)（in preparation）
+- [Real Robot](https://stl-apu.github.io/laboratory_experiments/ros_turtlebot_real)
 
 [このページのトップへ](#)
 
