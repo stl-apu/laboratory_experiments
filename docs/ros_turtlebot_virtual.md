@@ -15,7 +15,7 @@ $ docker container run -p 6080:80 --shm-size=512m tiryoh/ros2-desktop-vnc:foxy
 
 コピー＆ペーストは左端のcontrol barのClipboardを使用します。Clipboardにペースト（Ctrl＋v）し、その内容をターミナルにペースト（Ctrl＋Shift＋v）できます。
 
-# シミュレーションの準備
+## シミュレーションの準備
 必要となる関連パッケージを予めインストールしておきます。Gazebo（Gazebo11）、Cartographer、Navigation2をインストールします。ダウンロードに時間が掛かる人は最後の2行（4行目と5行目）を後でダウンロードするようにしてください。
 
 ```
@@ -57,7 +57,7 @@ $ echo 'export TURTLEBOT3_MODEL=burger' >> ~/.bashrc
 $ source ~/.bashrc（←設定した直後のみ実行します）
 ```
 
-# シミュレーションの実行
+## シミュレーションの実行
 まず、動作確認の意味で、empty_world（何も無い世界）を起動してみます。何も無い世界でも5分くらい掛かります。
 
 ```
@@ -110,7 +110,7 @@ RVizの操作方法は、
 
 RVizの設定を保存しておきたい人は「Files」→「Save Config」を実行しておきましょう。
 
-# 参考：Gazeboの機能
+## 参考：Gazeboの機能
 Gazeboの基本機能はGazebo Tutorialsを確認してみてください。
 
 例えば、球などの基本物体（プリミティブ物体）やTurtleBot以外のロボットを追加することができます。担当教員は試したことが無いのですが、人間を追加することもできるようです。
