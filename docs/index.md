@@ -1,4 +1,4 @@
-# H-2：知能ロボティクス（後半）
+# H-2：知能ロボティクス実験（後半）
 
 ## 実験場所
 - 演習室6で実施します。
@@ -8,7 +8,7 @@
 ### Week 0
 - [事前準備](https://stl-apu.github.io/laboratory_experiments/preparetion)
 - [事前学習](https://youtu.be/-cXh0QW575M)
-    - YouTubeの動画を視聴してください。
+    - YouTubeの動画を視聴しておいてください。
     - 内容は「ROS概論」で、動画の長さは約1時間です。
 
 ### Week 1
@@ -38,3 +38,4 @@
 - [ROS TurtleBot](https://stl-apu.github.io/laboratory_experiments/ros_turtlebot)
 - [ROS Processor](https://stl-apu.github.io/laboratory_experiments/ros_processor)
 - [Assignment 3](https://stl-apu.github.io/laboratory_experiments/assignment3)
+
