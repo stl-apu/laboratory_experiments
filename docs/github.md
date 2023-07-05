@@ -14,6 +14,7 @@ $ docker container exec -it ros-cui /bin/bash
 ## Gitの設定
 - gitをインストールします。
 ```
+$ sudo apt update
 $ sudo apt install git -y
 ```
 - gitがインストールされたことを確認します。
@@ -29,14 +30,14 @@ $ git config --global user.email "メールアドレス"
 $ git config --global user.name "Takuo Suzuki"
 $ git config --global user.email "takuo.suzuki@ist.aichi-pu.ac.jp"
 ```
-- 名前とメールアドレスが設定されていることを確認する。
+- 名前とメールアドレスが設定されていることを確認します。
 ```
 $ git config -l
 ```
-    - Gitの設定を変更したい時は再度`$ git config`を実行し、上書きする。
+    - Gitの設定を変更したい時は再度`$ git config`を実行し、上書きします。
 
 ## GitHubの設定
-- clone、pull、pushなどのコマンドを実行できるよう、SSH接続（鍵認証）の設定を行います。
+- `clone`、`pull`、`push`などのコマンドを実行できるよう、SSH接続（鍵認証）の設定を行います。
 
 - 下記のディレクトリーにid_rsaとid_rsa.pubが存在することを確認します。
 ```
@@ -47,11 +48,11 @@ $ ls ~/.ssh
 $ cd ~/.ssh
 $ ssh-keygen -t rsa
 ```
-        - ディレクトリーも存在しない場合は作成します。
+        - そもそもディレクトリーが存在しない場合は作成します。
 ```
 $ mkdir ~/.ssh
 ```
-        - コマンドssh-keygenが無い場合はパッケージをインストールします。
+        - コマンド`ssh-keygen`が無い場合はパッケージをインストールします。
 ```
 $ sudo apt update
 $ sudo apt install openssh-server -y

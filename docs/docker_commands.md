@@ -11,7 +11,7 @@ $ docker image ls
 ```
 
 ## コンテナーの作成
-- イメージを用いてコンテナーを作成し、起動します。この時、オプションnameでコンテナーに対して名前（例：ros-cui）を付けておきます。
+- イメージに基づいてコンテナーを作成し、起動します。この時、オプションnameでコンテナーに対して名前（例：ros-cui）を付けておきます。
 ```
 《UbuntuやWindows（WSL2）の場合》
 $ docker container run -itd --net host -e DISPLAY=$DISPLAY --name ros-cui ros:foxy-ros-base-focal /bin/bash
