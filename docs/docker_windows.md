@@ -30,15 +30,16 @@
 localhost
 ホストOSのIPアドレス（←追記！）
 ```
+    - ネットワーク環境によってIPアドレスは変化するので、大学以外で実験を実施する場合は必要に応じて修正・追記する。
 
 - コンピューターを再起動する。
 
-- VcXsrv（Xサーバー）をソフトウェア「XLanuch」で起動する。
+- VcXsrv（X11サーバー）をソフトウェア「XLanuch」で起動する。システムトレイ（通知領域）にXLanuchのアイコンが表示される。
     - 「Multiple windows」を選択する。「Display number」は「-1」でOK！
     - 「Start no client」を選択する。
     - 「Native opengl」のチェックを外す。
-        - もしGUIが表示されない場合は実験中だけ「Disable access control」にチェックを入れる。
-    - システムトレイ（通知領域）にXLanuchのアイコンが表示される。
+
+- <span style="color: #CC0066;">もし上記の設定でGUIが表示されない場合は実験中だけ「Disable access control」にチェックを入れる。</span>
 
 [このページのトップへ](#)
 
