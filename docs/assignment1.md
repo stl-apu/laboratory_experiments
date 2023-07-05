@@ -18,7 +18,7 @@ ___
 
 以上です。よろしくお願いします。
 
-［Hint］まずはTurtleSimやTurtleBot3（Burger）で使用されているTopic message types（/turtle1/cmd_velなど）を調査してみましょう。
+［Hint］最初にTurtleSimやTurtleBot3（Burger）で使用されているTopic message types（/turtle1/cmd_velなど）を調査してみましょう。
 
 [このページのトップへ](#)
 
