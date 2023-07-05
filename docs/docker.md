@@ -7,7 +7,7 @@
 - 普通はCUIを用いて利用しますが、色々と設定すれば、GUIを用いて利用することもできます。
     - X Window System（X11）を用いてホストOS上にGUIを表示します。ホストOSにGUIの表示を依頼することを「X11 Forwarding」と言います。
 - Docker Host上でDocker Containerを動かします。
-- Docker Imageを用いてDocker Containerを作成します。
+- Docker Imageに基づいてDocker Containerを作成します。
 
 ## 演習
 - Dockerの設定
