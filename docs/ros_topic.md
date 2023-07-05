@@ -56,6 +56,7 @@ $ ros2 topic list
 $ ros2 topic info /turtle1/cmd_vel
 ```
     - 「geometry_msgs/msg/Twist」という型であることが分かります。ROS2にはintなどの単純な型（std_msgs/msg/Int32）も存在しますが、ROSはロボット用のソフトウェアなので、いくつかの変数がまとまった構造体のような型を利用することが多いです。
+
 - トピックメッセージ型「geometry_msgs/msg/Twist」を構成する要素を確認してみます。  
 ```
 $ ros2 interface show geometry_msgs/msg/Twist
