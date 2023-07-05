@@ -6,7 +6,7 @@
 - Docker Desktop for Macをインストールする。
     - https://docs.docker.com/get-docker/
 - Docker.appを起動し、IDとPasswordを入力する。
-- ターミナルを起動し、コマンドdockerが実行できることを確認する。
+- ターミナルを起動し、コマンド`docker`が実行できることを確認する。
 ```
 % docker version
 ```
@@ -26,7 +26,7 @@ INET6:localhost
 ```
 % xhost +localhost
 ```
-    - localhostが許可されたことを確認する。
+    - localhostが許可されたことを改めて確認する。
 ```
 % xhost
 ```
