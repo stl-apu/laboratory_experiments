@@ -6,7 +6,7 @@
 $ sudo apt update
 $ sudo apt install docker.io -y
 ```
-- コマンドdockerが実行できることを確認します。
+- コマンド`docker`が実行できることを確認します。
 ```
 $ docker version
 ```
