@@ -1,6 +1,6 @@
 # Dockerの設定（Windows）
 
-## コンピューターの設定の確認
+## コンピューターの設定
 - 「タスクマネージャー」を起動し、［パフォーマンス］→［CPU］から［仮想化：有効］となっていることを確認する。
     - 有効にする方法はコンピューターのメーカーや機種によって異なるので、自分で調べる。
 - 「コントロールパネル」を起動し、［プログラム］→［Windowsの機能の有効化または無効化］を開き、［Hyper-V］と［Linux用Windowsサブシステム（Windows Subsystem for Linux）］にチェックが入っていることを確認する。
@@ -11,7 +11,7 @@
 - Docker Desktop for Windowsをインストールする。
     - https://docs.docker.com/get-docker/
 - Docker Desktop.exeを起動し、IDとPasswordを入力する。
-- コマンドプロンプトを起動し、コマンドdockerが実行できることを確認する。
+- コマンドプロンプトを起動し、コマンド`docker`が実行できることを確認する。
 ```
 > docker version
 ```
@@ -20,12 +20,12 @@
 - GUIを使用するためにVcXsrvをインストールする。
     - https://sourceforge.net/projects/vcxsrv/
 
-- ホストのIPアドレスを確認する。Wi-FiなどのIPv4アドレスを確認する。
+- ホストOSのIPアドレスを確認する。Wi-FiなどのIPv4アドレスを確認する。
 ```
 > ipconfig
 ```
 
-- ホストの設定を変更する。VcXsrvのインストール先（/Program Files/VcXsrv）にあるX0.hostsファイルに、X Window Systemの転送を許可するホストOSのIPアドレスを記入し、保存する。
+- GUIを使用するためにX11サーバーの設定を変更する。VcXsrvのインストール先（/Program Files/VcXsrv）にあるX0.hostsファイルに、X Window Systemの転送を許可するホストOSのIPアドレスを記入し、保存する。
 ```
 localhost
 ホストOSのIPアドレス（←追記！）
