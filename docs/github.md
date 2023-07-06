@@ -67,7 +67,10 @@ $ cat ~/.ssh/id_rsa.pub | xsel -bi
 $ sudo apt update
 $ sudo apt install xsel -y
 ```
-    - 公開鍵の内容をコピーすることが目的なので、別のコマンドを使用しても問題ありません。
+    - 「Can't open display」というエラーが出てしまう人は無理をせず、コマンド`cat`で公開鍵の内容をターミナルに表示し、マウスやキーボードを用いてコピーしてください。
+```
+$ cat ~/.ssh/id_rsa.pub
+```
 
 - GitHubのウェブサイトを開きます。
     - https://github.com/
