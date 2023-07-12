@@ -9,23 +9,21 @@ $ nano practice_subscriber_node.py
 ```
 
 ## モジュールのインポート
-モジュールrclpyをインポートします。rclpyはROS Client Library for Pythonで、ROSノードをPythonで記述する際に必ず必要となるモジュールです。
+モジュール「rclpy」をインポートします。rclpyはROS Client Library for Pythonのことで、ROSノードをPythonで記述する際に必ず必要となるモジュールです。
 
 ```
 import rclpy
 from rclpy.node import Node
 ```
 
-また、今回は標準的なトピックメッセージ型を使用するため、モジュールstd_msgsもインポートします。
+また、今回は標準的なトピックメッセージ型を使用するため、モジュール「std_msgs」もインポートします。
 
 ```
 from std_msgs.msg import String
 ```
 
 ## クラスの定義
-ROSノードはクラスNodeを継承して作成するのが一般的です。
-
-下記の通り、クラスNodeを継承したクラスPracticeSubscriberを定義します。
+ROSノードはクラスNodeを継承して作成するのが一般的です。下記の通り、クラス「Node」を継承したクラス「PracticeSubscriber」を定義します。
 
 ```
 class PracticeSubscriber(Node):
@@ -36,7 +34,7 @@ class PracticeSubscriber(Node):
         self.get_logger().info(f'Subscribe: {msg.data}')
 ```
 
-`__init__()`はコンストラクターで、クラスのインスタンスを生成する時に呼び出されます。super()でクラスNodeのコンストラクターを呼び出し、ノード名を指定します。関数`create_subscription()`では「トピックメッセージ型」「トピック名」「コールバックメソッド名」「通信品質」を指定します。
+関数「__init__」はコンストラクターで、クラスのインスタンスを生成する時に呼び出されます。関数「super」でクラスNodeのコンストラクターを呼び出し、ノード名を指定します。関数「create_subscription」では「トピックメッセージ型」「トピック名」「コールバックメソッド名」「通信品質」を指定します。
 
 `callback()`はコールバックメソッドで、トピックを受け取った時に呼び出されます。get_loggerは情報をターミナルに表示します。
 
