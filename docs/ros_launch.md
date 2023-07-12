@@ -78,7 +78,7 @@ launch_ros.actions.Node(
     on_exit=launch.actions.Shutdown())
 ```
 
-2つ目のノードとしてはpublisherを起動します。複数のROSノードを起動する時はコンマで区切ります。
+2つ目のノードとしてはpublisherを起動します。<span style="color: #CC0066;">複数のROSノードを起動する時はコンマで区切ります。</span>
 
 ```
 launch_ros.actions.Node(

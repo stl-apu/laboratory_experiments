@@ -14,7 +14,7 @@ $ nano practice_publisher_node.py
 リスナーと同様です。
 
 ## クラスの定義
-下記の通り、クラスPracticePublisherを定義します。
+下記の通り、クラス「PracticePublisher」を定義します。
 
 ```
 class PracticePublisher(Node):
@@ -35,9 +35,9 @@ class PracticePublisher(Node):
         self.i -= 1
 ```
 
-関数`create_publisher()`は「トピックメッセージ型」「トピック名」「通信品質」を指定します。リスナーの関数`create_subscription()`で指定した「トピックメッセージ型」と「トピック名」に合わせます。
+関数「create_publisher」は「トピックメッセージ型」「トピック名」「通信品質」を指定します。リスナーの関数「create_subscription」で指定した「トピックメッセージ型」と「トピック名」に合わせます。
 
-関数`create_timer()`は「タイマーの間隔」と「コールバック」を指定します。「タイマーの間隔」の単位は秒（s）です。
+関数「create_timer」は「タイマーの間隔」と「コールバック関数名」を指定します。なお、「タイマーの間隔」の単位は秒（s）です。
 
 ## メイン関数の定義
 リスナーと同様ですので、リスナーのプログラムをコピー＆ペーストしましょう。ただし、インスタンスを作成するクラス名が異なる点に注意してください。

@@ -57,7 +57,7 @@ entry_points={
 ：
 ```
 
-左辺（practice_subscriber_nodeなど）がノード名になります。同じ名前のノードは1つしか存在できないことに注意しましょう。
+左辺（practice_subscriber_nodeなど）がノード名になります。同じ名前のノードは1つしか存在できない点に注意しましょう。
 
 xmlファイル「package.xml」を開き、Pythonプログラムの中でインポートするモジュールを事前に記述しておきます。
 
