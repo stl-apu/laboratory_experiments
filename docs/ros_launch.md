@@ -1,15 +1,24 @@
 # ROS launch（ローンチ）
 毎回、複数のターミナルを開いて実行するのは面倒なので、普通はlaunchファイルを作成します。
 
-コマンドlaunchでlaunchファイルを実行すると、複数のROSノードを1つのターミナルで起動することができます。
+コマンド`launch`でlaunchファイルを実行すると、複数のROSノードを1つのターミナルで起動することができます。
 
-launchディレクトリーを作成し、その中にlaunchファイルを置きます。launchファイル名は「sample_launch.py」のように最後に「_launch」を付けることが多いです。
+ディレクトリー「launch」を作成し、その中にlaunchファイルを置きます。launchファイル名は「sample_launch.py」のように最後に「_launch」を付けることが多いです。
 
 ```
-~/colcon_ws/src/パッケージ名/launch/launchファイル名.py
+~/colcon_ws/src/パッケージ名/launch/ローンチファイル名.py
 や
-~/colcon_ws/src/メタパッケージ名/パッケージ名/launch/launchファイル名.py
+~/colcon_ws/src/メタパッケージ名/パッケージ名/launch/ローンチファイル名.py
 ```
+
+## xtermのインストール
+予め端末エミュレーター「XTerm」をインストールしておきます。
+
+```
+$ sudo apt update
+$ sudo apt install xterm -y
+```
+
 
 ## launchファイルの試用
 試しにlaunchファイルを実行してみましょう。1つのコマンドで3つのノードを起動することができます。
@@ -17,23 +26,17 @@ launchディレクトリーを作成し、その中にlaunchファイルを置�
 ```
 $ ros2 launch sample_package listener_talker_launch.py
 ```
+
 3つのノードは、
 - listenerノードが端末と共に起動します。
 - talkerノードが端末と共に起動します。
 - rqt_graphノードがGUIツールとして起動します。
 
-## xtermのインストール
-予めインストールしておきます。
-
-```
-$ sudo apt update
-$ sudo apt install xterm -y
-```
 
 ## launchファイルの作成
-拡張子から分かると思いますが、launchファイルはPythonで記述します。
+拡張子から予想できると思いますが、launchファイルはPythonで記述します。
 
-まず、パッケージpractice_packageにlaunchディレクトリーを作成します。
+まず、パッケージ「practice_package」にディレクトリー「launch」を作成します。
 
 ```
 $ cd ~/colcon_ws/src/laboratory_experiments_2023/practice_package/
@@ -57,7 +60,7 @@ import launch
 import launch_ros.actions
 ```
 
-関数`generate_launch_description`でオブジェクトLaunchDescriptionを返します。
+関数「generate_launch_description」でオブジェクト「LaunchDescription」を返します。
 
 ```
 def generate_launch_description():
@@ -65,9 +68,9 @@ def generate_launch_description():
     ])
 ```
 
-角括弧の間に起動するROSノードに関する情報を記述します。
+角括弧の間に起動するROSノードに関する情報を記述していきます。
 
-1つ目のノードとしてsubscriberを起動します。必須項目はpackageとexecutableのみです。他の項目については自分で調査してみましょう。
+1つ目のノードとしてsubscriberを起動します。必須項目は「package」と「executable」の2つのみです。他の項目については自分で学習しましょう。
 
 ```
 launch_ros.actions.Node(
@@ -78,7 +81,7 @@ launch_ros.actions.Node(
     on_exit=launch.actions.Shutdown())
 ```
 
-2つ目のノードとしてはpublisherを起動します。<span style="color: #CC0066;">複数のROSノードを起動する時はコンマで区切ります。</span>
+2つ目のノードとしてpublisherを起動します。<span style="color: #CC0066;">複数のROSノードを起動する時はコンマで区切ります。</span>
 
 ```
 launch_ros.actions.Node(
@@ -89,7 +92,7 @@ launch_ros.actions.Node(
     on_exit=launch.actions.Shutdown())
 ```
 
-3つ目はrqt_graphを起動します。rqt_graphはGUIツールなので、xtermを起動する必要はありません。
+3つ目のノードとしてrqt_graphを起動します。rqt_graphはGUIツールなので、xtermを起動する必要はありません。
 
 ```
 launch_ros.actions.Node(
@@ -100,16 +103,20 @@ launch_ros.actions.Node(
 ```
 
 ## launchファイルの設定
-setup.pyを編集する必要があります。
+setup.pyを編集する必要があるので、テキストエディターで開きます。
 
-osモジュールとglobモジュールをインポートします。
+```
+$ nano setup.py
+```
+
+まず、osモジュールとglobモジュールをインポートします。
 
 ```
 import os
 from glob import glob
 ```
 
-data_filesにlaunchファイルの参照先を追加します。package_nameを「practice_package」などと書き換える必要はありません。下記のまま記述してください。なお、「：」は省略記号です。
+次に、data_filesにlaunchファイルの参照先を追加します。関数joinの中の「package_name」を「practice_package」などと書き換える必要はありません。下記のまま記述してください。関数globの中のアステリスク（*）は正規表現です。分からない人は学習してください。なお、「：」は省略記号です。
 
 ```
 ：
@@ -127,7 +134,7 @@ data_files=[
 $ cd ~/colcon_ws && colcon build
 ```
 
-一応、事前にxtermが使用できるかどうかを確認しておきます。
+一応、xtermが正常に起動するかを事前に確認しておきます。
 
 ```
 $ xterm
