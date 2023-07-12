@@ -116,7 +116,7 @@ import os
 from glob import glob
 ```
 
-次に、data_filesにlaunchファイルの参照先を追加します。関数joinの中の「package_name」を「practice_package」などと書き換える必要はありません。下記のまま記述してください。関数globの中のアステリスク（*）は正規表現です。分からない人は学習してください。なお、「：」は省略記号です。
+次に、data_filesにlaunchファイルの参照先を追加します。関数joinの中の「package_name」を「practice_package」などと書き換える必要はありません。下記のまま記述してください。関数globの中のアステリスク（*）は正規表現です。意味が分からない人は学習してください。なお、「：」は省略記号です。
 
 ```
 ：
