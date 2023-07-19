@@ -9,46 +9,39 @@ TurtleBotにアダプターかバッテリーを挿し、TurtleBot内のOpenCR�
 
 TurtleBot上のRIDARが回転し始め、起動音が鳴ります。
 
-TurtleBotが起動したら、リモートPCからRasbperry Piに入ります。
-
+TurtleBotが起動したら、リモートPCからTurtleBot内のRasbperry Piに入ります。
 ```
 $ ssh ubuntu@10.0.1.11
 ```
 
-環境変数（TURTLEBOT3_MODEやORS_DOMAIN_ID）が設定されていることを確認します。
-
+環境変数（TURTLEBOT3_MODELやROS_DOMAIN_ID）が設定されていることを確認します。
 ```
 $ cat ~/.bashrc
 ```
 
 TurtleBotを始動するためのROSパッケージを実行します。
-
 ```
 $ ros2 launch turtlebot3_bringup robot.launch.py
 ```
 
 ## 実機の操作
-モデルと同じように実機を操作することができます。別のターミナルを開いて…
-
+ヴァーチャルロボットと同じようにリアルロボットを操作することができます。別のターミナルで操作してみます。
 ```
 $ ros2 run turtlebot3_teleop teleop_keyboard
 ```
 
-実機とモデルを同時に動かすこともできます。別のターミナルを開いて…
-
+ヴァーチャルとリアルを同時に動かすこともできます。別のターミナルを開いてシミュレーターを起動します。
 ```
 $ ros2 launch turtlebot3_gazebo empty_world.launch.py
 ```
 
-試しに点群データを確認してみます。別のターミナルを開いて…
-
+試しに点群データを確認してみます。別のターミナルを開いてRVizで確認してみます。
 ```
 $ rviz2
 ```
 
 ## TurtleBotの停止
 リモートPCからシャットダウンします。
-
 ```
 $ sudo shutdown -h now
 ```
