@@ -9,9 +9,9 @@ ___
 - まず、グループごとに課題提出用のブランチを作成してください。
 ```
 《記法》
-$ git checkout -b feature/グループ名
+$ git checkout -b feature/グループ番号_グループ名
 《実例》
-$ git checkout -b feature/baymax
+$ git checkout -b feature/0_baymax
 ```
     - グループ名は話し合って決めてください。
     - グループの誰か1人が作成し、他の人はそのブランチに切り替えてください。
@@ -41,7 +41,7 @@ $ git checkout -b feature/baymax
     - レポートの用紙サイズはA4縦とします。
     - 図表を使用しても構いません。
     - PDF形式で提出してください。
-    - ファイル名は「チーム番号_チーム名.pdf（例：0_baymax.pdf）」でお願いします。
+    - ファイル名は「グループ番号_グループ名.pdf（例：0_baymax.pdf）」でお願いします。
 
 - 締切は次回の実験実施日の12時50分までとします。
 
