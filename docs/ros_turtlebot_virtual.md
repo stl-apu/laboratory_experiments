@@ -4,7 +4,7 @@ TurtleBot本体でなく、リモートPC上で実行します。Gazebo（ガゼ
 ## Dockerコンテナーの作成
 GUIに対応したROS用のDockerコンテナーを作成します。
 ```
-$ docker container run -p 6080:80 --shm-size=512m tiryoh/ros2-desktop-vnc:foxy
+$ docker container run -p 6080:80 --shm-size=512m --name ros-gui tiryoh/ros2-desktop-vnc:foxy
 ```
 
 ウェブブラウザーを開き、URL「[http://localhost:6080](http://localhost:6080)」でアクセスしてみます。
@@ -12,6 +12,8 @@ $ docker container run -p 6080:80 --shm-size=512m tiryoh/ros2-desktop-vnc:foxy
 ターミナルは［左下のボタン］→［System Tools］→［LXTerminal］で開けます。
 
 コピー＆ペーストは左端のcontrol barのClipboardを使用します。Clipboardにペースト（Ctrl＋v）し、その内容をターミナルにペースト（Ctrl＋Shift＋v）できます。
+
+<span style="color: #CC0066;">念のため、ログアウトしてからコンテナーを停止するようにしましょう。</span>
 
 ## シミュレーションの準備
 必要となる関連パッケージを予めインストールしておきます。Gazebo（Gazebo11）、Cartographer、Navigation2をインストールします。ダウンロードに時間が掛かる場合は最後の2行（4行目と5行目）を後でダウンロードするようにしてください。
