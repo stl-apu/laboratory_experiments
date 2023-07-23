@@ -13,7 +13,7 @@ $ docker container run -p 6080:80 --shm-size=512m --name ros-gui tiryoh/ros2-des
 
 コピー＆ペーストは左端のcontrol barのClipboardを使用します。Clipboardにペースト（Ctrl＋v）し、その内容をターミナルにペースト（Ctrl＋Shift＋v）できます。
 
-<span style="color: #CC0066;">念のため、ログアウトしてからコンテナーを停止するようにしましょう。</span>
+<span style="color: #CC0066;">コンテナーを停止する時は、念のためログアウトしてからにしましょう。</span>コンテナーを再起動した際、「サーバーへの接続に失敗しました」というエラーが発生する可能性があるので…。
 
 ## シミュレーションの準備
 必要となる関連パッケージを予めインストールしておきます。Gazebo（Gazebo11）、Cartographer、Navigation2をインストールします。ダウンロードに時間が掛かる場合は最後の2行（4行目と5行目）を後でダウンロードするようにしてください。
