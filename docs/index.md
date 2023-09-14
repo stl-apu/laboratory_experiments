@@ -7,7 +7,7 @@
 
 ### Week 0
 - [事前準備](https://stl-apu.github.io/laboratory_experiments/preparetion)
-- [事前学習](https://youtu.be/-cXh0QW575M)
+- 事前学習
     - YouTubeの動画を視聴しておいてください。
     - 内容は「ROS概論」で、動画の長さは約1時間です。
 
