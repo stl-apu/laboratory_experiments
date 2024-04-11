@@ -1,9 +1,11 @@
 # Dockerの設定（Mac）
 
 ## ソフトウェアのインストール
-- DockerのアカウントでDocker Hubにアクセスします。
-    - https://hub.docker.com/
-- Docker Desktop for Macをインストールします。
+DockerのアカウントでDocker Hubにアクセスします。
+
+→https://hub.docker.com/
+
+Docker Desktop for Macをインストールします。
     - https://docs.docker.com/get-docker/
 - Docker.appを起動し、IDとPasswordを入力します。
 - ターミナルを起動し、コマンド`docker`が実行できることを確認します。
