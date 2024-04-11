@@ -13,7 +13,7 @@
 - [事前準備](https://stl-apu.github.io/laboratory_experiments/preparetion)
 - 事前学習
     - YouTubeの動画を視聴しておいてください。
-    - リンクはTeamsのチーム「2024情報科学実験II」で通知します。
+    - リンクはMicrosoft Teamsのチーム「2024情報科学実験II」で通知します。
     - 動画のタイトルは「ROSを用いたロボットの共同研究」で、動画の長さは約1時間です。
 
 ### Week 1
@@ -25,7 +25,7 @@
 - [ROS Node](https://stl-apu.github.io/laboratory_experiments/ros_node)
 - [Assignment 1](https://stl-apu.github.io/laboratory_experiments/assignment1)
 
-### Week 2
+### Week 2（更新中）
 グループでROSのプログラムを作ります。
 - [ROS Package](https://stl-apu.github.io/laboratory_experiments/ros_package)
 - [ROS Subscriber](https://stl-apu.github.io/laboratory_experiments/ros_subscriber)
@@ -35,7 +35,7 @@
 - [ROS Bag](https://stl-apu.github.io/laboratory_experiments/ros_bag)
 - [Assignment 2](https://stl-apu.github.io/laboratory_experiments/assignment2)
 
-### Week 3
+### Week 3（更新中）
 グループでROSを用いてロボットを動かします。
 - [ROS Simulation](https://stl-apu.github.io/laboratory_experiments/ros_simulation)
 - [ROS Service](https://stl-apu.github.io/laboratory_experiments/ros_service)
