@@ -39,7 +39,15 @@ localhost
 
 コンピューターを再起動します。
 
-VcXsrv（X11サーバー）をソフトウェア「XLanuch」で起動します。「Multiple windows」を選択します。「Display number」は「-1」でOKです。「Start no client」を選択します。「Native opengl」のチェックを外します。システムトレイ（通知領域）にXLanuchのアイコンが表示されます。
+VcXsrv（X11サーバー）をソフトウェア「XLanuch」で起動します。
+
+「Multiple windows」を選択します。「Display number」は「-1」でOKです。
+
+次に「Start no client」を選択します。
+
+最後に「Native opengl」のチェックを外します。
+
+システムトレイ（通知領域）にXLanuchのアイコンが表示されます。
 
 <span style="color: #CC0066;">もし上記の設定でGUIが表示されない場合は実験中だけ「Disable access control」にチェックを入れるようにしましょう。</span>
 
