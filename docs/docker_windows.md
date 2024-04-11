@@ -7,12 +7,16 @@
 
 ## ソフトウェアのインストール
 DockerのアカウントでDocker Hubにアクセスします。
+
 →[https://hub.docker.com/](https://hub.docker.com/)
 
-- Docker Desktop for Windowsをインストールします。
-    - https://docs.docker.com/get-docker/
-- Docker Desktop.exeを起動し、IDとPasswordを入力します。
-- コマンドプロンプトを起動し、コマンド`docker`が実行できることを確認します。
+Docker Desktop for Windowsをインストールします。
+
+→[https://docs.docker.com/get-docker/](https://docs.docker.com/get-docker/)
+
+Docker Desktop.exeを起動し、IDとPasswordを入力します。
+
+コマンドプロンプトを起動し、コマンド`docker`が実行できることを確認します。
 ```
 > docker version
 ```
