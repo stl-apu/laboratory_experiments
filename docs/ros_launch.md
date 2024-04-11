@@ -39,7 +39,7 @@ $ ros2 launch sample_package listener_talker_launch.py
 まず、パッケージ「practice_package」にディレクトリー「launch」を作成します。
 
 ```
-$ cd ~/colcon_ws/src/laboratory_experiments_2023/practice_package/
+$ cd ~/colcon_ws/src/laboratory_experiments_2024/practice_package/
 $ mkdir launch
 $ cd launch
 ```

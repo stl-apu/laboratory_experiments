@@ -6,7 +6,7 @@
 practice_publisher_node.pyを作成します。
 
 ```
-$ cd ~/colcon_ws/src/laboratory_experiments_2023/practice_package/practice_package
+$ cd ~/colcon_ws/src/laboratory_experiments_2024/practice_package/practice_package
 $ nano practice_publisher_node.py
 ```
 

@@ -23,7 +23,7 @@ GUIに対応したROS用のDockerコンテナーを用います。
 サンプルプログラムをsrcディレクトリーにcloneします。SSHで接続できるように、GitHubの鍵認証を設定します。なお、cloneした直後はmainブランチにいる点に注意してください。
 ```
 $ cd ~/colcon_ws/src/
-$ git clone git@github.com:stl-apu/laboratory_experiments_2023.git
+$ git clone git@github.com:stl-apu/laboratory_experiments_2024.git
 ```
 
 ビルドします。
@@ -44,7 +44,7 @@ $ ros2 run sample_package sample_processor_node
 ## サンプルプログラムの理解
 sample_processor_node.pyの中身を確認してみます。
 ```
-$ cat ~/colcon_ws/src/laboratory_experiments_2023/sample_package/sample_package/sample_processor_node.py
+$ cat ~/colcon_ws/src/laboratory_experiments_2024/sample_package/sample_package/sample_processor_node.py
 ```
 
 メッセージ型「sensor_msgs/msg/LaserScan」を使用するためには、Pythonのプログラムでモジュールsensor_msgsを読み込む必要があります。ついでに、geometry_msgsも読み込んでおきます。

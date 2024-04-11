@@ -6,12 +6,12 @@
 ROSノードはROSパッケージの中に入れます。複数のROSノードを入れることができ、複数のROSノードが連携することで、大規模・複雑な機能を実現することができます。
 
 ## ROSパッケージの作成
-ROSパッケージはディレクトリー「src」の中に作成します。今回は「laboratory_experiments_2023」というメタパッケージの中に作成します。
+ROSパッケージはディレクトリー「src」の中に作成します。今回は「laboratory_experiments_2024」というメタパッケージの中に作成します。
 
 ```
 $ docker container exec -it ros-cui /bin/bash
 $ source /ros_entrypoint.sh
-$ cd ~/colcon_ws/src/laboratory_experiments_2023
+$ cd ~/colcon_ws/src/laboratory_experiments_2024
 ```
 
 メタパッケージは複数のROSパッケージをまとめたものです。ロボットは複数の機能を組み合わせて使用することが多いので、多くのメタパッケージが使用されています。

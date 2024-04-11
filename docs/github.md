@@ -94,17 +94,17 @@ $ cd ~/colcon_ws/src/
 ```
 - コマンド`clone`でプログラムをダウンロード（初回ダウンロード）します。
 ```
-$ git clone git@github.com:stl-apu/laboratory_experiments_2023.git
+$ git clone git@github.com:stl-apu/laboratory_experiments_2024.git
 ```
-- コマンド`ls`でディレクトリー「laboratory_experiments_2023」が存在することを確認します。
+- コマンド`ls`でディレクトリー「laboratory_experiments_2024」が存在することを確認します。
 ```
 $ ls
 ```
 
 ## 差分アップロード
-- ディレクトリー「laboratory_experiments_2023」に移動します。
+- ディレクトリー「laboratory_experiments_2024」に移動します。
 ```
-$ cd laboratory_experiments_2023
+$ cd laboratory_experiments_2024
 ```
 - ブランチの一覧を確認します。mainのみが存在します。
 ```
