@@ -1,13 +1,14 @@
 # Dockerの設定（Windows）
 
 ## コンピューターの設定
-- 「タスクマネージャー」を起動し、［パフォーマンス］→［CPU］から［仮想化：有効］となっていることを確認します。
-    - 有効にする方法はコンピューターのメーカーや機種によって異なるので、自分で調べてください。
-- 「コントロールパネル」を起動し、［プログラム］→［Windowsの機能の有効化または無効化］を開き、［Hyper-V］と［Linux用Windowsサブシステム（Windows Subsystem for Linux）］にチェックが入っていることを確認します。
+「タスクマネージャー」を起動し、［パフォーマンス］→［CPU］から［仮想化：有効］となっていることを確認します。有効にする方法はコンピューターのメーカーや機種によって異なるので、自分で調べてください。
+
+「コントロールパネル」を起動し、［プログラム］→［Windowsの機能の有効化または無効化］を開き、［Hyper-V］と［Linux用Windowsサブシステム（Windows Subsystem for Linux）］にチェックが入っていることを確認します。
 
 ## ソフトウェアのインストール
-- DockerのアカウントでDocker Hubにアクセスします。
-    - https://hub.docker.com/
+DockerのアカウントでDocker Hubにアクセスします。
+→[https://hub.docker.com/](https://hub.docker.com/)
+
 - Docker Desktop for Windowsをインストールします。
     - https://docs.docker.com/get-docker/
 - Docker Desktop.exeを起動し、IDとPasswordを入力します。
