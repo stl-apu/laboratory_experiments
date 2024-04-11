@@ -148,4 +148,4 @@ $ ros2 launch practice_package practice_launch.py
 
 [このページのトップへ](#)
 
-[情報科学実験用サイトのトップへ](https://stl-apu.github.io/laboratory_experiments/)
+[実験用サイトのトップへ](https://stl-apu.github.io/laboratory_experiments/)

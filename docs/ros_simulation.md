@@ -121,4 +121,4 @@ $ ros2 run mouse_teleop mouse_teleop --remap mouse_vel:=/turtle1/cmd_vel
 
 [このページのトップへ](#)
 
-[情報科学実験用サイトのトップへ](https://stl-apu.github.io/laboratory_experiments/)
+[実験用サイトのトップへ](https://stl-apu.github.io/laboratory_experiments/)

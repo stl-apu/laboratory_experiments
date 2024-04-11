@@ -90,4 +90,4 @@ $ docker container rm ros-cui
 
 [Dockerページへ](https://stl-apu.github.io/laboratory_experiments/docker)
 
-[情報科学実験用サイトのトップへ](https://stl-apu.github.io/laboratory_experiments/)
+[実験用サイトのトップへ](https://stl-apu.github.io/laboratory_experiments/)

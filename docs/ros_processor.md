@@ -68,4 +68,4 @@ callback関数の中ではfor文やif文を用いて最も近い物体までの�
 
 [このページのトップへ](#)
 
-[情報科学実験用サイトのトップへ](https://stl-apu.github.io/laboratory_experiments/)
+[実験用サイトのトップへ](https://stl-apu.github.io/laboratory_experiments/)
