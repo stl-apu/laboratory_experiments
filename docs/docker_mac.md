@@ -3,7 +3,7 @@
 ## ソフトウェアのインストール
 DockerのアカウントでDocker Hubにアクセスします。
 
-→https://hub.docker.com/
+https://hub.docker.com/
 
 Docker Desktop for Macをインストールします。
     - https://docs.docker.com/get-docker/
