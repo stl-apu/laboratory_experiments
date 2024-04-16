@@ -1,11 +1,11 @@
 # Dockerの使い方
 
 ## イメージのダウンロード
-- ROS2がインストールされたUbuntu 20.04のイメージをダウンロードします。
+- ROS2が予めインストールされたUbuntu 20.04のイメージをダウンロードします。
 ```
 $ docker image pull ros:foxy-ros-base-focal
 ```
-- 上記のイメージが存在することを確認します。
+- ダウンロード後、上記のイメージが存在することを確認します。
 ```
 $ docker image ls
 ```
@@ -13,47 +13,44 @@ $ docker image ls
 ## コンテナーの作成
 - イメージに基づいてコンテナーを作成し、起動します。この時、オプションnameでコンテナーに対して名前（例：ros-cui）を付けておきます。
 ```
-《UbuntuやWindows（WSL2）の場合》
+《Ubuntuの場合》
 $ docker container run -itd --net host -e DISPLAY=$DISPLAY --name ros-cui ros:foxy-ros-base-focal /bin/bash
-《MacやWindows（WSL1）の場合》
+《MacやWindowsの場合》
 $ docker container run -itd -e DISPLAY=host.docker.internal:0 --name ros-cui ros:foxy-ros-base-focal /bin/bash
 ```
-- コンテナー「ros-cui」が存在することを確認します。
+- 起動後、コンテナー「ros-cui」が存在することを確認します。
 ```
 $ docker container ls -a
 ```
-- コンテナー「ros-cui」の中に入ります。
+- コンテナー「ros-cui」の中に入ってみます。
 ```
 $ docker container exec -it ros-cui /bin/bash
 ```
 
 ## コンテナーの試用
-- コマンドsudoをインストールしておきます。
+- 今後のためにコマンドsudoをインストールしておきます。
 ```
 $ su
 $ apt update
 $ apt install sudo -y
 $ exit
 ```
-- エディター「nano」をインストールし、実行してみます。
+- エディター「nano」をインストールし、実行してみます。ctrl＋xで終了できます。
 ```
 $ sudo apt install nano -y
 $ nano
 ```
-    - ctrl＋xで終了できます。
-- X Window Systemの動作を確認するため、アプリ「x11-apps」をインストールし、実行してみます。
+- X Window Systemの動作を確認するため、アプリ「x11-apps」をインストールし、実行してみます。正常に実行できた場合は「マウスカーソルを見続ける目」が表示されます。ctrl＋cで終了できます。
 ```
 $ sudo apt install x11-apps -y
 $ xeyes
 ```
-    - マウスカーソルを見続ける目が表示されます。
-    - ctrl＋cで終了できます。
 
 ## コンテナーの操作
 - 今後のためにコンテナーに関するコマンドを整理しておきます。
 
 ### コンテナーの起動
-- コンテナーを起動します。
+- コンテナーを起動するコマンドです。コンテナーに入る前にコンテナーを起動しておく必要があります。
 ```
 《記法》
 $ docker container start コンテナー名
@@ -62,7 +59,7 @@ $ docker container start ros-cui
 ```
 
 ### コンテナーの停止
-- コンテナーをコマンド`exit`で抜けてから、コンテナーを停止します。
+- コンテナーを停止するコマンドです。コンテナーをコマンド`exit`で抜けてから実行します。
 ```
 《記法》
 $ docker container stop コンテナー名

@@ -5,7 +5,7 @@
 ## 準備
 - ターミナルを開きます。
     - Windowsではターミナルのことをコマンドプロンプトと言います。読み替えてください。
-- Dockerサービスを起動します。
+- DockerサービスとDockerコンテナーを起動します。
 - Dockerコンテナーに入ります。
 ```
 $ docker container exec -it ros-cui /bin/bash

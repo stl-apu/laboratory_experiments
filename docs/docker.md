@@ -10,6 +10,8 @@
 - Docker Imageに基づいてDocker Containerを作成します。
 
 ## 演習
+「Dockerの設定」を済ませた後、「Dockerの使い方」を実施してください。
+
 - Dockerの設定
     - [Ubuntu](https://stl-apu.github.io/laboratory_experiments/docker_ubuntu)
     - [Mac](https://stl-apu.github.io/laboratory_experiments/docker_mac)
