@@ -212,6 +212,11 @@ $ git push origin feature/2021311000
 $ git checkout develop
 ```
 
+- コンテナーから抜けて終了です。
+```
+$ exit
+```
+
 ## 補足1：ブランチの結合
 - ブランチmain（master）がロボットで実験する際の本番環境となります。
 - 実験する前にはfeature → develop → mainと、プログラムをコマンド`merge`で結合する必要があります。
