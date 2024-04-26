@@ -25,7 +25,7 @@
 - [ROS Node](https://stl-apu.github.io/laboratory_experiments/ros_node)
 - [Assignment 1](https://stl-apu.github.io/laboratory_experiments/assignment1)
 
-### Week 2（更新中）
+### Week 2
 グループでROSのプログラムを作ります。
 - [ROS Package](https://stl-apu.github.io/laboratory_experiments/ros_package)
 - [ROS Subscriber](https://stl-apu.github.io/laboratory_experiments/ros_subscriber)
@@ -35,7 +35,7 @@
 - [ROS Bag](https://stl-apu.github.io/laboratory_experiments/ros_bag)
 - [Assignment 2](https://stl-apu.github.io/laboratory_experiments/assignment2)
 
-### Week 3（更新中）
+### Week 3
 グループでROSを用いてロボットを動かします。
 - [ROS Simulation](https://stl-apu.github.io/laboratory_experiments/ros_simulation)
 - [ROS Service](https://stl-apu.github.io/laboratory_experiments/ros_service)
