@@ -40,7 +40,7 @@ $ exit
 $ sudo apt install nano -y
 $ nano
 ```
-- X Window Systemの動作を確認するため、アプリ「x11-apps」をインストールし、実行してみます。正常に実行できた場合は「マウスカーソルを見続ける目」が表示されます。ctrl＋cで終了できます。
+- X Window Systemの動作を確認するため、アプリ「x11-apps」をインストールし、実行してみます。正常に実行できた場合は「マウスカーソルを見続ける目」が表示されます。<span style="color: #CC0066;">表示されない人は設定などを間違えている可能性が高いので、ここまでの内容を確認してください。</span>ctrl＋cで終了できます。
 ```
 $ sudo apt install x11-apps -y
 $ xeyes
