@@ -55,7 +55,6 @@ $ ros2 topic list
 ```
 $ ros2 topic info /turtle1/cmd_vel
 ```
-    - 
 
 - トピックメッセージ型「geometry_msgs/msg/Twist」を構成する要素を確認してみます。2つの3次元ベクトル（linearとangular）で構成されており、それぞれの値はfloatであることが分かります。
 ```
