@@ -129,7 +129,7 @@ $ git branch
 《記法》
 $ git checkout -b ブランチ名
 《実例》
-$ git checkout -b feature/2021311000
+$ git checkout -b feature/2022311000
 ```
     - オプションbはブランチを作成しながら切り替えます。普通に切り替える場合はオプションを付けません。
 - テキストエディター（nanoなど）でtest.txtを開き、「Local 1」と追記し、保存します。
@@ -152,7 +152,7 @@ $ git commit -m "Update test.txt"
 《記法》
 $ git push origin ブランチ名
 《実例》
-$ git push origin feature/2021311000
+$ git push origin feature/2022311000
 ```
 - GitHubのウェブサイトを開き、自分用のブランチを確認します。test.txtに「Local 1」が反映されていたらOKです！
 
@@ -177,14 +177,14 @@ $ git commit -m "Update test.txt"
 ```
 - pushすると、エラーが発生します。pullしてからでないとpushできない状態となります。
 ```
-$ git push origin feature/2021311000
+$ git push origin feature/2022311000
 ```
 
 - このように複数人が同時に同じファイルを編集すると、競合（conflict）が発生します。
 
 - pullすると、別のエラーが発生します。
 ```
-$ git pull origin feature/2021311000
+$ git pull origin feature/2022311000
 ```
 
 - テキストエディターでtest.txtを開き、競合を解消し、保存します。
@@ -204,7 +204,7 @@ Local 2
 ```
 $ git add test.txt
 $ git commit -m "Update test.txt"
-$ git push origin feature/2021311000
+$ git push origin feature/2022311000
 ```
 
 - 現在のブランチを「develop」に戻しておきます。
