@@ -7,7 +7,7 @@ TurtleBot 3の実機を用いたデモを4限目の開始時に行います。
 ## TurtleBotの起動
 TurtleBotにアダプターかバッテリーを挿し、TurtleBot内のOpenCRの電源スイッチをスライドします。
 
-TurtleBot上のRIDARが回転し始め、起動音が鳴ります。
+TurtleBot上のLIDARが回転し始め、起動音が鳴ります。
 
 TurtleBotが起動したら、リモートPCからTurtleBot内のRasbperry Piに入ります。
 ```
@@ -30,12 +30,12 @@ $ ros2 launch turtlebot3_bringup robot.launch.py
 $ ros2 run turtlebot3_teleop teleop_keyboard
 ```
 
-ヴァーチャルとリアルを同時に動かすこともできます。別のターミナルを開いてシミュレーターを起動します。
+ヴァーチャルとリアルを同時に動かすこともできます。別のターミナルを開いてシミュレーター（Gazebo）を起動します。
 ```
 $ ros2 launch turtlebot3_gazebo empty_world.launch.py
 ```
 
-試しに点群データを確認してみます。別のターミナルを開いてRVizで確認してみます。
+点群データも確認してみます。別のターミナルを開いて可視化ツール（RViz）で確認してみます。
 ```
 $ rviz2
 ```
