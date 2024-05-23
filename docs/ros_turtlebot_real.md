@@ -7,25 +7,25 @@ TurtleBot 3の実機を用いたデモを4限目の開始時に行います。
 ## TurtleBotの起動
 TurtleBotにアダプターかバッテリーを挿し、TurtleBot内のOpenCRの電源スイッチをスライドします。
 
-TurtleBot上のLIDARが回転し始め、起動音が鳴ります。
+Rasbperry Piの緑色LEDがともります。そして、TurtleBot上のLIDARが回転し始め、起動音が鳴ります。
 
 TurtleBotが起動したら、リモートPCからTurtleBot内のRasbperry Piに入ります。
 ```
 $ ssh ubuntu@10.0.1.11
 ```
 
-環境変数（TURTLEBOT3_MODELやROS_DOMAIN_ID）が設定されていることを確認します。
+環境変数（ROS_DOMAIN_IDやTURTLEBOT3_MODEL）が設定されていることを確認します。
 ```
 $ cat ~/.bashrc
 ```
 
-TurtleBotを始動するためのROSパッケージを実行します。
+TurtleBotを始動するためのROSパッケージをRasbperry Piで実行します。
 ```
 $ ros2 launch turtlebot3_bringup robot.launch.py
 ```
 
 ## 実機の操作
-ヴァーチャルロボットと同じようにリアルロボットを操作することができます。別のターミナルで操作してみます。
+ヴァーチャルロボットと同じようにリアルロボットを操作することができます。リモートPCで別のターミナルを開いて操作してみます。
 ```
 $ ros2 run turtlebot3_teleop teleop_keyboard
 ```
@@ -35,7 +35,7 @@ $ ros2 run turtlebot3_teleop teleop_keyboard
 $ ros2 launch turtlebot3_gazebo empty_world.launch.py
 ```
 
-点群データも確認してみます。別のターミナルを開いて可視化ツール（RViz）で確認してみます。
+点群データも確認してみます。別のターミナルを開いて可視化ツール（RViz）で確認してみます。Fixed Frameは「base_link」や「base_scan」に設定する。
 ```
 $ rviz2
 ```
