@@ -9,7 +9,7 @@ TurtleBotにアダプターかバッテリーを挿し、TurtleBot内のOpenCR�
 
 Rasbperry Piの緑色LEDがともります。そして、TurtleBot上のLIDARが回転し始め、起動音が鳴ります。
 
-TurtleBotが起動したら、リモートPCからTurtleBot内のRasbperry Piに入ります。
+1分ほど待ち、TurtleBotが起動したら、リモートPCからTurtleBot内のRasbperry Piに入ります。
 ```
 $ ssh ubuntu@10.0.1.11
 ```
