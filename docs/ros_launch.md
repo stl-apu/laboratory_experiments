@@ -103,7 +103,7 @@ launch_ros.actions.Node(
 ```
 
 ## launchファイルの設定
-setup.pyを編集する必要があるので、テキストエディターで開きます。
+setup.pyを<span style="color: #CC0066;">編集する</span>必要があるので、テキストエディターで開きます。ROSパッケージを作成した時に作成されているので、新たに作成する必要はありません。
 
 ```
 $ nano setup.py
