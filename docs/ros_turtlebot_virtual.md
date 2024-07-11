@@ -9,7 +9,7 @@ $ docker container run -p 6080:80 --shm-size=512m --name ros-gui tiryoh/ros2-des
 
 ウェブブラウザーを開き、URL「[http://localhost:6080](http://localhost:6080)」でアクセスしてみます。
 
-ターミナルは［左下のボタン］→［System Tools］→［LXTerminal］で開けます。
+ターミナルは、左上のボタン［Menu］→［System Tools］→［MATE Terminal］などを使います。
 
 コピー＆ペーストは左端のcontrol barのClipboardを使用します。Clipboardにペースト（Ctrl＋v）し、その内容をターミナルにペースト（Ctrl＋Shift＋v）できます。
 
