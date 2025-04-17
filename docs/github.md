@@ -4,7 +4,7 @@ GitHubを利用して、実験で使用するサンプルプログラムをダ�
 ## 準備
 ターミナルを開きます。なお、Windowsではターミナルのことをコマンドプロンプトと言います。以後、読み替えてください。
 
-DockerサービスとDockerコンテナーが起動していることを確認し、Dockerコンテナーに入ります。
+Dockerコンテナーに入っていないなら、DockerサービスとDockerコンテナーが起動していることを確認した上で、Dockerコンテナーに入ります。
 ```
 $ docker container exec -it ros-cui /bin/bash
 ```
@@ -209,7 +209,7 @@ $ git push origin feature/2023311000
 $ git checkout develop
 ```
 
-コンテナーから抜けて終了です。
+Dockerコンテナーから抜けて終了です。
 ```
 $ exit
 ```

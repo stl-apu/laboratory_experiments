@@ -15,9 +15,9 @@ $ source ros_entrypoint.sh
 必要なパッケージをインストールします。
 ```
 $ sudo apt update
-$ sudo apt install ros-foxy-demo-nodes-cpp -y
-$ sudo apt install ros-foxy-demo-nodes-py -y
-$ sudo apt install ros-foxy-rqt* -y
+$ sudo apt install ros-humble-demo-nodes-cpp -y
+$ sudo apt install ros-humble-demo-nodes-py -y
+$ sudo apt install ros-humble-rqt* -y
 ```
 
 余計なトラブルを避けるため、アクセラレーターをオフに設定しておきます。
