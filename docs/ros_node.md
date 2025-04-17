@@ -2,7 +2,7 @@
 ROSコマンドでなくROSノードを用いて出版・講読を行ってみます。
 
 ## 準備
-Dockerコンテナーに入ります。
+Dockerコンテナーに入っていない場合は、Dockerコンテナーに入ります。
 ```
 $ docker container exec -it ros-cui /bin/bash
 ```
@@ -25,7 +25,7 @@ $ sudo apt install ros-humble-rqt* -y
 $ export LIBGL_ALWAYS_INDIRECT=1
 ```
 
-GUIを用いたROSツールを使用するので、Dockerクライアント（Dockerコンテナー）側で環境変数DISPLAYが設定されていることを確認しましょう。設定されていないと、Dockerホスト（ホストOS）側にGUIの表示を依頼できません。設定させていない場合は「Dockerの設定」を再確認しましょう。
+GUIを用いたROSツールを使用するので、Dockerクライアント（Dockerコンテナー）側で環境変数DISPLAYが設定されていることを確認しましょう。設定されていないと、Dockerホスト（ホストOS）側にGUIの表示を依頼できません。設定されている場合は「host.docker.internal:0」など、何か文字列が返ってきます。設定させていない場合はページ「Dockerの設定」を再確認しましょう。
 ```
 $ echo $DISPLAY
 ```
