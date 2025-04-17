@@ -1,7 +1,7 @@
 # Dockerの設定（Mac）
 
 ## ソフトウェアのインストール
-DockerのアカウントでDocker Hubにアクセスできることを確認します。
+DockerのアカウントでDocker Hubにサインインできることを確認します。
 
 →[https://hub.docker.com/](https://hub.docker.com/)
 
@@ -9,36 +9,35 @@ Docker Desktop for Macをインストールします。
 
 →[https://docs.docker.com/get-docker/](https://docs.docker.com/get-docker/)
 
-Docker.appを起動し、アカウント情報（IDとPassword）を入力します。
+Docker.appを起動し、アカウント情報（IDとpassword）を入力します。
 
-ターミナルを起動し、コマンド`docker`が実行できることを確認します。ClientやServerの情報が表示されると思います。
+ターミナルを起動し、コマンド`docker`が実行できることを確認します。clientやserverの情報が表示されると思います。
 ```
 % docker version
 ```
 
 ## GUIの設定
-XQuartzをインストールします。
+MacでX Window Systemを利用するためにXQuartzをインストールします。
 
 →[https://www.xquartz.org/](https://www.xquartz.org/)
 
-XQuartzを起動し、［設定］を選択する。そして、［セキュリティ］の［ネットワーク・クライアントからの接続を許可］にチェックを入れます。
+XQuartzを起動し、［設定］を選択します。そして、［セキュリティ］の［ネットワーク・クライアントからの接続を許可］にチェックを入れます。
 
-コンピューターを再起動します。
+コンピューターを再起動します（再起動後、XQuartzは停止した状態になります）。
 
-アクセス制限を確認し、localhostが含まれていることを確認します。
+アクセス制限を確認し、localhostが含まれているかどうかを確認します。含まれていなかった場合はlocalhostを許可し、再確認します。
 ```
+% xhost
+
+↓含まれていなかったら（何も表示されなかったら）
+
+% xhost +localhost
 % xhost
 INET:localhost
 INET6:localhost
 ```
 
-含まれていなかった場合はlocalhostを許可し、localhostが許可されたことを確認します。
-```
-% xhost +localhost
-% xhost
-```
-
-改めてXQuartzを起動します。第2週や第3週の実験を実施する前にもXQuartzを起動する必要があります。覚えておきましょう。
+改めてXQuartzを起動します。第2週や第3週の実験を実施する前にもXQuartzを起動する必要があります。覚えておいてください。
 
 [このページのトップへ](#)
 

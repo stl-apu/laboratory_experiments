@@ -7,7 +7,7 @@ $ sudo apt update
 $ sudo apt install docker.io -y
 ```
 
-インストールしたら、コマンド`docker`が実行できることを確認します。
+インストールしたら、コマンド`docker`が実行できることを確認します。インストールされたDockerの版が表示されたらOKです。
 ```
 $ docker version
 ```
@@ -28,17 +28,19 @@ $ sudo chgrp docker /var/run/docker.sock
 $ sudo reboot
 ```
 
-接続が許可されているXクライアントとして「LOCAL:」があることを確認します。
+接続が許可されているXクライアントとして「LOCAL:」があるかどうかを確認します。「LOCAL:」が無い場合は追加し、再確認します。
 ```
+$ xhost
+access control enabled, only authorized clients can connect
+SI:localuser:ユーザー名
+
+↓無かったら
+
+$ xhost +local:
 $ xhost
 access control enabled, only authorized clients can connect
 LOCAL:
 SI:localuser:ユーザー名
-```
-
-「LOCAL:」が無い場合は追加します。
-```
-$ xhost +local:
 ```
 
 Dockerサービスを再起動します。
@@ -51,3 +53,4 @@ $ sudo service docker restart
 [Dockerページへ](https://stl-apu.github.io/laboratory_experiments/docker)
 
 [実験用サイトのトップへ](https://stl-apu.github.io/laboratory_experiments/)
+
