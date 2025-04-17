@@ -41,7 +41,7 @@ $ apt install sudo -y
 $ exit
 ```
 
-エディター「nano」をインストールし、実行してみます。終了するときはctrl＋xを押します。
+エディター「nano」をインストールし、実行してみます。終了するときは「Ctrl＋x」を押します。
 ```
 $ sudo apt update
 $ sudo apt install nano -y
