@@ -17,7 +17,7 @@
     - 動画のタイトルは「ROSを用いたロボットの共同研究」で、動画の長さは約1時間です。
 
 ### Week 1
-個人でROSの仕組みを学びます。PC（特にOS）の準備をお願いします。WindowsのHomeエディションでは、実験を行うことができません。
+個人でROSの仕組みを学びます。PC（特にOS）の準備をお願いします。<span style="color: #CC0066;">WindowsのHomeエディションでは、実験を行うことができません。</span>
 
 - [Docker](https://stl-apu.github.io/laboratory_experiments/docker)
 - [ROS Preparetion](https://stl-apu.github.io/laboratory_experiments/ros_preparetion)
@@ -27,7 +27,7 @@
 - [Assignment 1](https://stl-apu.github.io/laboratory_experiments/assignment1)
 
 ### Week 2
-グループでROSのプログラムを作ります。Pythonの予習をお願いします。特に字下げ（インデント）について理解しておいてください。
+グループでROSのプログラムを作ります。Pythonの予習をお願いします。<span style="color: #CC0066;">特に字下げ（インデント）について理解しておいてください。</span>
 
 - [ROS Package](https://stl-apu.github.io/laboratory_experiments/ros_package)
 - [ROS Subscriber](https://stl-apu.github.io/laboratory_experiments/ros_subscriber)
