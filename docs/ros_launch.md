@@ -13,6 +13,7 @@
 ## xtermのインストール
 予め端末エミュレーター「XTerm」をインストールしておきます。
 ```
+$ sudo apt update
 $ sudo apt install xterm -y
 ```
 

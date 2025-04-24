@@ -28,6 +28,7 @@ $ sudo apt install ros-humble-navigation2 ros-humble-nav2-bringup -y
 TurtleBot 3用のパッケージをインストールします。
 ```
 $ source ~/.bashrc
+$ sudo apt update
 $ sudo apt install ros-humble-dynamixel-sdk ros-humble-turtlebot3 ros-humble-turtlebot3-msgs ros-humble-turtlebot3-gazebo -y
 ```
 

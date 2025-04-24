@@ -35,6 +35,7 @@ Gitコマンド（`clone`、`pull`、`push`など）を実行できるよう、S
 
 鍵を作成するために、コマンド`ssh-keygen`をインストールします。ついでに、コマンド`xsel`もインストールしておきます。
 ```
+$ sudo apt update
 $ sudo apt install openssh-server xsel -y
 ```
 

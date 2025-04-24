@@ -43,12 +43,14 @@ $ sudo apt autoclean
 
 エディター「nano」をインストールし、実行してみます。終了するときは「Ctrl＋x」を押します。
 ```
+$ sudo apt update
 $ sudo apt install nano -y
 $ nano
 ```
 
 X Window Systemの動作を確認するため、アプリ「x11-apps」をインストールし、実行してみます。正常に実行できた場合は「マウスカーソルを見続ける目」が表示されます。<span style="color: #CC0066;">表示されない人は設定などを間違えている可能性が高いので、ここまでの実験内容を再確認してください。</span>終了するときはctrl＋cを押します。
 ```
+$ sudo apt update
 $ sudo apt install x11-apps -y
 $ xeyes
 ```
