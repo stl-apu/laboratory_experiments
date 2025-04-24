@@ -11,7 +11,7 @@
 ```
 
 ## xtermのインストール
-予め端末エミュレーター「XTerm」をインストールしておきます。
+Dockerコンテナーに入り、予め端末エミュレーター「XTerm」をインストールしておきます。
 ```
 $ sudo apt update
 $ sudo apt install xterm -y
@@ -24,8 +24,10 @@ $ xterm
 
 
 ## launchファイルの試用
-試しにlaunchファイルを実行してみましょう。1つのコマンドで3つのノードを起動することができます。
+Dockerコンテナーの中で試しにlaunchファイルを実行してみましょう。ROSの環境を設定した上で実行します。1つのコマンドで3つのノードを起動することができます。
 ```
+$ source /ros_entrypoint.sh
+$ source ~/colcon_ws/install/setup.bash
 $ ros2 launch sample_package listener_talker_launch.py
 ```
 
@@ -44,7 +46,7 @@ $ cd ~/colcon_ws/src/laboratory_experiments_2025/practice_package/
 $ mkdir launch && cd $_
 ```
 
-次に、ファイルpractice_launch.pyを作成します。
+次に、ファイルpractice_launch.pyをテキストエディター「nano」で作成します。
 ```
 $ nano practice_launch.py
 ```
@@ -106,7 +108,7 @@ def generate_launch_description():
     ])
 ```
 
-「Ctrl＋x」で保存しながら終了します。
+「Ctrl＋o」で上書き保存したあと、「Ctrl＋x」でテキストエディター「nano」を閉じます。
 
 
 ## 設定ファイルの更新
