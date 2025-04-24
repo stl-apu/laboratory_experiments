@@ -27,7 +27,7 @@
 
 ### HomeからEducationへのアップグレード（Windowsのみ）
 - 情報科学部Wikiの「利用可能なソフトウェア」を確認してみてください。
-    - https://www.cis.aichi-pu.ac.jp/dokuwiki/doku.php?id=index.html
+    - [https://www.cis.aichi-pu.ac.jp/dokuwiki/doku.php?id=index.html](https://www.cis.aichi-pu.ac.jp/dokuwiki/doku.php?id=index.html)
 - ［フリーソフトウェア］から「Education」と「Education N」が見つかると思いますが、「Education」をオススメします。
 - ボタン［キーを表示する］からプロダクトキーをコピーし、自分のPCの［システム］→［ライセンス認証］にペーストすれば、数分でアップグレードできると思います。
 
