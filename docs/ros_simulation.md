@@ -7,7 +7,7 @@
 ```
 $ source /ros_entrypoint.sh
 $ sudo apt update
-$ sudo apt install ros-foxy-turtlesim -y
+$ sudo apt install ros-humble-turtlesim -y
 ```
 
 - ROSパッケージが実行可能であることを確認します。
@@ -102,10 +102,10 @@ $ cd ~/colcon_ws/src/
 $ git clone git@github.com:ros-teleop/teleop_tools.git
 ```
 
-- foxy版のブランチを切り替えます。
+- humble版のブランチを切り替えます。
 ```
 $ cd teleop_tools
-$ git checkout foxy-devel
+$ git checkout humble-devel
 ```
 
 - ビルドします。

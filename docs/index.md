@@ -17,7 +17,8 @@
     - 動画のタイトルは「ROSを用いたロボットの共同研究」で、動画の長さは約1時間です。
 
 ### Week 1
-個人でROSの仕組みを学びます。
+個人でROSの仕組みを学びます。PC（特にOS）の準備をお願いします。WindowsのHomeエディションでは、実験を行うことができません。
+
 - [Docker](https://stl-apu.github.io/laboratory_experiments/docker)
 - [ROS Preparetion](https://stl-apu.github.io/laboratory_experiments/ros_preparetion)
 - [GitHub](https://stl-apu.github.io/laboratory_experiments/github)
@@ -26,17 +27,18 @@
 - [Assignment 1](https://stl-apu.github.io/laboratory_experiments/assignment1)
 
 ### Week 2（更新中）
-グループでROSのプログラムを作ります。
+グループでROSのプログラムを作ります。Pythonの予習をお願いします。特に字下げ（インデント）について理解しておいてください。
+
 - [ROS Package](https://stl-apu.github.io/laboratory_experiments/ros_package)
 - [ROS Subscriber](https://stl-apu.github.io/laboratory_experiments/ros_subscriber)
 - [ROS Publisher](https://stl-apu.github.io/laboratory_experiments/ros_publisher)
 - [ROS Build](https://stl-apu.github.io/laboratory_experiments/ros_build)
 - [ROS Launch](https://stl-apu.github.io/laboratory_experiments/ros_launch)
-- [ROS Bag](https://stl-apu.github.io/laboratory_experiments/ros_bag)
 - [Assignment 2](https://stl-apu.github.io/laboratory_experiments/assignment2)
 
 ### Week 3（更新中）
-グループでROSを用いてロボットを動かします。
+グループでROSを用いてロボットを動かします。他のメンバーに迷惑を掛けないよう、第2週までの復習をお願いします。
+
 - [ROS Simulation](https://stl-apu.github.io/laboratory_experiments/ros_simulation)
 - [ROS Service](https://stl-apu.github.io/laboratory_experiments/ros_service)
 - [ROS Parameter](https://stl-apu.github.io/laboratory_experiments/ros_parameter)

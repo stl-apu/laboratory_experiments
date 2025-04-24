@@ -1,29 +1,29 @@
 # ROSのサブスクライバー
-第1週で学んだリスナーを自作してみます。
+第1週で使ったリスナーを自作してみます。
 
-practice_subscriber_node.pyを作成します。
+practice_subscriber_node.pyを作成します。コンテナーに入り、ROSの環境を設定した状態で進めてください。
 
 ```
-$ cd ~/colcon_ws/src/laboratory_experiments_2024/practice_package/practice_package
+$ cd ~/colcon_ws/src/laboratory_experiments_2025/practice_package/practice_package
 $ nano practice_subscriber_node.py
 ```
 
 ## モジュールのインポート
-モジュール「rclpy」をインポートします。rclpyはROS Client Library for Pythonのことで、ROSノードをPythonで記述する際に必ず必要となるモジュールです。
+まず先頭でモジュール「rclpy」をインポートします。rclpyはROS Client Library for Pythonのことで、ROSノードをPythonで記述する際に必ず必要となるモジュールです。
 
 ```
 import rclpy
 from rclpy.node import Node
 ```
 
-また、今回は標準的なトピックメッセージ型を使用するため、モジュール「std_msgs」もインポートします。
+また、今回は標準的なトピックメッセージ型を使用するため、モジュール「std_msgs」もインポートしておきます。
 
 ```
 from std_msgs.msg import String
 ```
 
 ## クラスの定義
-ROSノードはクラスNodeを継承して作成するのが一般的です。下記の通り、クラス「Node」を継承したクラス「PracticeSubscriber」を定義します。
+次にROSノードについて記述します。ROSノードはクラスNodeを継承して作成するのが一般的です。下記の通り、クラス「Node」を継承したクラス「PracticeSubscriber」を定義します。
 
 ```
 class PracticeSubscriber(Node):
@@ -39,7 +39,7 @@ class PracticeSubscriber(Node):
 関数「callback」はコールバック関数で、トピックを受け取った時に呼び出されます。関数「get_logger」は情報をターミナルに表示します。
 
 ## メイン関数の定義
-Pythonは逐次型のプログラミング言語なので、main関数が無くても問題ありませんが、エントリーポイントとして記述します。下記の通り関数「main」を定義します。
+Pythonは逐次型のプログラミング言語なので、main関数が無くても問題ありませんが、エントリーポイントとして記述します。下記の通り関数「main」を定義します。関数「init」でROS 2の通信を初期化した後、インスタンスを生成します。例外処理により、キーボードで強制終了した場合でも安全にROSノードを終了できるようにした上で、関数「spin」でトピックを待ち続けます。
 
 ```
 def main():
@@ -55,14 +55,6 @@ def main():
         rclpy.shutdown()
         print('========== プログラム終了 ==========')
 ```
-
-関数「init」でROS 2の通信を初期化します。
-
-次に、インスタンスを生成します。
-
-例外処理により、キーボードで強制終了した場合でも安全にROSノードを終了できるようにします。
-
-あとは関数「spin」でトピックを待ち続けます。
 
 [このページのトップへ](#)
 

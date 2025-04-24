@@ -1,20 +1,18 @@
 # ROSのパブリッシャー
-第1週で学んだトーカーを自作してみます。
+第1週で使ったトーカーを自作してみます。今回は10回だけトピックを出版するトーカーを作成します。
 
-今回は10回だけトピックを出版するトーカーを作成します。
-
-practice_publisher_node.pyを作成します。
+practice_publisher_node.pyを作成します。コンテナーに入り、ROSの環境を設定した状態で進めてください。
 
 ```
-$ cd ~/colcon_ws/src/laboratory_experiments_2024/practice_package/practice_package
+$ cd ~/colcon_ws/src/laboratory_experiments_2025/practice_package/practice_package
 $ nano practice_publisher_node.py
 ```
 
 ## モジュールのインポート
-リスナーと同様です。
+3つのモジュールをインポートします。リスナーと同様ですので、リスナーのプログラムをコピー＆ペーストしてください。
 
 ## クラスの定義
-下記の通り、クラス「PracticePublisher」を定義します。
+下記の通り、クラス「PracticePublisher」を定義します。関数「create_publisher」は「トピックメッセージ型」「トピック名」「通信品質」を指定します。「トピックメッセージ型」と「トピック名」は、リスナーの関数「create_subscription」で指定したものに合わせます。関数「create_timer」は「タイマーの間隔」と「コールバック関数名」を指定します。なお、「タイマーの間隔」の単位は秒（s）です。
 
 ```
 class PracticePublisher(Node):
@@ -35,12 +33,8 @@ class PracticePublisher(Node):
         self.i -= 1
 ```
 
-関数「create_publisher」は「トピックメッセージ型」「トピック名」「通信品質」を指定します。リスナーの関数「create_subscription」で指定した「トピックメッセージ型」と「トピック名」に合わせます。
-
-関数「create_timer」は「タイマーの間隔」と「コールバック関数名」を指定します。なお、「タイマーの間隔」の単位は秒（s）です。
-
 ## メイン関数の定義
-リスナーと同様ですので、リスナーのプログラムをコピー＆ペーストしましょう。ただし、インスタンスを作成するクラス名が異なる点に注意してください。
+リスナーと同様ですので、リスナーのプログラムをコピー＆ペーストしてください。ただし、インスタンスを作成するクラス名が異なる点に注意してください（PracticeSubscriberでなく、PracticePublisherです）。
 
 [このページのトップへ](#)
 

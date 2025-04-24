@@ -4,7 +4,7 @@ TurtleBot本体でなく、リモートPC上で実行します。Gazebo（ガゼ
 ## Dockerコンテナーの作成
 GUIに対応したROS用のDockerコンテナーを作成します。
 ```
-$ docker container run -p 6080:80 --shm-size=512m --name ros-gui tiryoh/ros2-desktop-vnc:foxy
+$ docker container run -p 6080:80 --shm-size=512m --name ros-gui tiryoh/ros2-desktop-vnc:humble
 ```
 
 ウェブブラウザーを開き、URL「[http://localhost:6080](http://localhost:6080)」でアクセスしてみます。
@@ -20,22 +20,22 @@ $ docker container run -p 6080:80 --shm-size=512m --name ros-gui tiryoh/ros2-des
 ```
 $ sudo apt update
 $ sudo apt upgrade -y
-$ sudo apt install ros-foxy-gazebo-* -y
-$ sudo apt install ros-foxy-cartographer ros-foxy-cartographer-ros -y
-$ sudo apt install ros-foxy-navigation2 ros-foxy-nav2-bringup -y
+$ sudo apt install ros-humble-gazebo-* -y
+$ sudo apt install ros-humble-cartographer ros-humble-cartographer-ros -y
+$ sudo apt install ros-humble-navigation2 ros-humble-nav2-bringup -y
 ```
 
 TurtleBot 3用のパッケージをインストールします。
 ```
 $ source ~/.bashrc
-$ sudo apt install ros-foxy-dynamixel-sdk ros-foxy-turtlebot3 ros-foxy-turtlebot3-msgs ros-foxy-turtlebot3-gazebo -y
+$ sudo apt install ros-humble-dynamixel-sdk ros-humble-turtlebot3 ros-humble-turtlebot3-msgs ros-humble-turtlebot3-gazebo -y
 ```
 
-TurtleBot 3のシミュレーション用のパッケージをインストールします。タグ名「foxy-devel」を指定しながら`clone`します。
+TurtleBot 3のシミュレーション用のパッケージをインストールします。タグ名「humble-devel」を指定しながら`clone`します。
 ```
 $ mkdir -p ~/colcon_ws/src
 $ cd ~/colcon_ws/src/
-$ git clone https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git -b foxy-devel
+$ git clone https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git -b humble-devel
 $ cd ~/colcon_ws
 $ colcon build --symlink-install
 ```

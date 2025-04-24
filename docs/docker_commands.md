@@ -33,17 +33,16 @@ $ docker container exec -it ros-cui /bin/bash
 ```
 
 ## コンテナーの試用
-今後のために、コマンドsudoをインストールしておきます。
+とりあえず、アップデートを確認し、更新しておきます。
 ```
-$ su
-$ apt update
-$ apt install sudo -y
-$ exit
+$ sudo apt update
+$ sudo apt upgrade -y
+$ sudo apt --purge autoremove -y
+$ sudo apt autoclean
 ```
 
 エディター「nano」をインストールし、実行してみます。終了するときは「Ctrl＋x」を押します。
 ```
-$ sudo apt update
 $ sudo apt install nano -y
 $ nano
 ```

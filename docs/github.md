@@ -10,12 +10,6 @@ $ docker container exec -it ros-cui /bin/bash
 ```
 
 ## Gitの設定
-Gitをインストールします。
-```
-$ sudo apt update
-$ sudo apt install git -y
-```
-
 Gitがインストールされたことを確認します。
 ```
 $ git version
@@ -41,9 +35,7 @@ Gitコマンド（`clone`、`pull`、`push`など）を実行できるよう、S
 
 鍵を作成するために、コマンド`ssh-keygen`をインストールします。ついでに、コマンド`xsel`もインストールしておきます。
 ```
-$ sudo apt update
-$ sudo apt install openssh-server -y
-$ sudo apt install xsel -y
+$ sudo apt install openssh-server xsel -y
 ```
 
 ディレクトリー「~/.ssh」にid_rsaとid_rsa.pubを作成します。パスフレーズは無しで大丈夫です。

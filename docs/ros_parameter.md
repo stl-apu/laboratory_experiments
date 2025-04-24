@@ -60,7 +60,7 @@ $ ros2 run turtlesim turtlesim_node --ros-args --params-file ./turtlesim.yaml
 ## 参考：ROSパラメーターの使い道
 ロボットを動かしながら値を変更できるので、狭い道に入ったら最高速度の上限を下げて安全に移動するなど、ロボットの動きを柔軟に調整することができます。
 
-起動時に設定する場合はlaunchファイル内でyamlファイルを読み込みます。詳細はページ「[ROS2 Documentation](https://docs.ros.org/en/foxy/Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.html#loading-parameters-from-yaml-file)」などを参照してください。
+起動時に設定する場合はlaunchファイル内でyamlファイルを読み込みます。詳細はページ「[ROS2 Documentation](https://docs.ros.org/en/humble/Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.html#loading-parameters-from-yaml-file)」などを参照してください。
 
 その他、名前空間（パラメーター名前空間）を使用すると、同じパラメーター名を複数使用することができます。
 

@@ -1,9 +1,8 @@
 # The First Week's Assignment
-
 第1週の課題（課題1）について説明します。
 
-___
 
+___
 - ROS 2で一般的に使用されているTopic message types（トピックメッセージ型）を調査し、それらが使用されている場面（用途）を説明してください。
     - ROS 1でなくROS 2ですので注意してください。
     - Topic message types（トピックメッセージ型）はTopic types（トピック型）やMessage types（メッセージ型）と書かれていることもあります。
@@ -14,12 +13,14 @@ ___
 - レポートはTeamsのプライベートチャットで鈴木＜SUZUKI Takuo＞に提出してください。
 - 締切は次回の実験実施日の12時50分までとします。
 
-___
 
+___
 以上です。よろしくお願いします。
 
 ［Hint］最初にTurtleSimやTurtleBot3（Burger）で使用されているTopic message types（/turtle1/cmd_velなど）を調査してみましょう。
 
+
 [このページのトップへ](#)
 
 [実験用サイトのトップへ](https://stl-apu.github.io/laboratory_experiments/)
+
