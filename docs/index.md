@@ -40,7 +40,7 @@
 - [ROS Launch](https://stl-apu.github.io/laboratory_experiments/ros_launch)
 - [Assignment 2](https://stl-apu.github.io/laboratory_experiments/assignment2)
 
-### Week 3（更新中）
+### Week 3
 グループでROSを用いてロボットを動かします。他のメンバーに迷惑を掛けないよう、第2週までの復習をお願いします。<span style="color: #CC0066;">注意点として、GUIに対応したROS用のDockerコンテナーはログアウトしてから停止するようにしてください。</span>
 
 - [ROS Simulation](https://stl-apu.github.io/laboratory_experiments/ros_simulation)
