@@ -25,7 +25,7 @@ $ git checkout -b feature/0_baymax
 
 - 最後にROSパッケージ「assignment_package」の中にreadme.mdを作成してください。readmeファイルに書いてある手順でROSパッケージを実行し、評価します。念のため、正常に実行できた場合の出力例を示してください。markdownファイルの書き方は[ココ](https://docs.github.com/ja/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)などを参考にしてください。
 
-- 評価可能な状態になったら、グループの代表者がTeamsのグループチャットで鈴木＜SUZUKI Takuo＞に連絡してください。代表者以外のメンバーも確認できるよう、他のメンバーもグループに加えましょう。
+- 評価可能な状態になったら、グループの代表者がTeamsのグループチャットで鈴木拓央＜SUZUKI Takuo＞に連絡してください。代表者以外のメンバーも確認できるよう、他のメンバーもグループに加えましょう。
 
 - S評価やA評価を得たいグループは「そのようなトピック通信を実現しようと考えた理由」や「トピック通信を実現するために工夫した部分」などを文書ファイルにまとめ、上記のグループチャットで提出してください。加点します。
     - 執筆を担当した人、ならびに各人が担当した部分を明記してください。
