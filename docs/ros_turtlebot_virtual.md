@@ -1,51 +1,57 @@
 # TurtleBot（virtual robot）
-TurtleBot本体（実機）でなく、リモートPC上（シミュレーター）で実行します。Gazebo（ガゼボ）というソフトウェアを用いたシミュレーションです。
+TurtleBot本体（実機）でなく、リモートPC上（シミュレーター）で実行します。Gazebo（ガゼボ）というソフトウェアを用いたシミュレーションです。基本的に、ROS 1では旧Gazebo（Gazebo Classic）を使用し、ROS 2では新Gazebo（Gazebo Ignition）を使用します。また、通常はROS 2 Humbleをオススメしますが、Gazeboを用いる場合はROS 2 Jazzyをオススメします。
 
 ## Dockerコンテナーの作成
-GUIに対応したROS用のDockerコンテナーを作成します。
+GUIに対応したROS用のDockerコンテナーを作成します。コンテナー中でなく、PC上で実行してください。
 ```
-$ docker container run -p 6080:80 --shm-size=512m --name ros-gui tiryoh/ros2-desktop-vnc:humble
+$ docker container run -p 6080:80 --name ros-gui --shm-size=512m tiryoh/ros2-desktop-vnc:jazzy
 ```
 
-ウェブブラウザーを開き、URL「[http://localhost:6080](http://localhost:6080)」でアクセスしてみます。
+PC上でウェブブラウザーを開き、URL「[http://localhost:6080/](http://localhost:6080/)」でアクセスします。ボタン「接続」を押すと、デスクトップが表示されます。
 
-ターミナルは、左上のボタン［Menu］→［System Tools］→［MATE Terminal］などを使います。
+ターミナルは、デスクトップにあるTerminatorなどを使います。
 
 コピー＆ペーストは左端のcontrol barのClipboardを使用します。Clipboardにペースト（Ctrl＋v）し、その内容をターミナルにペースト（Ctrl＋Shift＋v）できます。
 
-<span style="color: #CC0066;">コンテナーを停止する時は、念のためログアウトしてから停止しましょう。</span>コンテナーを再起動した際、「サーバーへの接続に失敗しました」というエラーが発生する可能性があるので…。
+<span style="color: #CC0066;">コンテナーを停止する時は、念のためログアウトしてから停止しましょう。</span>コンテナーを再起動した際、「サーバーへの接続に失敗しました」というエラーが発生する可能性があるので…。発生してしまった場合は、1度、停止→再起動してみてください。それでもダメなら、コンテナーを削除し、再度、コンテナーを作成してください。
 
 ## シミュレーションの準備
-まず、アップデートを確認し、更新しておきます。
+とりあえず、アップデートを確認し、更新しておきます。
 ```
 $ sudo apt update
 $ sudo apt upgrade -y
-$ sudo apt --purge autoremove -y
-$ sudo apt autoclean
 ```
 
-次に、必要となる関連パッケージを予めインストールしておきます。Gazebo（Gazebo11）、Cartographer、Navigation2をインストールします。ダウンロードに時間が掛かる場合は後半の2行（3行目と4行目）を後でダウンロードするようにしてください。
+まず、新Gazebo（Gazebo Ignition）をインストールします。
 ```
-$ sudo apt update
-$ sudo apt install ros-humble-ros-gz -y
-$ sudo apt install ros-humble-cartographer ros-humble-cartographer-ros -y
-$ sudo apt install ros-humble-navigation2 ros-humble-nav2-bringup -y
+$ sudo apt install ros-${ROS_DISTRO}-ros-gz -y
 ```
+
+Gazegoが起動するかを確認しておきます。ウィンドウが1つ開けばOKです。✕ボタンで閉じておきます。
+```
+$ ros2 launch ros_gz_sim gz_sim.launch.py
+```
+
 
 TurtleBot 3用のパッケージをインストールします。
 ```
+$ source /opt/ros/jazzy/setup.bash
+$ mkdir -p ~/turtlebot3_ws/src
+$ cd ~/turtlebot3_ws/src/
+$ git clone -b jazzy https://github.com/ROBOTIS-GIT/DynamixelSDK.git
+$ git clone -b jazzy https://github.com/ROBOTIS-GIT/turtlebot3_msgs.git
+$ git clone -b jazzy https://github.com/ROBOTIS-GIT/turtlebot3.git
+$ cd ~/turtlebot3_ws
+$ colcon build --symlink-install
+$ echo 'source ~/turtlebot3_ws/install/setup.bash' >> ~/.bashrc
 $ source ~/.bashrc
-$ sudo apt update
-$ sudo apt install ros-humble-dynamixel-sdk ros-humble-turtlebot3 ros-humble-turtlebot3-msgs ros-humble-turtlebot3-gazebo -y
 ```
 
-TurtleBot 3のシミュレーション用のパッケージをインストールします。タグ名「humble-devel」を指定しながら`clone`します。
+TurtleBot 3のシミュレーション用のパッケージをインストールします。
 ```
-$ mkdir -p ~/colcon_ws/src
-$ cd ~/colcon_ws/src/
-$ git clone https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git -b humble-devel
-$ cd ~/colcon_ws
-$ colcon build --symlink-install
+$ cd ~/turtlebot3_ws/src/
+$ git clone -b jazzy https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
+$ cd ~/turtlebot3_ws && colcon build --symlink-install
 ```
 
 ROSの環境変数を設定します。ROS_DOMAIN_IDは0～65535の中で好きな数字を選んで設定してください（標準値は30です）。また、TurtleBot 3はburgerとwaffleがあるので、ロボットのモデルとしてburgerと設定しておきます。
@@ -58,7 +64,7 @@ $ export TURTLEBOT3_MODEL=burger
 ```
 $ echo 'export ROS_DOMAIN_ID=30' >> ~/.bashrc
 $ echo 'export TURTLEBOT3_MODEL=burger' >> ~/.bashrc
-$ source ~/.bashrc（←書き込んだ直後のみ実行します）
+$ source ~/.bashrc
 ```
 
 ## シミュレーションの実行
@@ -109,6 +115,18 @@ RVizの操作方法は、
 点のスタイル（PointsやSpheresなど）やサイズ、カラーなどを変更できるので、見やすいように変更してみましょう。
 
 RVizの設定を保存しておきたい人は終了する前に「Files」→「Save Config」を実行しておきましょう。
+
+
+## 関連パッケージのインストール
+次に、必要となる関連パッケージを予めインストールしておきます。
+
+CartographerとNavigation2
+```
+$ sudo apt update
+$ sudo apt install ros-jazzy-cartographer ros-jazzy-cartographer-ros -y
+$ sudo apt install ros-jazzy-navigation2 ros-jazzy-nav2-bringup -y
+```
+
 
 ## 参考：Gazeboの機能
 Gazeboの基本機能はGazebo Tutorialsを確認してみてください。例えば、球などの基本物体（プリミティブ物体）やTurtleBot以外のロボットを追加することができます。人間を追加することもできるようです。
