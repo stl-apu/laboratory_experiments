@@ -29,7 +29,7 @@ $ ros2 param set /turtlesim background_b 51
 ノードを起動するたびにパラメーターを1つ1つ変更するのは大変なので、普通は設定値を外部ファイルに保存しておきます。現在のディレクトリーにノード名のyamlファイル（例：turtlesim.yaml）が作成されます。
 ```
 《記法》
-$ ros2 param dump ノード名
+$ ros2 param dump ノード名 > パラメーターファイル名
 《実例》
 $ ros2 param dump /turtlesim > turtlesim.yaml
 ```
