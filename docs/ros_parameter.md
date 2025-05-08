@@ -31,7 +31,7 @@ $ ros2 param set /turtlesim background_b 51
 《記法》
 $ ros2 param dump ノード名
 《実例》
-$ ros2 param dump /turtlesim
+$ ros2 param dump /turtlesim > turtlesim.yaml
 ```
 
 現在の設定値が保存されているかを確認してみましょう。
