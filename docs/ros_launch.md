@@ -17,7 +17,7 @@ $ sudo apt update
 $ sudo apt install xterm -y
 ```
 
-一応、xtermが正常に起動するかを確認しておきます。起動した場合はCtrl＋dで閉じておきます。
+一応、XTermが正常に起動するかを確認しておきます。起動した場合はCtrl＋dで閉じておきます。
 ```
 $ xterm
 ```
@@ -64,6 +64,7 @@ import launch_ros.actions
 ```
 def generate_launch_description():
     return launch.LaunchDescription([
+        # 以降、ここに追記していきます。
     ])
 ```
 
@@ -108,7 +109,7 @@ def generate_launch_description():
     ])
 ```
 
-「Ctrl＋o」で上書き保存したあと、「Ctrl＋x」でテキストエディター「nano」を閉じます。
+「Ctrl＋o」で上書き保存したあと、「Ctrl＋x」でテキストエディターを閉じます。
 
 
 ## 設定ファイルの更新
