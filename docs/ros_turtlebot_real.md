@@ -1,15 +1,15 @@
 # TurtleBot（real robot）
-TurtleBot 3の実機を用いたデモを4限目の開始時に行います。
+TurtleBot3の実機を用いたデモを4限目の開始時に行います。
 
 ## デモの準備
-実験用のルーターの電源を入れ、リモートPCをルーターに接続させます。ちなみに、TurtleBotは自動的にルーターに接続するように設定してあります。
+実験用のルーターの電源を入れ、リモートPCをルーターに接続させます。ちなみに、TurtleBot自身は自動的にルーターに接続するよう、予め設定してあります。
 
 ## TurtleBotの起動
-TurtleBotにアダプターかバッテリーを挿し、TurtleBot内のOpenCRの電源スイッチをスライドします。
+TurtleBotにアダプターかバッテリーを接続し、TurtleBot内のOpenCRの電源スイッチをスライドします。
 
-Rasbperry Piの緑色LEDがともります。そして、TurtleBot上のLIDARが回転し始め、起動音が鳴ります。
+Rasbperry Piの緑色LEDが点灯します。そして、TurtleBot上のLIDARが回転し始め、起動音が鳴ります。
 
-1分ほど待ち、TurtleBotが起動したら、リモートPCからTurtleBot内のRasbperry Piに入ります。
+1分ほど待ち、TurtleBotが起動したら、リモートPCからTurtleBot内のRasbperry PiにSSH接続で入ります。なお、IPアドレスは固定してあります。
 ```
 $ ssh ubuntu@10.0.1.11
 ```
@@ -19,7 +19,7 @@ $ ssh ubuntu@10.0.1.11
 $ cat ~/.bashrc
 ```
 
-TurtleBotを始動するためのROSパッケージをRasbperry Piで実行します。
+TurtleBotを始動するためのROSパッケージをRasbperry Pi上で実行します。
 ```
 $ ros2 launch turtlebot3_bringup robot.launch.py
 ```
@@ -32,10 +32,10 @@ $ ros2 run turtlebot3_teleop teleop_keyboard
 
 ヴァーチャルとリアルを同時に動かすこともできます。別のターミナルを開いてシミュレーター（Gazebo）を起動します。
 ```
-$ ros2 launch turtlebot3_gazebo empty_world.launch.py
+$ ros2 launch ros_gz_sim gz_sim.launch.py
 ```
 
-点群データも確認してみます。別のターミナルを開いて可視化ツール（RViz）で確認してみます。Fixed Frameは「base_link」や「base_scan」に設定する。
+点群データも確認してみます。別のターミナルを開いて可視化ツール（RViz）で確認できます。Fixed Frameは「base_link」や「base_scan」に設定してみます。
 ```
 $ rviz2
 ```
