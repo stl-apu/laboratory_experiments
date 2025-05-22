@@ -7,7 +7,7 @@ TurtleBot3の実機を用いたデモを4限目の開始時に行います。
 ## TurtleBotの起動
 TurtleBotにアダプター（バッテリー）を接続し、TurtleBot内のOpenCRの電源スイッチをスライドします。
 
-Rasbperry Piの緑色LEDが点灯します。そして、TurtleBot上のLIDARが回転し始め、起動音が鳴ります。
+Rasbperry Piの緑色LEDが一時的に点灯します。そして、起動音が鳴り、TurtleBot上のLIDARが回転し始めます。
 
 1分ほど待ち、TurtleBotが起動したら、リモートPCからTurtleBot内のRasbperry PiにSSH接続で入ります。なお、IPアドレスは固定してあります。
 ```
@@ -44,10 +44,10 @@ $ ros2 run turtlebot3_teleop teleop_keyboard
 
 ヴァーチャルとリアルを同時に動かすこともできます。別のターミナルを開き、シミュレーター（Gazebo）を起動します。
 ```
-$ ros2 launch ros_gz_sim gz_sim.launch.py
+$ ros2 launch turtlebot3_gazebo empty_world.launch.py
 ```
 
-点群データも確認してみます。別のターミナルを開いて可視化ツール（RViz）で確認できます。Fixed Frameは「base_link」や「base_scan」に設定してみます。
+点群データも確認してみます。別のターミナルを開いて可視化ツール（RViz）で確認できます。Fixed Frameは「base_link」や「base_scan」に設定してみます。そして、ボタン「Add」でトピック「/scan」を追加してみます（点群が表示されない場合はReliability PolicyをBest Effortに切り替えてみます。）。
 ```
 $ rviz2
 ```
