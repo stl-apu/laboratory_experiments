@@ -1,11 +1,11 @@
-# TurtleBot（real robot）
+# TurtleBot（Real robot）
 TurtleBot3の実機を用いたデモを4限目の開始時に行います。
 
 ## デモの準備
 実験用のルーターの電源を入れ、リモートPCをルーターに接続させます。ちなみに、TurtleBot自身は自動的にルーターに接続するよう、予め設定してあります。
 
 ## TurtleBotの起動
-TurtleBotにアダプターかバッテリーを接続し、TurtleBot内のOpenCRの電源スイッチをスライドします。
+TurtleBotにアダプター（バッテリー）を接続し、TurtleBot内のOpenCRの電源スイッチをスライドします。
 
 Rasbperry Piの緑色LEDが点灯します。そして、TurtleBot上のLIDARが回転し始め、起動音が鳴ります。
 
@@ -14,7 +14,7 @@ Rasbperry Piの緑色LEDが点灯します。そして、TurtleBot上のLIDARが
 $ ssh ubuntu@10.0.1.11
 ```
 
-環境変数（ROS_DOMAIN_IDやTURTLEBOT3_MODEL）が設定されていることを確認します。
+まず、環境変数（ROS_DOMAIN_IDやTURTLEBOT3_MODEL）が設定されていることを確認します。
 ```
 $ cat ~/.bashrc
 ```
@@ -25,12 +25,24 @@ $ ros2 launch turtlebot3_bringup robot.launch.py
 ```
 
 ## 実機の操作
-ヴァーチャルロボットと同じようにリアルロボットを操作することができます。リモートPCで別のターミナルを開いて操作してみます。
+ヴァーチャルロボットと同じようにリアルロボットを操作することができます。
+
+ターミナルを開き、リモートPCの環境変数も確認しておきます。
+```
+$ cat ~/.bashrc
+```
+
+リモートPCでROSトピックを受け取れていることを確認します。
+```
+$ ros2 topic list
+```
+
+キーボードで操作してみます。
 ```
 $ ros2 run turtlebot3_teleop teleop_keyboard
 ```
 
-ヴァーチャルとリアルを同時に動かすこともできます。別のターミナルを開いてシミュレーター（Gazebo）を起動します。
+ヴァーチャルとリアルを同時に動かすこともできます。別のターミナルを開き、シミュレーター（Gazebo）を起動します。
 ```
 $ ros2 launch ros_gz_sim gz_sim.launch.py
 ```
@@ -48,7 +60,7 @@ $ sudo shutdown -h now
 
 Raspberry Piの緑色LEDが消えたら、OpenCRの電源をオフにします。
 
-TurtleBotからアダプターやバッテリーを抜いて終了です。
+TurtleBotからアダプター（バッテリー）を抜いて終了です。
 
 [このページのトップへ](#)
 

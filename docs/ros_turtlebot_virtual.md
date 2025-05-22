@@ -1,4 +1,4 @@
-# TurtleBot（virtual robot）
+# TurtleBot（Virtual robot）
 TurtleBot本体（実機）でなく、リモートPC上（シミュレーター）で実行します。Gazebo（ガゼボ）というソフトウェアを用いたシミュレーションになります。基本的に、ROS 1では旧Gazebo（Gazebo Classic）を使用し、ROS 2では新Gazebo（Gazebo Ignition）を使用します。また、通常はROS 2 Humbleをオススメしますが、Gazeboを用いる場合はROS 2 Jazzyをオススメします。よって、「ROS 2 Jazzy with Gazebo Ignition」という環境で演習を実施します。
 
 ## Dockerコンテナーの作成
