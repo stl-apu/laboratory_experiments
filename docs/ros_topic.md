@@ -16,12 +16,12 @@ $ source ros_entrypoint.sh
 
 トピック「/turtle1/cmd_vel」を出版してみます。「turtle1」は1台目の亀ロボットを意味し、「cmd_vel」は速度コマンドを意味します。前半の3つの値で並進移動量（1つ目の値で前進・後進）を、後半の3つの値で回転移動量（3つ目の値で進行方向）を指定します。回転移動については反時計回りが正になるので注意しましょう。
 ```
-$ ros2 topic pub --once /turtle1/cmd_vel geometry_msgs/msg/Twist '{linear: {x: 0.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 3.14}}'
+$ ros2 topic pub --once -w 0 /turtle1/cmd_vel geometry_msgs/msg/Twist '{linear: {x: 0.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 3.14}}'
 ```  
 
 オプションonceを削除することで、連続して出版するようになります。終了するときは「Ctrl＋c」を押しますが、このあと購読するので、しばらくそのままにしておいてください。ちなみに、一定間隔で出版したい場合はオプションrateを使用します。
 ```
-$ ros2 topic pub /turtle1/cmd_vel geometry_msgs/msg/Twist '{linear: {x: 0.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 3.14}}'
+$ ros2 topic -w 0 pub /turtle1/cmd_vel geometry_msgs/msg/Twist '{linear: {x: 0.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 3.14}}'
 ```
 
 ## 2つ目：ROSトピックの購読
