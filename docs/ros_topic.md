@@ -19,9 +19,9 @@ $ source ros_entrypoint.sh
 $ ros2 topic pub --once -w 0 /turtle1/cmd_vel geometry_msgs/msg/Twist '{linear: {x: 0.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 3.14}}'
 ```  
 
-オプションonceを削除することで、連続して出版するようになります。終了するときは「Ctrl＋c」を押しますが、このあと購読するので、しばらくそのままにしておいてください。ちなみに、一定間隔で出版したい場合はオプションrateを使用します。
+オプションonceを削除することで、連続して出版するようになります。終了するときは「Ctrl＋c」を押しますが、このあと購読するので、しばらくそのままにしておいてください。ちなみに、任意の間隔で出版したい場合はオプションrateを使用します。
 ```
-$ ros2 topic -w 0 pub /turtle1/cmd_vel geometry_msgs/msg/Twist '{linear: {x: 0.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 3.14}}'
+$ ros2 topic pub /turtle1/cmd_vel geometry_msgs/msg/Twist '{linear: {x: 0.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 3.14}}'
 ```
 
 ## 2つ目：ROSトピックの購読
