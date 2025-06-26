@@ -30,6 +30,12 @@ $ git config --global user.email "takuo.suzuki@ist.aichi-pu.ac.jp"
 $ git config -l
 ```
 
+今回は競合を体験するので、統合方法についても設定しておきます。
+```
+$ git config --global pull.rebase false
+```
+
+
 ## GitHubの設定
 Gitコマンド（`clone`、`pull`、`push`など）を実行できるよう、SSH接続（鍵認証）の設定を行います。
 
