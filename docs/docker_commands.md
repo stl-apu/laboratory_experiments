@@ -5,7 +5,7 @@
 ## 動作確認
 まずは動作確認！
 ```
-docker run hello-world
+$ docker run hello-world
 ```
 
 ## イメージのダウンロード
