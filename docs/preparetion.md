@@ -19,9 +19,9 @@
 
 ## PCの用意
 - 自分のPCに詳しくなってほしいですし、自宅でも実験を実施できるよう、本実験では個人のPCを使用します。
-- Ubuntu 22.04（Jammy Jellyfish）、Mac 15.4（Sequoia）、Windows 11（Pro、Enterprise、もしくはEducation）またはWindows 10（Pro、Enterprise、もしくはEducation）のいずれかのOSを使用できるようにしておいてください。
-    - 担当教員やTAがサポートしやすいのはUbuntu＞Mac＞Windows 11＞Windows 10の順番になります。
-    - Windows 11およびWindows 10のHomeエディションはDockerを使用できないので、Educationエディションなどにアップグレードしてください。あるいは後述の学部貸出PCを利用してください。
+- Ubuntu 22.04（Jammy Jellyfish）、Mac 15.4（Sequoia）、Windows 11（Pro、Enterprise、もしくはEducation）のいずれかのOSを使用できるようにしておいてください。
+    - 担当教員やTAがサポートしやすいのはUbuntu＞Mac＞Windows 11の順番になります。
+    - Windows 11のHomeエディションはDockerを使用できないので、Educationエディションなどにアップグレードしてください。あるいは後述の学部貸出PCを利用してください。
 - OSは最新の安定版にアップデートしておいてください。ただし、ウイルス対策ソフトなどが最新の安定版に対応していない場合は、それらが対応している版にアップデートしておいてください。
 - PCがクラッシュするような危険な内容は含んでいませんが、故障する可能性はゼロではありません。<span style="color: #CC0066;">実験中に個人のPCが故障しても責任を取れませんので、不安な人は学部貸出PCを利用してください。</span>また、自分のPCの環境を汚したくない人やOSをアップグレードしたくない人も学部貸出PCを利用してください。ただし、貸出可能台数に限りがあることを御理解ください。
 

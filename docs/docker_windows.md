@@ -18,7 +18,7 @@ Docker Desktop.exeを起動し、IDとPasswordを入力します。
 
 コマンドプロンプトを起動し、コマンド`docker`が実行できることを確認します。インストールされたDockerの版が表示されたらOKです。
 ```
-> docker version
+> docker --version
 ```
 
 ## GUIの設定
@@ -43,7 +43,7 @@ localhost
 
 コンピューターを再起動します。
 
-再起動後、VcXsrv（X11サーバー）をソフトウェア「XLanuch」で起動します。下記の通り設定します。システムトレイ（通知領域）にXLanuchのアイコンが表示されます。
+再起動後、VcXsrv（X11サーバー）をソフトウェア「XLaunch」で起動します。下記の通り設定します。システムトレイ（通知領域）にXLaunchのアイコンが表示されます。
 - 「Multiple windows」を選択します。
 - 「Display number」は「-1」でOKです。
 - 「Start no client」を選択します。

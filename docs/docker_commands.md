@@ -2,6 +2,12 @@
 
 「Dockerの設定」では、Docker Desktop（Linux Kernel）をインストールしました。「Dockerの使い方」では、Docker Imageに基づいてDocker Containerを作成し、Docker Host上でDocker Containerを動かします。
 
+## 動作確認
+まずは動作確認！
+```
+docker run hello-world
+```
+
 ## イメージのダウンロード
 ROS 2（Humble）が予めインストールされたUbuntu 22.04（Jammy）のイメージをダウンロードします。
 ```
