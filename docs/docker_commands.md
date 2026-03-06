@@ -23,9 +23,9 @@ $ docker image ls
 イメージに基づいてコンテナーを作成し、起動します。この時、オプションnameでコンテナーに対して名前（例：ros-cui）を付けておきます。
 ```
 《Ubuntuの場合》
-$ docker container run -itd --net host -e DISPLAY=$DISPLAY --name ros-cui ros:humble-ros-base-jammy /bin/bash
+$ docker container run -itd --net host -e DISPLAY=$DISPLAY -e QT_X11_NO_MITSHM=1 -e XDG_RUNTIME_DIR=/tmp/runtime-root --name ros-cui ros:humble-ros-base-jammy /bin/bash
 《MacやWindowsの場合》
-$ docker container run -itd -e DISPLAY=host.docker.internal:0 --name ros-cui ros:humble-ros-base-jammy /bin/bash
+$ docker container run -itd -e DISPLAY=host.docker.internal:0 -e QT_X11_NO_MITSHM=1 -e XDG_RUNTIME_DIR=/tmp/runtime-root --name ros-cui ros:humble-ros-base-jammy /bin/bash
 ```
 
 一応、コンテナー「ros-cui」が存在することを確認します。
