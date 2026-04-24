@@ -35,7 +35,7 @@
 - [Assignment 2](https://stl-apu.github.io/laboratory_experiments/assignment2)
 
 ### Week 3（更新中）
-グループでROSを用いてロボットを動かします。グループの他のメンバーに迷惑を掛けないよう、第2週までの復習をお願いします。<span style="color: #CC0066;">PCの画面が小さいと、シミュレーターと操作用のターミナルで埋まってしまいますので、モバイルモニターやタブレットがある人は持参することをオススメします。</span>
+グループでROSを用いてロボットを動かします。グループの他のメンバーに迷惑を掛けないよう、第2週までの復習をお願いします。<span style="color: #CC0066;">PCの画面が小さいと、ロボット表示用のシミュレーターとロボット操作用のターミナルで埋まってしまいますので、モバイルモニターやタブレットがある人は持参することをオススメします。</span>
 
 - [ROS Simulation](https://stl-apu.github.io/laboratory_experiments/ros_simulation)
 - [ROS Service](https://stl-apu.github.io/laboratory_experiments/ros_service)

@@ -14,21 +14,21 @@
 - 複数人でシステムを開発する時、他の人が担当している部分を最新の状態に保つことができます。
 - アカウントを持っていない人は、下記のウェブサイトから作成してください。
     - [https://github.co.jp/](https://github.co.jp/)
-- <span style="color: #CC0066;">第1週の実験実施日の前日までにアカウント名をMicrosoft Teamsのプライベートチャットで担当教員（SUZUKI Takuo）に教えてください。</span>演習用のリポジトリーに招待します。
+- <span style="color: #CC0066;">第1週の実験実施日の前日までにアカウント名をMicrosoft Teamsの個人チャット（プライベートチャット）で担当教員（SUZUKI Takuo）に教えてください。</span>演習用のリポジトリーに招待します（招待メールが届くと思いますので、承諾しておいてください）。
 
 
 ## PCの用意
 - 自分のPCに詳しくなってほしいですし、自宅でも実験を実施できるよう、本実験では個人のPCを使用します。
-- Ubuntu 22.04（Jammy Jellyfish）、Mac 15.4（Sequoia）、Windows 11（Pro、Enterprise、もしくはEducation）のいずれかのOSを使用できるようにしておいてください。
-    - 担当教員やTAがサポートしやすいのはUbuntu＞Mac＞Windows 11の順番になります。
-    - Windows 11のHomeエディションはDockerを使用できないので、Educationエディションなどにアップグレードしてください。あるいは後述の学部貸出PCを利用してください。
+- Ubuntu 22.04（Jammy Jellyfish）、Mac 26.4（Tahoe）、Windows 11（Pro、Enterprise、Education、もしくはHome）のいずれかのOSを使用できるようにしておいてください。
+    - 担当教員がサポートしやすいのはUbuntu＞Mac＞Windowsの順番になります。
+    - Windows 11のHomeエディションは、Dockerを使用するために追加の設定が必要になる可能性が高い（Dockerを使用できない可能性もある）ので、Educationエディションなどにアップグレードすることをオススメします。あるいは演習室のPCを利用してください。
 - OSは最新の安定版にアップデートしておいてください。ただし、ウイルス対策ソフトなどが最新の安定版に対応していない場合は、それらが対応している版にアップデートしておいてください。
-- PCがクラッシュするような危険な内容は含んでいませんが、故障する可能性はゼロではありません。<span style="color: #CC0066;">実験中に個人のPCが故障しても責任を取れませんので、不安な人は学部貸出PCを利用してください。</span>また、自分のPCの環境を汚したくない人やOSをアップグレードしたくない人も学部貸出PCを利用してください。ただし、貸出可能台数に限りがあることを御理解ください。
+- PCがクラッシュするような危険な内容は含んでいませんが、故障する可能性はゼロではありません。<span style="color: #CC0066;">実験中に個人のPCが故障しても責任を取れませんので、不安な人は演習室のPCを利用してください。</span>
 
 ### HomeからEducationへのアップグレード（Windowsのみ）
-- 情報科学部Wikiの「利用可能なソフトウェア」を確認してください。
+- 情報科学部Wikiの「利用可能なソフトウェア」→「MS Windows（Windows 11, Windows 10）等の利用方法」を確認してください。
     - [https://www.cis.aichi-pu.ac.jp/dokuwiki/doku.php?id=index.html](https://www.cis.aichi-pu.ac.jp/dokuwiki/doku.php?id=index.html)
-- ［フリーソフトウェア］から「Education」と「Education N」が見つかると思いますが、「Education」をオススメします。
+- リンク先の［フリーソフトウェア］から「Education」と「Education N」が見つかると思いますが、「Education」の方をオススメします。
 - ボタン［キーを表示する］からプロダクトキーをコピーし、自分のPCの［システム］→［ライセンス認証］にペーストすれば、数分でアップグレードできると思います。
 
 [このページのトップへ](#)
