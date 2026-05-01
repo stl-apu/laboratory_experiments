@@ -3,10 +3,10 @@
 ## 解説
 ロボットとは直接関係しませんが、ロボットはグループで研究開発することが多いので、Dockerを良く利用します。
 
-普通はLinux（Ubuntu）上で利用しますが、色々と設定すれば、MacやWindows上でも利用することができます。また、普通はCUI（CLI）を用いて利用しますが、色々と設定すれば、GUIを用いて利用することもできます。X Window System（X11）を用いてホストOS上にGUIを表示します。ちなみに、ホストOSにGUIの表示を依頼することを「X11 Forwarding」と言います。
+普通はLinux（Ubuntu）上で利用しますが、色々と設定すれば、MacやWindows上でも利用することができます。また、普通はCUI（CLI）を用いて利用しますが、色々と設定すれば、GUIを用いて利用することもできます。本実験ではX Window System（X11）を用いてホストOS上にGUIを表示します。ちなみに、ホストOSにGUIの表示を依頼することを「X11 Forwarding」と言います。
 
 ## 演習
-「Dockerの設定」を済ませた後、「Dockerの使い方」を実施してください。
+OSに合わせて「Dockerの設定」を済ませた後、「Dockerの使い方」を実施してください。
 
 - Dockerの設定
     - [Ubuntu](https://stl-apu.github.io/laboratory_experiments/docker_ubuntu)

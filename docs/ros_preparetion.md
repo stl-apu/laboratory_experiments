@@ -1,9 +1,11 @@
 # ROSの準備
-ROSが使用できることを確認し、ソースコードを作成するための準備を行います。
+ROSが使用できることを確認し、プログラムを作成するための準備を行います。
 
 ## 環境変数の確認
-コンテナーに入っていない場合は入ります。
+Dockerコンテナーに入っていない場合は、Dockerコンテナーを起動してから入ります。
 ```
+$ docker container start ros-cui
+↓起動したら
 $ docker container exec -it ros-cui /bin/bash
 ```
 

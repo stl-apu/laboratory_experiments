@@ -3,7 +3,7 @@
 「Dockerの設定」では、Docker Desktop（Linux Kernel）をインストールしました。「Dockerの使い方」では、Docker Imageに基づいてDocker Containerを作成し、Docker Host上でDocker Containerを動かします。
 
 ## 動作確認
-まずは動作確認！
+まずは動作確認！Dockerを起動してから（Docker Desktopを起動してから）、下記のコマンドを実行してください。「Hello from Docker!」と戻ってくればOKです。
 ```
 $ docker run hello-world
 ```
@@ -54,7 +54,7 @@ $ sudo apt install nano -y
 $ nano
 ```
 
-X Window Systemの動作を確認するため、アプリ「x11-apps」をインストールし、実行してみます。正常に実行できた場合は「マウスカーソルを見続ける目」が表示されます。<span style="color: #CC0066;">表示されない人は設定などを間違えている可能性が高いので、ここまでの実験内容を再確認してください。</span>終了するときはctrl＋cを押します。
+X Window Systemの動作を確認するため、アプリ「x11-apps」をインストールし、実行してみます。正常に実行できた場合は「マウスカーソルを見続ける目」が表示されます。<span style="color: #CC0066;">表示されない人は、設定などを間違えている可能性が高いので、ここまでの実験内容を再確認してください。</span>終了するときは「Ctrl＋c」を押します。
 ```
 $ sudo apt update
 $ sudo apt install x11-apps -y
@@ -65,6 +65,12 @@ $ xeyes
 
 ## コンテナーの操作
 今後のために、コンテナーに関するコマンドを整理しておきます。
+
+### コンテナーの確認
+コンテナーの一覧を確認するコマンドです。
+```
+$ docker container ls --all
+```
 
 ### コンテナーの起動
 コンテナーを起動するコマンドです。コンテナーに入る前にコンテナーを起動しておく必要があります。
