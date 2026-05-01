@@ -4,7 +4,7 @@
 practice_publisher_node.pyを作成します。コンテナーに入り、ROSの環境を設定した状態で進めてください。
 
 ```
-$ cd ~/colcon_ws/src/laboratory_experiments_2025/practice_package/practice_package
+$ cd ~/colcon_ws/src/laboratory_experiments_2026/practice_package/practice_package
 $ nano practice_publisher_node.py
 ```
 

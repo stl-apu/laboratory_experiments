@@ -42,7 +42,7 @@ $ ros2 launch sample_package listener_talker_launch.py
 
 まず、パッケージ「practice_package」にディレクトリー「launch」を作成します。
 ```
-$ cd ~/colcon_ws/src/laboratory_experiments_2025/practice_package/
+$ cd ~/colcon_ws/src/laboratory_experiments_2026/practice_package/
 $ mkdir launch && cd $_
 ```
 
@@ -115,7 +115,7 @@ def generate_launch_description():
 ## 設定ファイルの更新
 setup.pyをテキストエディターで開き、編集します。setup.pyはROSパッケージを作成した時に必要なファイルの1つとして作成されている設定ファイルで、新たに作成する必要はありません。
 ```
-$ cd ~/colcon_ws/src/laboratory_experiments_2025/practice_package/
+$ cd ~/colcon_ws/src/laboratory_experiments_2026/practice_package/
 $ nano setup.py
 ```
 

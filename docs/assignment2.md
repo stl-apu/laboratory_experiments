@@ -13,7 +13,7 @@ $ git checkout -b feature/グループ番号_グループ名
 $ git checkout -b feature/0_baymax
 ```
 
-- 次に、ディレクトリー「laboratory_experiments_2025」の中にROSパッケージ「assignment_package」を作成してください。グループの誰か1人が作成・`push`し、他の人は`pull`しましょう。
+- 次に、ディレクトリー「laboratory_experiments_2026」の中にROSパッケージ「assignment_package」を作成してください。グループの誰か1人が作成・`push`し、他の人は`pull`しましょう。
 
 - そして、「伝言ゲーム」のようなトピック通信を実現してください。
     - それぞれのメンバーが1つずつノードを作成し、それらを連携させます。<span style="color: #CC0066;">特定のメンバーのみがプログラミングを担当することは避けてください。</span>
