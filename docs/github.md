@@ -65,7 +65,7 @@ GitHubのウェブサイトを開きます。
 
 →[https://github.com/](https://github.com/)
 
-サインインしたら、［Settings］→［SSH and GPG keys］へと進み、［SSH keys］の所にあるボタン「New SSH key」を押します。そして、公開鍵の内容を記入欄「Key」の中にペーストし、登録します。なお、記入欄「Title」にはコンピューター名など（例：ros-cui）を記入します。
+サインインしたら、リポジトリー（laboratory_experiments_2026）の［Settings］でなく、ユーザーの［Settings］→［SSH and GPG keys］へと進み、［SSH keys］の所にあるボタン「New SSH key」を押します。そして、公開鍵の内容を記入欄「Key」の中にペーストし、登録します。なお、記入欄「Title」にはコンピューター名など（例：ros-cui）を記入します。
 
 正常に接続できるかを確認します。「Are you sure you want to continue connecting (yes/no/[fingerprint])?」と聞かれた場合は「yes」と回答します。「You've successfully authenticated, but GitHub does not provide shell access.」と表示されればOKです！
 ```
