@@ -3,7 +3,7 @@
 「Dockerの設定」では、Docker Desktop（Linux Kernel）をインストールしました。「Dockerの使い方」では、Docker Imageに基づいてDocker Containerを作成し、Docker Host上でDocker Containerを動かします。
 
 ## 動作確認
-まずは動作確認！Dockerを起動してから（Docker Desktopを起動してから）、下記のコマンドを実行してください。「Hello from Docker!」と戻ってくればOKです。
+まずは動作確認！Dockerを起動してから（Docker Desktopを起動してから）、ターミナルで下記のコマンドを実行してください。「Hello from Docker!」と戻ってくればOKです。
 ```
 $ docker run hello-world
 ```
