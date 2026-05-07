@@ -16,7 +16,7 @@ Docker Desktop for Windowsをインストールします。
 
 Docker Desktop.exeを起動し、IDとPasswordを入力します。
 
-ターミナルを起動し、コマンド`docker`が実行できることを確認します。インストールされたDockerの版が表示されたらOKです。
+ターミナル（端末／terminal）を起動し、コマンド`docker`が実行できることを確認します。インストールされたDockerの版が表示されたらOKです。
 ```
 > docker --version
 ```
