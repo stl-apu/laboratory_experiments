@@ -25,6 +25,7 @@
 - PCがクラッシュするような危険な内容は含んでいませんが、故障する可能性はゼロではありません。<span style="color: #CC0066;">実験中に個人のPCが故障しても責任を取れませんので、心配な人は演習室のPCを利用してください。</span>
 
 ### HomeからEducationへのアップグレード（Windowsのみ）
+- 下記の手順でアップグレードできると思います。サポートが必要な時は情報科学部の教員センター（C棟1階C108）に相談してください。よろしくお願いします。
 - 情報科学部Wikiの「利用可能なソフトウェア」→「MS Windows（Windows 11, Windows 10）等の利用方法」を確認してください。
     - [https://www.cis.aichi-pu.ac.jp/dokuwiki/doku.php?id=index.html](https://www.cis.aichi-pu.ac.jp/dokuwiki/doku.php?id=index.html)
 - リンク先の［フリーソフトウェア］から「Education」と「Education N」が見つかると思いますが、「Education」の方をオススメします。
