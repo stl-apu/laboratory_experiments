@@ -11,7 +11,7 @@
 ```
 
 ## xtermのインストール
-Dockerコンテナーに入り、予め端末エミュレーター「XTerm」をインストールしておきます。
+Dockerコンテナーに入り、予めターミナルエミュレーター「XTerm」をインストールしておきます。ターミナルの中でターミナルを実行できるようになります。
 ```
 $ sudo apt update
 $ sudo apt install xterm -y
@@ -24,10 +24,14 @@ $ xterm
 
 
 ## launchファイルの試用
-Dockerコンテナーの中で試しにlaunchファイルを実行してみましょう。ROSの環境を設定した上で実行します。1つのコマンドで3つのノードを起動することができます。
+Dockerコンテナーの中で試しにlaunchファイルを実行してみましょう。ROSノードと同様に、ROSローンチもROSの環境を設定した上で実行します。1つのコマンドで3つのノードを起動することができます（詳細は後述します）。
 ```
-$ source /ros_entrypoint.sh
-$ source ~/colcon_ws/install/setup.bash
+（$ docker container exec -it ros-cui /bin/bash）
+（↓Dockerコンテナーに入り）
+（$ source /ros_entrypoint.sh）
+（↓ROSの環境を設定し）
+（$ source ~/colcon_ws/install/setup.bash）
+（↓自作パッケージの設定も反映し）
 $ ros2 launch sample_package listener_talker_launch.py
 ```
 
@@ -40,7 +44,7 @@ $ ros2 launch sample_package listener_talker_launch.py
 ## launchファイルの作成
 拡張子から予想できると思いますが、launchファイルはPythonで記述します。
 
-まず、パッケージ「practice_package」にディレクトリー「launch」を作成します。
+まず、パッケージ「practice_package」にディレクトリー「launch」を作成し、その中に移動します。
 ```
 $ cd ~/colcon_ws/src/laboratory_experiments_2026/practice_package/
 $ mkdir launch && cd $_
@@ -64,7 +68,7 @@ import launch_ros.actions
 ```
 def generate_launch_description():
     return launch.LaunchDescription([
-        # 以降、ここに追記していきます。
+        # 以降、ここに追記していきます。字下げ（インデント）を保ってください。
     ])
 ```
 
@@ -88,7 +92,7 @@ launch_ros.actions.Node(
     on_exit=launch.actions.Shutdown())
 ```
 
-3つ目のノードとしてrqt_graphを起動します。rqt_graphはGUIツールなので、xtermを起動する必要はありません。
+3つ目のノードとしてrqt_graphを起動します。rqt_graphはGUIツールなので、ターミナル（xterm）を起動する必要はありません。
 ```
 launch_ros.actions.Node(
     package='rqt_graph',
@@ -113,7 +117,7 @@ def generate_launch_description():
 
 
 ## 設定ファイルの更新
-setup.pyをテキストエディターで開き、編集します。setup.pyはROSパッケージを作成した時に必要なファイルの1つとして作成されている設定ファイルで、新たに作成する必要はありません。
+自作パッケージの設定ファイル「setup.py」をテキストエディターで開き、編集します。setup.pyはROSパッケージを作成した時に必要なファイルの1つとして作成されているので、新たに作成する必要はありません。
 ```
 $ cd ~/colcon_ws/src/laboratory_experiments_2026/practice_package/
 $ nano setup.py
@@ -125,7 +129,7 @@ import os
 from glob import glob
 ```
 
-次に、data_filesにlaunchファイルの参照先を追加します。注意点として、関数「join」の中の「package_name」を「practice_package」と書き換える必要はありません。下記のまま記述してください。関数「glob」の中のアステリスク（*）は正規表現です。なお、「：」は省略記号です。
+次に、data_filesにlaunchファイルの参照先を追加します。注意点として、関数「join」の中の「package_name」を「practice_package」と書き換える必要はありません。下記のままコピー＆ペーストしてください。関数「glob」の中のアステリスク（*）は正規表現になります。なお、「：」は省略記号です。
 ```
 setup(
     ：
@@ -143,7 +147,7 @@ setup(
 $ cd ~/colcon_ws && colcon build
 ```
 
-実行します。ターミナル（xterm）2つとrqt_graphが表示されれば成功です。
+実行します。試用の時のように、ターミナル（xterm）2つとrqt_graphが表示されれば成功です。
 ```
 $ ros2 launch practice_package practice_launch.py
 ```

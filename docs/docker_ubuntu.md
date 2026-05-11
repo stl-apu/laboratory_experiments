@@ -43,7 +43,7 @@ LOCAL:
 SI:localuser:ユーザー名
 ```
 
-Dockerサービスを再起動します。
+Dockerエンジンを再起動します。
 ```
 $ sudo service docker restart
 ```

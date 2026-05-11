@@ -47,7 +47,7 @@ $ sudo apt --purge autoremove -y
 $ sudo apt autoclean
 ```
 
-エディター「nano」をインストールし、実行してみます。終了するときは「Ctrl＋x」を押します。
+テキストエディター「nano」をインストールし、実行してみます。終了するときは「Ctrl＋x」を押します。
 ```
 $ sudo apt update
 $ sudo apt install nano -y

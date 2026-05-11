@@ -1,22 +1,26 @@
 # ROSのサブスクライバー
-第1週で使ったリスナーを自作してみます。
+第1週で使ったROSノード「listener／リスナー」を自作してみます。
 
-practice_subscriber_node.pyを作成します。コンテナーに入り、ROSの環境を設定した状態で進めてください。
+practice_subscriber_node.pyを作成します。Dockerコンテナーに入り、ROSの環境を設定した状態で進めてください。
 
 ```
+（$ docker container exec -it ros-cui /bin/bash）
+（↓Dockerコンテナーに入り）
+（$ source /ros_entrypoint.sh）
+（↓ROSの環境を設定し）
 $ cd ~/colcon_ws/src/laboratory_experiments_2026/practice_package/practice_package
 $ nano practice_subscriber_node.py
 ```
 
 ## モジュールのインポート
-まず先頭でモジュール「rclpy」をインポートします。rclpyはROS Client Library for Pythonのことで、ROSノードをPythonで記述する際に必ず必要となるモジュールです。
+まず先頭でモジュール「rclpy」をインポートします。
 
 ```
 import rclpy
 from rclpy.node import Node
 ```
 
-また、今回は標準的なトピックメッセージ型を使用するため、モジュール「std_msgs」もインポートしておきます。
+また、モジュール「std_msgs」もインポートしておきます。
 
 ```
 from std_msgs.msg import String

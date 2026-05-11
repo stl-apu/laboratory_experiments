@@ -1,4 +1,4 @@
-# ROSノード
+# ROS node（ノード）
 ROSコマンドでなくROSノードを用いて出版・講読を行ってみます。
 
 ## 準備
@@ -27,7 +27,7 @@ $ source ~/.bashrc
 ```
 
 ## 1つ目：ROSトピックの購読
-listenerを起動します。
+ROSノード「listener／リスナー」を起動します。
 ```
 $ docker container exec -it ros-cui /bin/bash
 $ source ros_entrypoint.sh
@@ -35,7 +35,7 @@ $ ros2 run demo_nodes_cpp listener
 ```
 
 ## 2つ目：ROSトピックの出版
-talkerを起動します。
+ROSノード「talker／トーカー」を起動します。
 ```
 $ docker container exec -it ros-cui /bin/bash
 $ source ros_entrypoint.sh
