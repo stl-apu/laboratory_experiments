@@ -27,7 +27,7 @@
 - [ROS Node](https://stl-apu.github.io/laboratory_experiments/ros_node)
 - [Assignment 1](https://stl-apu.github.io/laboratory_experiments/assignment1)
 
-### Week 2（更新中）
+### Week 2
 グループでROSのプログラムを作ります。Pythonの予習をお願いします。<span style="color: #CC0066;">特に字下げ（インデント）について理解しておいてください。</span>
 
 - [ROS Package](https://stl-apu.github.io/laboratory_experiments/ros_package)
