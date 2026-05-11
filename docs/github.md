@@ -213,6 +213,11 @@ $ git commit -m "Update test.txt"
 $ git push origin feature/2024311000
 ```
 
+最後にローカルにあるブランチの一覧を確認してみます。3つのブランチがあり、feature/2024311000にアステリスク（*）が付いていると思います。
+```
+$ git branch
+```
+
 Dockerコンテナーから抜けて終了です。
 ```
 $ exit

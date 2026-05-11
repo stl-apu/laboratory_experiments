@@ -9,7 +9,7 @@
 ## 実験内容
 第1週は個人で取り組み、第2週と第3週はグループで取り組みます。グループの他のメンバーに迷惑を掛けないよう、事前準備への御協力をよろしくお願いします。
 
-質問はMicrosoft Teamsの実験用チームにある「後期：質問用」というチャネルに投稿してください。検索しやすいよう、スクリーンキャプチャーを貼るのではなく、エラーの文章を貼り付けてください。また、自分で調査・実行した内容も書き込んでください。（追伸：エラーの解決に協力してくれた学生には加点しますので、余裕のある人は協力してください。よろしくお願いします。）
+質問はMicrosoft Teamsの実験用チームにある「後期：質問用」というチャネルに投稿してください。検索しやすいよう、スクリーンショットをそのまま貼るのではなく、エラーの文章を貼り付けてください。また、自分で調査・実行した内容も書き込んでください。（追伸：エラーの解決に協力してくれた学生には加点しますので、余裕のある人は協力してください。よろしくお願いします。）
 
 
 ### Week 0：事前準備
@@ -35,8 +35,8 @@
 - [ROS Publisher](https://stl-apu.github.io/laboratory_experiments/ros_publisher)
 - [ROS Build](https://stl-apu.github.io/laboratory_experiments/ros_build)
 - [ROS Launch](https://stl-apu.github.io/laboratory_experiments/ros_launch)
+- グループワーク（課題2に向けて）
 - [Assignment 2](https://stl-apu.github.io/laboratory_experiments/assignment2)
-- グループワーク（課題2）
 
 ### Week 3（更新中）
 グループでROSを用いてロボットを動かします。グループの他のメンバーに迷惑を掛けないよう、第2週までの復習をお願いします。<span style="color: #CC0066;">PCの画面が小さいと、ロボット表示用のシミュレーターとロボット操作用のターミナルで埋まってしまいますので、モバイルモニターやタブレットがある人は持参することをオススメします。</span>
@@ -44,6 +44,6 @@
 - [ROS Simulation](https://stl-apu.github.io/laboratory_experiments/ros_simulation)
 - [ROS Service](https://stl-apu.github.io/laboratory_experiments/ros_service)
 - [ROS Parameter](https://stl-apu.github.io/laboratory_experiments/ros_parameter)
+- グループワーク（課題3に向けて）
 - [Assignment 3](https://stl-apu.github.io/laboratory_experiments/assignment3)
-- グループワーク（課題3）
 
