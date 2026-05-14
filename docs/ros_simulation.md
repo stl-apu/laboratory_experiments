@@ -92,30 +92,15 @@ $ rqt --force-discover
 ```
 
 ### マウスを用いた操作
-発展的な内容ですので、出来なくても全く問題ありません。無理せず、基礎の理解を優先してください。
-
 ロボットをマウス（タッチパッドやトラックパッドも含む）で操作することもできます。シミュレーションを一旦終了し、下記の通り、必要なソフトウェアをインストールしましょう。
 
-ROSパッケージ「teleop_tools」をcloneします。
+ROSパッケージ「mouse_teleop」をcloneします。
 ```
-$ cd ~/colcon_ws/src/
-$ git clone git@github.com:ros-teleop/teleop_tools.git
-```
-
-humble版のブランチを切り替えます。
-```
-$ cd teleop_tools
-$ git checkout humble
+$ sudo apt update
+$ sudo apt install ros-${ROS_DISTRO}-mouse-teleop -y
 ```
 
-ビルドします。
-```
-$ source /ros_entrypoint.sh
-$ cd ~/colcon_ws && colcon build
-$ source ~/colcon_ws/install/setup.bash
-```
-
-また、実行に必要なPythonのモジュールをインストールします。動作確認のコマンドを実行し、数字が出力されればOKです。
+また、実行に必要となるPythonモジュール「tkinter」もインストールします。動作確認のコマンドを実行し、数字が出力されればOKです。
 ```
 $ sudo apt update
 $ sudo apt install python3-tk -y
@@ -123,9 +108,9 @@ $ sudo apt install python3-tk -y
 $ python3 -c 'import tkinter; print(tkinter.TkVersion)'
 ```
 
-シミュレーターなどを再起動し、マウスで操作するためのROSノード「mouse_teleop」を起動します。マウスのドラッグにより並進移動量と回転移動量を出版することができますが、標準設定のままでは「/mouse_vel」というトピック名で出版するので、ロボットは動きません。オプションremapを用いて「/mouse_vel」を「/turtle1/cmd_vel」というトピック名で出版するように変更することで、ロボットが動くと思います。
+シミュレーターなどを再起動し、マウスで操作するためのROSノード「mouse_teleop」を起動します。マウスのドラッグにより並進移動量と回転移動量を出版することができますが、標準設定のままでは「/mouse_vel」というトピック名で出版するので、ロボットは動きません。オプションremap（-r）を用いて「/mouse_vel」を「/turtle1/cmd_vel」というトピック名で出版するように変更することで、ロボットが動くと思います。
 ```
-$ ros2 run mouse_teleop mouse_teleop --remap mouse_vel:=/turtle1/cmd_vel
+$ ros2 run mouse_teleop mouse_teleop --ros-args -r mouse_vel:=/turtle1/cmd_vel
 ``` 
 
 [このページのトップへ](#)
