@@ -41,6 +41,8 @@ ___
 
 ［Hint］ROSノードやROSトピックの状態を確認する必要があるので、ROSツール（rqt関連）やROSコマンド（ros2 topic関連）などを調査し、利用してみましょう。
 
+［お願い］mainブランチにpushしないように注意してください。pushする時はコマンド`$ git status`などを使って確認してください。
+
 [このページのトップへ](#)
 
 [実験用サイトのトップへ](https://stl-apu.github.io/laboratory_experiments/)
