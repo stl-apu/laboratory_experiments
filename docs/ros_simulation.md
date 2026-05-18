@@ -60,6 +60,14 @@ $ rqt_graph
 
 ### 時系列データの確認
 ROSツール「rqt_plot」でロボットに対する制御入力の時系列変化を確認できます。
+
+導入は、
+```
+$ sudo apt update
+$ sudo apt install ros-${ROS_DISTRO}-rqt-plot -y
+```
+
+実行は、
 ```
 $ ros2 run rqt_plot rqt_plot
 あるいは
@@ -80,6 +88,12 @@ $ rqt_plot
 
 ### 様々なデータの確認・変更
 rqt_plotなどの元になっているrqt（正確には、RQt／アール・キュート）はROSのGUIツールで、カスタマイズして使用ことができます。様々な情報を同時に確認することができますし、情報を確認しながら値を変更することもできます。例として、Robot Steeringを用いてトピックを出版してみます。
+
+RQt全体の導入は、
+```
+$ sudo apt update
+$ sudo apt install ros-${ROS_DISTRO}-rqt* -y
+```
 
 まず、rqtを起動します。
 ```
